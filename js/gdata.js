@@ -22,15 +22,15 @@ var rowData1 = [
 // Gnb 리스트
 var gnbList = [
     {
-        name:'나는 누구?',
-        url:'info.html'
-    },
-    {
-        name:'작업 내역',
+        name:'Info',
         url:'index.html'
     },
     {
-        name:"IT 용어 사전",
+        name:'History',
+        url:'work-list.html'
+    },
+    {
+        name:"It 용어 번역 검색",
         url:'ittt.html'
     },
 ];

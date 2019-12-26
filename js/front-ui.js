@@ -10,7 +10,9 @@ var UI = {
         this.visualMouseClickEvent();
         this.gnbListDraw();
         this.popup();
-
+        this.gnbPathCheck();
+        this.windowPathCheck();
+        this.utilControlEvent();
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -211,7 +213,7 @@ var UI = {
             return Math.random() - Math.random();
         });
 
-        $random.splice(0, ($random.length - 10));
+        $random.splice(0, ($random.length - 5));
 
         $.each($random ,function(key, value){
             $(el).append('<p class="question">' + value.question + '</p><p class="answer">' + value.answer + '</p>')
@@ -389,14 +391,14 @@ var UI = {
             if($(this).hasClass('is-on')){
                 $(this).removeClass('is-on');
                 $visual.removeClass('is-on');
-                $theme.removeClass('x-mas');
+                $theme.removeClass('theme');
                 $mouse.css({"display":"inline-block"});
-                $themeOncheck = false;
+                checkTheme = false;
             } else {
                 $(this).addClass('is-on');
                 $visual.addClass('is-on');
-                $theme.addClass('x-mas');
-                $themeOncheck = true;
+                $theme.addClass('theme');
+                checkTheme = true;
             }
         })
 
@@ -570,12 +572,77 @@ var UI = {
                 return false;
             }
         })
+    },
+    gnbPathCheck : function() {
+        var $gnbLink = $('.gnb .nav-list li');
+        var $gnbGroup =[];
+
+        $gnbLink.each(function() {
+            $gnbGroup.push($(this).children());
+        });
+
+        $.each($gnbGroup, function( key, value ){
+            var $link = $(this);
+            $link.on('click',function (e) {
+                var $thisPath = window.location.href;
+                var $path =  $link.attr('href');
+                e.preventDefault();
+
+                if(checkTheme){
+                    location.href = $path + '#theme=on'
+                } else {
+                    location.href = $path;
+                    return false;
+                }
+            });
+        });
+    },
+    windowPathCheck : function (){
+        var $thisPath = window.location.href;
+        var $pathArray = $thisPath.split("/");
+        if($pathArray[4].match("#theme=on")){
+            $('.visual-toggle').click();
+        } else {
+            return false;
+        }
+    },
+    utilControlEvent : function() {
+        var $utils = $("div.util .nav-list li a");
+        var $utilGroup = [];
+        var $utilPop = $("#util");
+        var $body = $("body");
+
+            $utils.each(function() {
+            if($.inArray($(this), $utilGroup) === -1){
+                $utilGroup.push($(this));
+            }
+        });
+
+        $.each($utilGroup , function(key, value){
+            $(this).on('click', function(e){
+                $body.removeClass("is-lock");
+                $utilPop.removeClass('is-show');
+                e.preventDefault();
+                if($(this).hasClass('love-event')){
+                    $('.header .love-btn').click();
+                } else {
+                    return false;
+                }
+            });
+        });
+
+        console.log($utilGroup);
+
     }
 };
 
+var checkTheme = false;
+
 //ready
 $(function(){
+
     UI.init();
+
     if($themeOncheck){
         $('.visual-toggle').click();
     }

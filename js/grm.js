@@ -1,13 +1,13 @@
 function grm () {
     // popup, overlay, scrolltop
     $("body").append(
-        '<!-- overlay list -->' +
+        /*'<!-- overlay list -->' +
         '<div class="overlay d-right">' +
         '<div class="overlay-inner">' +
         '<button type="button" class="tbl-event-btn" title="리스트 닫기"><i class="icon icon-arrow-down-white1"><span>닫기</span><span class="blind">리스트 닫기</span></i></button>' +
         '<div class="intro-tbl-col"></div>' +
         '</div>' +
-        '</div>' +
+        '</div>' + */
         '<!-- Gnb 기본 팝업 풀사이즈 -->' +
         '<div class="popup-wrap is-dim wide" id="gnb">' +
         '<div class="pop">' +
@@ -64,20 +64,8 @@ function grm () {
         '<div class="pop-content">' +
         '<div class="util">' +
         '<ul class="nav-list">' +
-        '<li><a href="">메뉴1</a></li>' +
-        '<li><a href="">메뉴2</a></li>' +
-        '<li><a href="">메뉴3</a></li>' +
-        '<li><a href="">메뉴4</a></li>' +
-        '<li><a href="">메뉴5</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
-        '<li><a href="">메뉴6</a></li>' +
+        '<li><a href="" class="love-event">응원 메세지</a></li>' +
+        '<li><a href="" data-pop="search">작업내역 검색</a></li>' +
         '</ul>' +
         '</div>' +
         '</div>' +
@@ -95,12 +83,13 @@ function grm () {
     // header
     $(".header").append(
         '<div class="inner">' +
-        '<div class="in-left"><button type="button" data-pop="gnb"><i class="icon icon icon-nav-hambuger"><span class="blind">GNB 창 열기</span></i></button></div>' +
+        '<div class="in-left"><button type="button" data-pop="gnb"><i class="icon icon-nav-hambuger"><span class="blind">GNB 창 열기</span></i></button></div>' +
         '<div class="in-center">' +
         '<h1 class="tac"><a href="index.html">Home</a></h1>' +
         '</div>' +
         '<div class="in-right">' +
         '<ul class="util">' +
+        '<li><button type="button" class="visual-toggle" title="테마 열기/닫기"><i class="icon icon-switch-white-off"><span class="blind">테마 열기/닫기</span></i></button></li>' +
         '<li><button type="button" class="love-btn" title="위로 해줄께!"><i class="icon icon-cardiogram-white"><span class="blind">팝업 열기</span></i></button></li>' +
         '<li><button type="button" data-pop="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
         '<li><button type="button" data-pop="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
@@ -111,9 +100,8 @@ function grm () {
     // visual-spot
     $('.visual-spot').append(
         '<div class="spot-inner">' +
-        '<div></div>' +
         '<div class="bg-area">' +
-        '<button type="button" class="visual-toggle toggle-switch" data-tooltip="테마 스위치!!"></button>' +
+        /*'<button type="button" class="visual-toggle toggle-switch" data-tooltip="테마 스위치!!"></button>' +*/
         '</div>' +
         '</div>' +
         '<div class="full-event-area">' +
