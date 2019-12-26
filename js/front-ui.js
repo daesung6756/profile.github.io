@@ -1,13 +1,7 @@
 var UI = {
     init : function(){
-        this.tableColDraw('.intro-tbl-col', colOption1, rowData1);
-        this.tableAni('.tbl-col', 'ani-slide-down-up');
-        this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
-        this.historyLogDraw(historyLog);
-        this.moreText('.feedback', '22');
-        this.patOnTheBack('.love-btn',encouragement );
-
         this.tabs();
+        this.lampDraw();
         this.sectionToggleSwitchEvent();
         this.tooltip();
         this.headetStickyBar();
@@ -16,6 +10,14 @@ var UI = {
         this.visualMouseClickEvent();
         this.gnbListDraw();
         this.popup();
+
+
+        // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
+        // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
+        this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
+        this.historyLogDraw(historyLog);
+        this.moreText('.feedback', '22');
+        this.patOnTheBack('.love-btn',encouragement );
     },
     tableColDraw: function(wrap, cols, rows){
         if(cols && rows) {
@@ -215,6 +217,23 @@ var UI = {
             $(el).append('<p class="question">' + value.question + '</p><p class="answer">' + value.answer + '</p>')
         });
 
+    },
+    lampDraw: function() {
+        var sectionInnerGroup = [];
+
+        $('.section .section-inner').each(function(key, value){
+            sectionInnerGroup.push($(this));
+        });
+
+        $.each(sectionInnerGroup, function(){
+            $(this).append(
+            '<div class="blink-event-set">' +
+                '<span class="bim box-blink-ani"></span>' +
+                '<span class="lamp"></span>' +
+                '<span class="light box-blink-ani box-shadow-ani"></span>' +
+                '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
+            '</div>');
+        });
     },
     tableAni : function (tname, aname){
         var $tableTr = $(tname +' tbody tr'),
@@ -554,8 +573,6 @@ var UI = {
     }
 };
 
-var $aniEvent = false;
-var $themeOncheck = false;
 //ready
 $(function(){
     UI.init();
@@ -563,15 +580,18 @@ $(function(){
         $('.visual-toggle').click();
     }
 });
+
 //scroll
 $(window).on('scroll', function(){
     UI.headetStickyBar();
     UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show");
 });
+
 //resize
 $(window).on('resize', function(){
     UI.tooltip();
 });
+
 //event
 $(document).on('click', '.scroll-floating button', function(e){
     e.preventDefault();
