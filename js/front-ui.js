@@ -630,9 +630,6 @@ var UI = {
                 }
             });
         });
-
-        console.log($utilGroup);
-
     }
 };
 

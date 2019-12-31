@@ -33,6 +33,10 @@ var gnbList = [
         name:"It 용어 번역 검색",
         url:'ittt.html'
     },
+    {
+        name:"웹 접근성 정보",
+        url:'web-accessibility.html'
+    },
 ];
 
 //업무 내역
