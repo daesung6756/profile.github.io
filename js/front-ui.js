@@ -78,7 +78,7 @@ var UI = {
                         if (dt['key'] === 'ths') {
                             $(makeTr).append('<th scope="row" style="text-align:' + dt['align'] + ';vertical-align:' + dt['valign'] + '">' + row[dt['key']] + '</th>');
                         } else {
-                            $(makeTr).append('<td style=text-align:' + dt['align'] + ';vertical-align:' + dt['valign'] + '">' + row[dt['key']] + '</td>');
+                            $(makeTr).append('<td style=text-align:' + dt['align'] + ';vertical-align:' + dt['valign'] + '>' + row[dt['key']] + '</td>');
                         }
                     });
 
@@ -117,7 +117,7 @@ var UI = {
             var $count;
             var $el;
 
-            if (parseInt($getYears.split(".")) !== parseInt($years)) {
+            if (parseInt($getYears.split("~")[1].split(".")[0]) !== parseInt($years)) {
                 $el = $('.photo-list.before-log');
                 $beforeLog.text('before (' + $nArray.length + ')');
                 $count = $bMax--;
@@ -127,7 +127,7 @@ var UI = {
                 $count = $aMax--;
             }
 
-            var $info =
+            var $info1 =
                 '<dl class="info">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
@@ -143,6 +143,23 @@ var UI = {
                 '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
                 '<dd class="url"><a href="' + value.url + '" target="_blank" title="' + value.url + ' 바로가기">사이트 바로가기</a></dd>' +
                 '</dl>';
+
+            var $info2 =
+                '<dl class="info">' +
+                '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
+                '<dd class="type">' + value.type + '</dd>' +
+                '<dd class="date">' + value.date + '</dd>' +
+                '<dd class="agency">' + value.agency + '</dd>' +
+                '<dd class="customer">' + value.customer + '</dd>' +
+                '<dd class="position">' + value.position + '</dd>' +
+                '<dd class="process">' + value.process + '</dd>' +
+                '<dd class="language">' + value.language + '</dd>' +
+                '<dd class="tool">' + value.tool + '</dd>' +
+                '<dd class="support">' + value.support + '</dd>' +
+                '<dd class="description"><p>' + value.description + '</p></dd>' +
+                '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
+                '</dl>';
+
             var $pic1 = '<div class="pic">' +
                 '<span class="item case1" style="background-image:url(' + $pc + ');"></span>' +
                 '<span class="item case2"></span>' +
@@ -169,16 +186,22 @@ var UI = {
                 '<span class="item case3"></span>' +
                 '</div>';
 
-            if($pc !== '' && $mobile !== '' && $tablet === '') {
-                $el.append('<li>' + $pic1 + $info + '</li>');
-            } else if($pc !== '' && $tablet === '' && $mobile === '') {
-                $el.append('<li>' + $pic2 + $info + '</li>');
-            } else if($pc === '' && $tablet === '' && $mobile !== '') {
-                $el.append('<li>' + $pic3 + $info + '</li>');
-            } else if ($pc !== '' && $tablet !== '' && $mobile !== ''){
-                $el.append('<li>' + $pic4 + $info + '</li>');
+            if(value.url !== ''){
+                $infos = $info1;
             } else {
-                $el.append('<li>' + $pic5 + $info + '</li>');
+                $infos = $info2;
+            }
+
+            if($pc !== '' && $mobile !== '' && $tablet === '') {
+                $el.append('<li>' + $pic1 + $infos + '</li>');
+            } else if($pc !== '' && $tablet === '' && $mobile === '') {
+                $el.append('<li>' + $pic2 + $infos + '</li>');
+            } else if($pc === '' && $tablet === '' && $mobile !== '') {
+                $el.append('<li>' + $pic3 + $infos + '</li>');
+            } else if ($pc !== '' && $tablet !== '' && $mobile !== ''){
+                $el.append('<li>' + $pic4 + $infos + '</li>');
+            } else {
+                $el.append('<li>' + $pic5 + $infos + '</li>');
             }
 
         });

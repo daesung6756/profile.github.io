@@ -49,7 +49,7 @@ var historyLog = [
         ],
         type : '운영',
         name:'T World Direct 프로젝트',
-        date:'2019.1 ~ 2019.12',
+        date:'2018.12 ~ 2020.1',
         agency:'이모션 글로벌',
         customer:'SKT',
         position: 'PA (PL:1명, PA:2명)',
@@ -57,7 +57,7 @@ var historyLog = [
         language:'Html, Css, jQuery',
         tool: 'Svn, Git',
         support :'PC는 ie 9, 기타 다른 브라우져 최신버전, Mobile은 최신 버전 브라우저.',
-        description:'Pc web, Mobile web, 부분 반응형 페이지등이 있으며, 기획자 10여명, 디자이너 6~7명, 퍼블리셔 3명이 투입된 운영 프로젝트이다. 투입 당시 As-is 리뉴얼 작업이 진행 되는 중이었으며, As-is사이트를 잠시 운영 하다가 2월~3월 쯤에 To-be 사이트를 운영 하기 시작하였다.',
+        description:'Pc web, Mobile web, 부분 반응형 페이지등이 있으며, 기획자 10여명, 디자이너 6~7명, 퍼블리셔 3명이 투입된 운영 프로젝트이다. 투입 당시 As-is 리뉴얼 작업이 진행 되는 중이었으며, As-is사이트를 잠시 운영 하다가 2월~3월 쯤에 To-be 사이트를 운영 하기 시작하였다. 과장급들이 마케터 수준의 업무 역량을 가져, 밑에 들어 오는 신입들도 다운그레이드 될 판',
         feedback:'이미 3년을 재계약 하였고, 그동안 퍼블리싱 파트만 외주 업체가 진행 하였다. 올해부터 내부 인력으로 교체 되었는데, 오랜시간 굳어져 있어서 작업방식이 변화가 필요해 보이지만 사실상 누가 나서서 고객사와 부딪치겠는가... 이해는 되지만 결국 불공정한 입장은 변함 없을 것 같다. 이곳은 고객사와 불통이 심각하다.',
         url:'https://shop.tworld.co.kr/shop/main',
         rate  : 4
@@ -162,16 +162,16 @@ var historyLog = [
         language:'Html, css, jQuery',
         tool:'FTP',
         support :'모바일 최신 브라우저',
-        description:'' ,
-        feedback:'',
+        description:'제안용으로 제작한 사이트이며 마이크로사이트 수준의 페이지양과 인터렉션이 과도하게 들어갔다. 보통 프로토타입 수준으로 통 이미지에 페이지를 넘기는 방식으로 제작하는데 비해, PL이 욕심을 내어 불필요하게 코퀄리티가 되었다. 결국 수주가 안되었던 것으로 기억이 난다. 현재 산출물이 남아 있지 않다. ' ,
+        feedback:'이전부터 회사 네임벨류와 규모에 비해 체계가 없다는게 느껴졌고, 제안 작업을 수차례 진행하면서, PM PL의 중요성을 다시 한번 느끼게 되었던 작업이다. 웹 앱 등 관련 지식이 전혀 없는 사람이 머리가 되면, 그게 과연 정상적인 프로젝트인가...',
         url:'',
         rate  : 4
     },
     {
         img: [
-            '',
-            '',
-            '',
+            'images/list/yc-pc.png',
+            'images/list/yc-tablet.png',
+            'images/list/yc-mobile.png',
         ],
         type : '구축 지원',
         name:'법무법인 율촌 프로젝트',
@@ -182,9 +182,9 @@ var historyLog = [
         process:'하자 보수' ,
         language:'Html, css, jQuery',
         tool:'FTP',
-        support :'',
-        description:'' ,
-        feedback:'',
+        support :'최신 브라우저',
+        description:'이 프로젝트는 말도 많고 탈도 많았던 프로젝트이다. 변호사 집단이라 소송까지 간다면 이길 수가 없다. 그래서 거의 상대방의 요구를 들어 줄 수 밖에 없었다. 수없이 갈리고, 바꾸고, 회사가 한 1년 정도 거의 무료 봉사를 했던 프로젝트이다. 애초에 이런 프로젝트는 들이지 말았어야 하는데...  당시 정상적으로 투입 되어있던 분들이 클라이언트나 내부적 갈등으로 많이 힘들어 했었던 기억이 난다.' ,
+        feedback:'뭐 무슨 프로젝트든 클라이언트의 요구를 들어 줘야 하는 입장이라는 사실을 알고 있다. 하지만 일을 받아 왔으면 일정도 받아와야 하는데, 일만 받아오면 내부적으로 그 사람의 무지를 다 떠안고 가야 한다. 클라이언트도 클라이언트지만 사실 내부 사람들과 강등이 많았던 프로제트였다. 일을 서로 어렵게 하기 시합이라도 하듯이...',
         url:'https://www.yulchon.com/ko/main/main.do',
         rate  : 4
     },
@@ -290,7 +290,7 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'https://www.pizzahut.co.kr/',
+        url:'',
         rate  : 4
     },
     {
@@ -332,14 +332,14 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
             '',
             '',
-            '',
+            'images/list/999tv-admin-mobile.jpg',
         ],
         type : '구축 및 운영 유지 보수',
         name:'자사 메인사이트 모바일용 Admin 구축 프로젝트',
@@ -353,12 +353,12 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
-            '',
+            'images/list/999tv-2-pc.png',
             '',
             '',
         ],
@@ -374,12 +374,12 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
-            '',
+            'images/list/lawcall-pc.jpg',
             '',
             '',
         ],
@@ -395,12 +395,12 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
-            '',
+            'images/list/unse999-2-pc.jpg',
             '',
             '',
         ],
@@ -416,12 +416,12 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
-            '',
+            'images/list/unse999-pc.jpg',
             '',
             '',
         ],
@@ -437,12 +437,12 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
     {
         img: [
-            '',
+            'images/list/999tv-pc.jpg',
             '',
             '',
         ],
@@ -458,7 +458,7 @@ var historyLog = [
         support :'ie9~ 기타 다른 최신 브라우저',
         description:'' ,
         feedback:'',
-        url:'javascript:void(0)',
+        url:'',
         rate  : 4
     },
 ];
