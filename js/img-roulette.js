@@ -1,5 +1,5 @@
 var makeInputArray = ["영화 관람권", "콤보 2천원 할인권", "팝콘(중) 교환권", "영화 2천원 할인권", "다음 기회에 꽝!", "음료(중) 교환권"];
-var roulette = {
+var rouletteImg = {
     init : function() {
         // this.drawArray(".output-rotate .roullet-inner", makeInputArray);
         this.startAnimation(makeInputArray);
@@ -32,7 +32,7 @@ var roulette = {
                 $outputInner.css({"transform": "rotate(" +  totalAngle + "deg)", "transition": "all 2.4s"});
 
                 setTimeout(function() {
-                    if($random < 31){
+                    if($random < 31 || $random > 331){
                         alert(array[1]);
                     } else if($random < 91) {
                         alert(array[0]);
@@ -47,17 +47,15 @@ var roulette = {
                     }
 
                     $play.attr('disabled', false);
-                    $play.text("초기화");
+                    $play.text("재시작");
 
                 }, 2400);
 
             }
         });
     }
-
-
 };
 
 $(function() {
-    roulette.init();
+    rouletteImg.init();
 });

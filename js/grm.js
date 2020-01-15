@@ -54,6 +54,24 @@ function grm () {
         '</div>' +
         '</div>' +
         '</div>' +
+        '<!-- 공유하기 풀 사이즈-->' +
+        '<div class="popup-wrap is-dim wide none-foot" id="share">' +
+        '<div class="pop">' +
+        '<div class="pop-head">' +
+        '<h2 class="pop-tit">Share</h2>' +
+        '<button type="button" data-pop-close="share" class="x-close"><i class="icon icon-x-circle-white"><span class="blind">팝업 닫기</span></i></button>' +
+        '</div>' +
+        '<div class="pop-content">' +
+        '<div class="content-inner">' +
+        '<div class="btn-area tac">' +
+        '<button type="button" data-share="facebook" title="Facebook 공유하기"><i class="icon icon-sns-facebook"><span class="blind">facebook</span></i></button>' +
+        '<button type="button" data-share="twitter"  title="Twitter 공유하기"><i class="icon icon-sns-twitter"><span class="blind">twitter</span></i></button>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
         '<!-- util 기본 팝업 풀사이즈 -->' +
         '<div class="popup-wrap is-dim wide" id="util">' +
         '<div class="pop">' +
@@ -64,6 +82,7 @@ function grm () {
         '<div class="pop-content">' +
         '<div class="util">' +
         '<ul class="nav-list">' +
+        '<li><a href="" data-pop="share">공유하기</a></li>' +
         '<li><a href="" class="love-event">응원 메세지</a></li>' +
         '<li><a href="" data-pop="search">작업내역 검색</a></li>' +
         '</ul>' +
@@ -92,6 +111,7 @@ function grm () {
         '<li><button type="button" class="visual-toggle" title="테마 열기/닫기"><i class="icon icon-switch-white-off"><span class="blind">테마 열기/닫기</span></i></button></li>' +
         '<li><button type="button" class="love-btn" title="위로 해줄께!"><i class="icon icon-cardiogram-white"><span class="blind">팝업 열기</span></i></button></li>' +
         '<li><button type="button" data-pop="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
+        '<li><button type="button" data-pop="share" title="현재 페이지 공유하기"><i class="icon icon-sns-share-white"><span class="blind">Share 열기</span></i></button></li>' +
         '<li><button type="button" data-pop="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
         '</ul>' +
         '</div>' +

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 모음</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/roulette.css">
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/grm.js"></script>
+    <script src="js/gdata.js"></script>
+    <script src="js/front-ui-min.js"></script>
+    <script src="js/img-roulette.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- header -->
+    <div class="header"></div>
+    <!-- //header -->
+
+    <!-- visual spot -->
+    <div class="visual-spot"></div>
+    <!-- //visual spot -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+            <!-- section 1 -->
+            <div class="section">
+                <div class="section-inner">
+
+                    <h3 class="tit box-blink-ani">Lunch Roulette</h3>
+
+                    <div class="article-wrap mt50 tac">
+                        <div class="output-rotate"><div class="roullet-inner"><img src="images/roulette-bg.png" alt=""></div></div>
+                        <div>
+                            <button type="button" class="play-btn">시작</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section 1 -->
+            <div class="section">
+                <div class="section-inner">
+
+                    <h3 class="tit box-blink-ani">SNS Share</h3>
+
+                    <div class="article-wrap mt50 tac">
+                        <button type="button" data-share="facebook" title="페이스북 공유">facebook</button>
+                        <button type="button" data-share="twitter" title="트위터 공유">twitter</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- section 1 -->
+            <div class="section">
+                <div class="section-inner">
+
+                    <h3 class="tit box-blink-ani">Custom Step number input</h3>
+
+                    <div class="article-wrap mt50 tac">
+                        <div style="text-align:left;background:#ddd;">
+                            <div class="number-input">
+                                <button type="button"></button>
+                                <input class="quantity" name="quantity" value="2" type="number" min="2" max="8" readonly>
+                                <button class="plus"></button>
+                            </div>
+                            <button type="button" onclick="UI.drawClipPath( event ,'.output-test','quantity');">변경</button>
+                            <span>룰렛</span>
+                        </div>
+                        <div class="output-test">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--// container -->
+
+    <!-- footer -->
+    <div class="footer"></div>
+    <!-- //footer -->
+
+    <style>
+        .output-test {position:relative;width:400px;min-height:400px;margin:0 auto;}
+        .output-test .r-fill{position: absolute;top: 0;left: 0;width: 400px;height: 400px;border-radius: 50%;}
+        .output-test .r-fill::after {content: "";position: absolute;top: 0;left: 0;width: 400px;height: 400px;}
+        .output-test .r-fill input {position:absolute;}
+
+        .output-test .clip-2 {clip: rect(0, 400px, 400px, 200px)}
+        .output-test .clip-2::after{clip: rect(0, 400px, 400px, 200px);}
+        .output-test .clip-2:nth-child(1){background: #dd5800;transform: rotate(180deg)}
+        .output-test .clip-2:nth-child(2){background: #586edd;transform: rotate(360deg)}
+
+        .output-test .text {position:absolute;width:400px;height:400px;padding-top:40px;}
+        .output-test .text-2:nth-child(1) {transform: rotate(45deg);}
+        .output-test .text-2:nth-child(2) {transform: rotate(270deg);}
+    </style>
+    <script>
+        UI.stepCustomNumberInput('.number-input' ,'quantity');
+    </script>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

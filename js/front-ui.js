@@ -13,6 +13,7 @@ var UI = {
         this.gnbPathCheck();
         this.windowPathCheck();
         this.utilControlEvent();
+        this.snsShare();
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -653,10 +654,93 @@ var UI = {
                 }
             });
         });
+    },
+    snsShare : function(){
+        var shareGroup = [];
+
+        $('[data-share]').each(function(){
+            if($.inArray($(this).data('share'), shareGroup > -1)){
+                shareGroup.push($(this).data('share'))
+            }
+        });
+        $.each(shareGroup, function(key, value) {
+            var $btn = $("[data-share=" + value + "]");
+
+            $btn.on('click', function(){
+                UI.sendSns(value , exhibitionTitle );
+            });
+        })
+    },
+    sendSns : function(sns, txt){
+        var o;
+        var _location = window.location.href;
+        var _url = encodeURIComponent(_location);
+        var _txt = encodeURIComponent(txt);
+        var _br  = encodeURIComponent('\r\n');
+
+        switch(sns) {
+            case 'facebook':
+                o = {
+                    method:'popup',
+                    url:'http://www.facebook.com/sharer/sharer.php?u=' + _url
+                };
+                break;
+
+            case 'twitter':
+                o = {
+                    method:'popup',
+                    url:'http://twitter.com/intent/tweet?text=' + _txt + '&url=' + _url
+                };
+                break;
+
+            default:
+                alert('지원하지 않는 SNS입니다.');
+                return false;
+        }
+
+        switch(o.method) {
+            case 'popup':
+                window.open(o.url,"현재페이지",'width=600,height=400, menubar=no, status=no, toolbar=no');
+                break;
+        }
+    },
+    stepCustomNumberInput : function (el, name) {
+        var $el = $(el),
+            $number = $('input[name=' + name + ']'),
+            $btn = $el.children('button');
+
+        $btn.each(function () {
+            console.log($number);
+            $(this).on('click', function() {
+                if($(this).hasClass('plus')){
+                    $number[0].stepUp();
+                } else {
+                    $number[0].stepDown();
+                }
+            });
+        })
+    },
+    drawClipPath : function(event, el, name){
+        var $el = $(el),
+            $value = $("input[name=" + name + "]").val(),
+            $valueGroup = new Array(parseInt($value)).fill().map(function(value, index){
+                return index + 1;
+            }).slice(0, 9),
+            $length = $valueGroup.length,
+            $valueClass = String("" + $length);
+
+        console.log(event.target);
+        $.each($valueGroup, function(key, value) {
+            $el.append('<div class="r-fill clip-' + $length + '"></div>');
+        });
+        $.each($valueGroup, function(key, value) {
+            $el.append('<div class="text text-' + $length + '"><input type="text" placeholder="입력하세요."></div>');
+        });
     }
 };
 
 var checkTheme = false;
+var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지 제목
 
 //ready
 $(function(){
@@ -664,7 +748,7 @@ $(function(){
     UI.init();
 
     if($themeOncheck){
-        $('.visual-toggle').click();
+        $('.visual-toggle').trigger("click");
     }
 });
 
