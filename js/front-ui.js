@@ -473,6 +473,14 @@ var UI = {
                 } else {
                     return false;
                 }
+
+                switch(value){
+                    case 'share':
+                        $('#' + value).find('.get-url-input').val(location.href);
+                        break;
+                    default:
+                        break;
+                }
             });
 
             $close.on('click', function(){
@@ -736,6 +744,15 @@ var UI = {
         $.each($valueGroup, function(key, value) {
             $el.append('<div class="text text-' + $length + '"><input type="text" placeholder="입력하세요."></div>');
         });
+    },
+    getBoardCopy : function(e, className) {
+        e.preventDefault();
+
+        var $this = $(e.target),
+            $input = $(className);
+
+        $input.select();
+        document.execCommand("copy");
     }
 };
 

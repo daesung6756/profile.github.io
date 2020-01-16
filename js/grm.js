@@ -64,8 +64,12 @@ function grm () {
         '<div class="pop-content">' +
         '<div class="content-inner">' +
         '<div class="btn-area tac">' +
-        '<button type="button" data-share="facebook" title="Facebook 공유하기"><i class="icon icon-sns-facebook"><span class="blind">facebook</span></i></button>' +
-        '<button type="button" data-share="twitter"  title="Twitter 공유하기"><i class="icon icon-sns-twitter"><span class="blind">twitter</span></i></button>' +
+        '<button type="button" data-share="facebook" class="share-btn" title="Facebook 공유하기"><i class="icon icon-sns-facebook"><span class="blind">facebook</span></i></button>' +
+        '<button type="button" data-share="twitter"  class="share-btn" title="Twitter 공유하기"><i class="icon icon-sns-twitter"><span class="blind">twitter</span></i></button>' +
+        '</div>' +
+        '<div class="form-set share-url">' +
+        '<input type="text" class="get-url-input" readonly>' +
+        '<button type="button" onclick="UI.getBoardCopy( event ,`.get-url-input`);">복사하기</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
