@@ -125,7 +125,10 @@ function grm () {
     $('.visual-spot').append(
         '<div class="spot-inner">' +
         '<div class="bg-area">' +
-        /*'<button type="button" class="visual-toggle toggle-switch" data-tooltip="테마 스위치!!"></button>' +*/
+        '<div class="desc-group">' +
+        '<h1>The CATS</h1>' +
+        '<p class="desc">Daesung Lee<br>Profile Website</p>' +
+        '</div>' +
         '</div>' +
         '</div>' +
         '<div class="full-event-area">' +

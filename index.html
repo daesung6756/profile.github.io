@@ -2,16 +2,13 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Info</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <script src="js/jquery-3.4.0.min.js"></script>
-    <script src="js/grm.js"></script>
-    <script src="js/gdata.js"></script>
-    <script src="js/profile.js"></script>
-    <script src="js/front-ui-min.js"></script>
+    <script src="js/include.js"></script>
+    <script>
+        include.head.title("Daesung.lee Info");
+        include.head.meta();
+        include.head.styles();
+        include.head.scripts();
+    </script>
 </head>
 <body>
 <div class="wrap">
@@ -76,6 +73,9 @@
     <!-- footer -->
     <div class="footer"></div>
     <!-- //footer -->
+<script>
+    include.footer.scripts();
+</script>
 </div>
 </body>
 </html>
