@@ -17,7 +17,7 @@ var include = {
             document.write('<script src="js/grm.js"></script>');
             document.write('<script src="js/gdata.js"></script>');
             document.write('<script src="js/profile.js"></script>');
-            document.write('<script src="js/front-ui-min.js"></script>');
+            document.write('<script src="js/front-ui.js"></script>');
         }
     },
     footer : {

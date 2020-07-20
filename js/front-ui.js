@@ -129,7 +129,7 @@ var UI = {
             }
 
             var $info1 =
-                '<dl class="info">' +
+                '<dl class="info revealOnScroll" data-animation="fadeInLeft" data-timeout="400">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
@@ -146,7 +146,7 @@ var UI = {
                 '</dl>';
 
             var $info2 =
-                '<dl class="info">' +
+                '<dl class="info revealOnScroll"  data-animation="fadeInLeft" data-timeout="400">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
@@ -161,30 +161,30 @@ var UI = {
                 '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
                 '</dl>';
 
-            var $pic1 = '<div class="pic">' +
-                '<span class="item case1" style="background-image:url(' + $pc + ');"></span>' +
+            var $pic1 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" style="background-image:url(' + $pc + ');" data-pop-open="imgPopup" data-pop-src="'+ $pc +'"></span>' +
                 '<span class="item case2"></span>' +
-                '<span class="item case3" style="background-image:url(' + $mobile + ');"></span>' +
+                '<span class="item case3" style="background-image:url(' + $mobile + ');" data-pop-open="imgPopup" data-pop-src="'+ $mobile +'"></span>' +
                 '</div>';
-            var $pic2 = '<div class="pic">' +
-                '<span class="item case1" style="background-image:url(' + $pc + ');"></span>' +
-                '<span class="item case2"></span>' +
-                '<span class="item case3"></span>' +
+            var $pic2 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" style="background-image:url(' + $pc + ');" data-pop-open="imgPopup" data-pop-src="'+ $pc +'"></span>' +
+                '<span class="item case2" data-pop-open="imgPopup"></span>' +
+                '<span class="item case3" data-pop-open="imgPopup"></span>' +
                 '</div>';
-            var $pic3 = '<div class="pic">' +
-                '<span class="item case1"></span>' +
-                '<span class="item case2"></span>' +
-                '<span class="item case3" style="background-image:url(' + $mobile + ');"></span>' +
+            var $pic3 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400" >' +
+                '<span class="item case1" data-pop-open="imgPopup"></span>' +
+                '<span class="item case2" data-pop-open="imgPopup"></span>' +
+                '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
                 '</div>';
-            var $pic4 = '<div class="pic">' +
-                '<span class="item case1" style="background-image:url(' + $pc + ');"></span>' +
-                '<span class="item case2" style="background-image:url(' + $tablet + ');"></span>' +
-                '<span class="item case3" style="background-image:url(' + $mobile + ');"></span>' +
+            var $pic4 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" data-pop-open="imgPopup" style="background-image:url(' + $pc + ');" data-pop-src="'+ $pc +'"></span>' +
+                '<span class="item case2" data-pop-open="imgPopup" style="background-image:url(' + $tablet + ');" data-pop-src="'+ $tablet +'"></span>' +
+                '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
                 '</div>';
-            var $pic5 = '<div class="pic">' +
-                '<span class="item case1"></span>' +
-                '<span class="item case2"></span>' +
-                '<span class="item case3"></span>' +
+            var $pic5 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" data-pop-open="imgPopup" ></span>' +
+                '<span class="item case2" data-pop-open="imgPopup" ></span>' +
+                '<span class="item case3" data-pop-open="imgPopup" ></span>' +
                 '</div>';
 
             if(value.url !== ''){
@@ -459,19 +459,29 @@ var UI = {
         });
 
         $.each(popGroup, function(key, value){
-            var $open = $("[data-pop=" + value +"]");
+            var $popup = $("[data-pop=" + value +"]");
+            var $open = $("[data-pop-open=" + value +"]");
             var $close = $("[data-pop-close=" + value +"]");
-            var $target = $("#" + value);
             var $body = $("body");
 
             $open.on('click', function(){
+                console.log(1);
                 $body.addClass("is-lock");
-                $target.addClass('is-show');
+                $popup.addClass('is-show');
 
-                if($target.hasClass('is-dim')){
-                    $target.append("<div class='dimmed'></div>")
-                } else {
-                    return false;
+                if($popup.hasClass('is-dim')){
+                    $popup.append("<div class='dimmed'></div>")
+                }
+
+                if($open.data("pop-src")){
+
+                    if($popup.find(".pop-load-img")){
+                        $popup.find(".pop-load-img").remove();
+                    }
+
+                    $popup.find(".pop-content").append(
+                        '<div class="pop-load-img"><div class="inner"><img src="' + $(this).data("pop-src") + '" alt=""></div></div>'
+                    )
                 }
 
                 switch(value){
@@ -485,8 +495,8 @@ var UI = {
 
             $close.on('click', function(){
                 $body.removeClass("is-lock");
-                $target.removeClass('is-show');
-                $target.children('.dimmed').remove();
+                $popup.removeClass('is-show');
+                $popup.children('.dimmed').remove();
             });
         })
 

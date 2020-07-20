@@ -38,7 +38,11 @@ var gnbList = [
         url:'web-accessibility.html'
     },
     {
-        name:"이벤트 모음",
+        name:"스크린 정보",
+        url:'screen-size.html'
+    },
+    {
+        name:"Code Snippet",
         url:'event-group.html'
     },
 ];
@@ -68,9 +72,9 @@ var historyLog = [
     },
     {
         img: [
-            'images/list/hankook-pc.jpg',
-            'images/list/hankook-tablet.jpg',
-            'images/list/hankook-mobile.jpg',
+            'images/list/hankook-brand-page-renewal-pc.jpg',
+            '',
+            'images/list/hankook-brand-page-renewal-mobile.jpg',
         ],
         type : '단기 리뉴얼 프로젝트',
         name:'한국타이어 한국 사이트 브랜드 페이지 리뉴얼',

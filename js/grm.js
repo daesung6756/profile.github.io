@@ -9,7 +9,7 @@ function grm () {
         '</div>' +
         '</div>' + */
         '<!-- Gnb 기본 팝업 풀사이즈 -->' +
-        '<div class="popup-wrap is-dim wide" id="gnb">' +
+        '<div class="popup-wrap is-dim wide" data-pop="gnb">' +
         '<div class="pop">' +
         '<div class="pop-head">' +
         '<h2 class="pop-tit">GNB</h2>' +
@@ -26,7 +26,7 @@ function grm () {
         '</div>' +
         '</div>' +
         '<!-- 검색창 팝업 풀 사이즈-->' +
-        '<div class="popup-wrap is-dim wide none-foot" id="search">' +
+        '<div class="popup-wrap is-dim wide none-foot" data-pop="serach">' +
         '<div class="pop">' +
         '<div class="pop-head">' +
         '<h2 class="pop-tit">History Log Search</h2>' +
@@ -55,7 +55,7 @@ function grm () {
         '</div>' +
         '</div>' +
         '<!-- 공유하기 풀 사이즈-->' +
-        '<div class="popup-wrap is-dim wide none-foot" id="share">' +
+        '<div class="popup-wrap is-dim wide none-foot" data-pop="share">' +
         '<div class="pop">' +
         '<div class="pop-head">' +
         '<h2 class="pop-tit">Share</h2>' +
@@ -77,7 +77,7 @@ function grm () {
         '</div>' +
         '</div>' +
         '<!-- util 기본 팝업 풀사이즈 -->' +
-        '<div class="popup-wrap is-dim wide" id="util">' +
+        '<div class="popup-wrap is-dim wide" data-pop="util">' +
         '<div class="pop">' +
         '<div class="pop-head">' +
         '<h2 class="pop-tit">Util</h2>' +
@@ -106,7 +106,7 @@ function grm () {
     // header
     $(".header").append(
         '<div class="inner">' +
-        '<div class="in-left"><button type="button" data-pop="gnb"><i class="icon icon-nav-hambuger"><span class="blind">GNB 창 열기</span></i></button></div>' +
+        '<div class="in-left"><button type="button" data-pop-open="gnb"><i class="icon icon-nav-hambuger"><span class="blind">GNB 창 열기</span></i></button></div>' +
         '<div class="in-center">' +
         '<h1 class="tac"><a href="index.html">Home</a></h1>' +
         '</div>' +
@@ -114,9 +114,9 @@ function grm () {
         '<ul class="util">' +
         '<li><button type="button" class="visual-toggle" title="테마 열기/닫기"><i class="icon icon-switch-white-off"><span class="blind">테마 열기/닫기</span></i></button></li>' +
         '<li><button type="button" class="love-btn" title="위로 해줄께!"><i class="icon icon-cardiogram-white"><span class="blind">팝업 열기</span></i></button></li>' +
-        '<li><button type="button" data-pop="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
-        '<li><button type="button" data-pop="share" title="현재 페이지 공유하기"><i class="icon icon-sns-share-white"><span class="blind">Share 열기</span></i></button></li>' +
-        '<li><button type="button" data-pop="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
+        '<li><button type="button" data-pop-open="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
+        '<li><button type="button" data-pop-open="share" title="현재 페이지 공유하기"><i class="icon icon-sns-share-white"><span class="blind">Share 열기</span></i></button></li>' +
+        '<li><button type="button" data-pop-open="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
         '</ul>' +
         '</div>' +
         '</div>'

@@ -11,6 +11,7 @@
     </script>
 </head>
 <body>
+
 <div class="wrap">
 
     <!-- header -->
@@ -50,9 +51,30 @@
     <!-- footer -->
     <div class="footer"></div>
     <!-- //footer -->
+
 </div>
+
+
 <script>
     include.footer.scripts();
+    $(window).on("load",function() {
+        UI.popup();
+    })
 </script>
+
+<!-- img gallery popup -->
+<div class="popup-wrap is-dim wide" data-pop="imgPopup">
+    <div class="pop">
+        <div class="pop-head">
+            <h2 class="pop-tit">이미지 팝업</h2>
+            <button type="button" data-pop-close="imgPopup" class="x-close"><i class="icon icon-x-circle-white"><span class="blind">팝업 닫기</span></i></button>
+        </div>
+        <div class="pop-content"></div>
+        <div class="pop-foot">
+            <div class="foot-inner"></div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
