@@ -27,15 +27,15 @@ img {display:block;max-width:100%;}
 .header .inner .util > li:nth-child(4){display:none;}
 .header .inner .util > li+ li:after {content:'';position:absolute;top:50%;left:0;width:1px;height:14px;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);background:rgba(255,255,255,.3)}
 
-.header.is-fixed {position:fixed;background:#1c1c1c;-webkit-transition:height .3s, background .3s;-o-transition:height .3s, background .3s;transition:height .3s, background .3s}
-.header.is-active {height:40px;}
+.header.is-fixed {position:fixed;}
+.header.is-active {height:40px;background:#1c1c1c;-webkit-transition:height .3s, background .3s;-o-transition:height .3s, background .3s;transition:height .3s, background .3s}
 .header.is-active .inner h1 {color:rgba(255,255,255,.6);font-size:14px;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 .header.is-active .inner button {width:40px;height:40px;}
 .header.is-active .inner button .icon {width:20px;height:20px;}
 .header.is-active .inner .in-center {padding:0 80px;height:40px;line-height:40px;}
 
 /* visual-spot */
-.visual-spot {position:relative;background-color:#000;overflow:hidden;-webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s;}
+.visual-spot {position:relative;background-color:#000;overflow:hidden;}
 .visual-spot .spot-inner {position:relative;text-align:center;overflow:hidden;}
 .visual-spot .bg-area {position:relative;width:100%;height:350px;text-align:center;padding-top:30px;-webkit-transition: height .3s;-o-transition: height .3s;transition: height .3s;max-width: 1024px;margin: 0 auto;}
 .visual-spot .bg-area .desc-group {position:absolute;top:50%;left:50%;margin-left:80px;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%)}
@@ -79,15 +79,18 @@ img {display:block;max-width:100%;}
 
 /* xmas theme */
 body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
-body.theme .header {background:rgba(127, 160, 61, 1); -webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
+body.theme .header {background:rgba(127, 160, 61, 0); -webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
+body.theme .header.is-fixed {background: rgba(0,0,0, .2);-webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
+body.theme .header.is-active {background:rgba(127, 160, 61, 1);-webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
 body.theme .overlay table.tbl-col th {border-top: 1px solid #7d3226;border-bottom: 1px solid #7d3226;background: #7d3226;}
 body.theme .overlay .intro-tbl-col {border: 3px solid #7d3226;}
 body.theme .overlay .tbl-event-btn {background: #f5513c;}
 body.theme .overlay .intro-tbl-col a {color: #303030;}
 body.theme .overlay table.tbl-col .num-box {border:1px solid #7d3226;background: #7d3226;}
 body.theme .overlay table.tbl-col th + th {border-left: 1px solid #7d3226;}
-body.theme .visual-spot {background:#333 ;-webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s;}
-body.theme .visual-spot.is-on .spot-inner{background:url("../images/spot-bg.png") right bottom no-repeat;background-size:contain;}
+body.theme .visual-spot{background:#333;}
+body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;background:url("../images/window.png") right center no-repeat;background-size:cover;}
+body.theme .visual-spot .spot-inner .bg-area{position:relative;background:url("../images/sky-bg.jpg") center center no-repeat;background-size:cover;background-attachment: fixed}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
 body.theme .visual-spot.is-on .desc-group .desc {opacity:1;color: #f9ffd1;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
 body.theme .section.is-on {background:rgb(72 72 72);}
@@ -96,7 +99,7 @@ body.theme .photo-list .info .name{color: #bf9e72;}
 body.theme .photo-list .info dd {color:#cac7b6}
 body.theme .photo-list .info dd:before {color:#ccc27d}
 body.theme .scroll-floating button{background: rgba(19, 103, 33, 1);}
-body.theme .footer {background:rgb(76, 74, 62)}
+body.theme .footer {background:rgb(53 53 53)}
 body.theme .footer .address-group > p {color:#9c9566}
 
 /* section */

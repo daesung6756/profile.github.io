@@ -26,7 +26,7 @@ function grm () {
         '</div>' +
         '</div>' +
         '<!-- 검색창 팝업 풀 사이즈-->' +
-        '<div class="popup-wrap is-dim wide none-foot" data-pop="serach">' +
+        '<div class="popup-wrap is-dim wide none-foot" data-pop="search">' +
         '<div class="pop">' +
         '<div class="pop-head">' +
         '<h2 class="pop-tit">History Log Search</h2>' +
@@ -125,6 +125,8 @@ function grm () {
     $('.visual-spot').append(
         '<div class="spot-inner">' +
         '<div class="bg-area">' +
+        '<div class="bg-box">' +
+        '</div>' +
         '<div class="desc-group">' +
         '<h1>The CATS</h1>' +
         '<p class="desc">Daesung Lee<br>Profile Website</p>' +

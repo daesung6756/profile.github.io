@@ -466,8 +466,7 @@ var UI = {
             var $body = $("body");
 
             $open.on('click', function(){
-                $body.addClass("is-lock");
-                $popup.addClass('is-show');
+
 
                 if($popup.hasClass('is-dim')){
                     $popup.append("<div class='dimmed'></div>")
@@ -483,13 +482,12 @@ var UI = {
                     )
                 }
 
-                switch(value){
-                    case 'share':
-                        $('#' + value).find('.get-url-input').val(location.href);
-                        break;
-                    default:
-                        break;
+                if($(this).data("pop") === "share"){
+                    $('#' + value).find('.get-url-input').val(location.href);
                 }
+
+                $body.addClass("is-lock");
+                $popup.addClass('is-show');
             });
 
             $close.on('click', function(){
