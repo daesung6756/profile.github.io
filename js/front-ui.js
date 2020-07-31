@@ -168,12 +168,12 @@ var UI = {
                 '</div>';
             var $pic2 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
                 '<span class="item case1" style="background-image:url(' + $pc + ');" data-pop-open="imgPopup" data-pop-src="'+ $pc +'"></span>' +
-                '<span class="item case2" data-pop-open="imgPopup"></span>' +
-                '<span class="item case3" data-pop-open="imgPopup"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3"></span>' +
                 '</div>';
             var $pic3 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400" >' +
-                '<span class="item case1" data-pop-open="imgPopup"></span>' +
-                '<span class="item case2" data-pop-open="imgPopup"></span>' +
+                '<span class="item case1"></span>' +
+                '<span class="item case2"></span>' +
                 '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
                 '</div>';
             var $pic4 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
@@ -182,9 +182,9 @@ var UI = {
                 '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
                 '</div>';
             var $pic5 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
-                '<span class="item case1" data-pop-open="imgPopup" ></span>' +
-                '<span class="item case2" data-pop-open="imgPopup" ></span>' +
-                '<span class="item case3" data-pop-open="imgPopup" ></span>' +
+                '<span class="item case1"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3"></span>' +
                 '</div>';
 
             if(value.url !== ''){
@@ -253,12 +253,13 @@ var UI = {
 
         $.each(sectionInnerGroup, function(){
             $(this).append(
+            '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
             '<div class="blink-event-set">' +
                 '<span class="bim box-blink-ani"></span>' +
                 '<span class="lamp"></span>' +
                 '<span class="light box-blink-ani box-shadow-ani"></span>' +
-                '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
             '</div>');
+
         });
     },
     tableAni : function (tname, aname){
@@ -465,7 +466,6 @@ var UI = {
             var $body = $("body");
 
             $open.on('click', function(){
-                console.log(1);
                 $body.addClass("is-lock");
                 $popup.addClass('is-show');
 
@@ -473,8 +473,7 @@ var UI = {
                     $popup.append("<div class='dimmed'></div>")
                 }
 
-                if($open.data("pop-src")){
-
+                if($(this).data("pop-src")){
                     if($popup.find(".pop-load-img")){
                         $popup.find(".pop-load-img").remove();
                     }

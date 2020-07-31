@@ -13,6 +13,7 @@ img {display:block;max-width:100%;}
 .header .inner h1 {color:rgba(255,255,255,.3);font-size:16px;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 .header .inner h1 a {color:inherit;font-size:inherit}
 .header .inner button {width:50px;height:50px;vertical-align:top;border:0;background:transparent;font-size:0;opacity:.3;-webkit-transition: width .3s, height .3s, opacity .3s;-o-transition: width .3s, height .3s, opacity .3s;transition: width .3s, height .3s, opacity .3s;}
+.header .inner .visual-toggle {opacity:1;}
 .header .inner button:hover {opacity:1;-webkit-transition: width .3s, height .3s, opacity .3s;-o-transition: width .3s, height .3s, opacity .3s;transition: width .3s, height .3s, opacity .3s;}
 .header .inner button .icon {width:30px;height:30px;}
 .header .inner .visual-toggle.is-on .icon {background-image:url('../images/icons/icon-switch-button-white-on.png');background-repeat:no-repeat;background-size:contain;}
@@ -26,7 +27,7 @@ img {display:block;max-width:100%;}
 .header .inner .util > li:nth-child(4){display:none;}
 .header .inner .util > li+ li:after {content:'';position:absolute;top:50%;left:0;width:1px;height:14px;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);background:rgba(255,255,255,.3)}
 
-.header.is-fixed {position:fixed;background: #f5513c;-webkit-transition:height .3s, background .3s;-o-transition:height .3s, background .3s;transition:height .3s, background .3s}
+.header.is-fixed {position:fixed;background:#1c1c1c;-webkit-transition:height .3s, background .3s;-o-transition:height .3s, background .3s;transition:height .3s, background .3s}
 .header.is-active {height:40px;}
 .header.is-active .inner h1 {color:rgba(255,255,255,.6);font-size:14px;-webkit-transition: all .3s;-o-transition: all .3s;transition: all .3s;}
 .header.is-active .inner button {width:40px;height:40px;}
@@ -38,8 +39,8 @@ img {display:block;max-width:100%;}
 .visual-spot .spot-inner {position:relative;text-align:center;overflow:hidden;}
 .visual-spot .bg-area {position:relative;width:100%;height:350px;text-align:center;padding-top:30px;-webkit-transition: height .3s;-o-transition: height .3s;transition: height .3s;max-width: 1024px;margin: 0 auto;}
 .visual-spot .bg-area .desc-group {position:absolute;top:50%;left:50%;margin-left:80px;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%)}
-.visual-spot .bg-area .desc-group h1 {color:#fff;font-size:24px;font-weight:900;letter-spacing:-.05em;opacity:.2;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
-.visual-spot .bg-area .desc-group .desc {color:#fff;font-size:14px;opacity:.3;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
+.visual-spot .bg-area .desc-group h1 {color:#fff;font-size:24px;font-weight:900;letter-spacing:-.05em;opacity:0;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
+.visual-spot .bg-area .desc-group .desc {color:#fff;font-size:14px;opacity:0;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
 .visual-spot .text-area {position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);margin:-20px 0 0 0;z-index:1;white-space: nowrap;}
 .visual-spot .text-area .text1 {position: relative;font-size: 16px;color: rgba(255,255,255,1);-webkit-animation: textScary .1s infinite , textOpacity .4s infinite;animation: textScary .1s infinite , textOpacity .4s infinite;}
 .visual-spot .text-area .text2 {position: relative;font-family: "Sacramento", cursive;text-align: center;color: rgba(255,255,255,1);font-size: 40px;font-weight: bold;line-height: 1.2;-webkit-animation: textScary .1s infinite , textOpacity 1s infinite;animation: textScary .1s infinite , textOpacity 1s infinite;}
@@ -668,7 +669,7 @@ span.tooltip::after {content:'';display:block;position:absolute;top:100%;right:0
     .form-set.share-url button {width:150px;height:70px;font-size:20px;}
 
     /* scroll-top */
-    .scroll-floating button{width:140px;background:rgba(60,100,245,.6);height:40px;margin:15px 0 0 0;border:0;border-radius:25px;font-weight:bold;color:#fff;cursor:pointer;}
+    .scroll-floating button{width:140px;background:rgba(0,0,0,1);height:40px;margin:15px 0 0 0;border:0;border-radius:25px;font-weight:bold;color:#fff;cursor:pointer;}
     .scroll-floating.is-show {-webkit-transform: translateY(-80px);-ms-transform: translateY(-80px);transform: translateY(-80px);-webkit-transition: -webkit-transform .3s;transition: -webkit-transform .3s;-o-transition: transform .3s;transition: transform .3s;transition: transform .3s, -webkit-transform .3s;}
 
     /* profile */
