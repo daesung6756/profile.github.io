@@ -57,7 +57,7 @@ img {display:block;max-width:100%;}
 .visual-spot .mouse.type5 {-webkit-animation: mouseMoveLeft 6s infinite, mouseScary .1s infinite;animation: mouseMoveLeft 6s infinite, mouseScary .1s infinite;right:0;}
 .visual-spot .mouse.type6 {-webkit-animation: mouseMoveRight 5s infinite, mouseScary .1s infinite;animation: mouseMoveRight 5s infinite, mouseScary .1s infinite;left:0;}
 
-.visual-spot .p5Canvas {position:absolute;left:30px;bottom:-10px;width:160px !important;height:247px !important;opacity:0;}
+.visual-spot .p5Canvas {position:absolute;left:30px;bottom:-10px;width:160px !important;height:247px !important;opacity:0;z-index:1}
 
 .visual-spot.is-on .mouse.type1 {-webkit-animation: quickMouseLeft 1s forwards;animation: quickMouseLeft 1s forwards;}
 .visual-spot.is-on .mouse.type2 {-webkit-animation: quickMouseRight 1.3s forwards;animation: quickMouseRight 1.3s forwards;}
@@ -88,12 +88,12 @@ body.theme .overlay .tbl-event-btn {background: #f5513c;}
 body.theme .overlay .intro-tbl-col a {color: #303030;}
 body.theme .overlay table.tbl-col .num-box {border:1px solid #7d3226;background: #7d3226;}
 body.theme .overlay table.tbl-col th + th {border-left: 1px solid #7d3226;}
-body.theme .visual-spot{background:#333;}
+body.theme .visual-spot{background:#333;box-shadow: 20px 20px 20px rgba(0,0,0,.8);}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;background:url("../images/window.png") right center no-repeat;background-size:cover;}
 body.theme .visual-spot .spot-inner .bg-area{position:relative;background:url("../images/sky-bg.jpg") center center no-repeat;background-size:cover;background-attachment: fixed}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
-body.theme .visual-spot.is-on .desc-group .desc {opacity:1;color: #f9ffd1;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
-body.theme .section.is-on {background:rgb(72 72 72);}
+body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity .3s, color .3s;-o-transition: opacity .3s, color .3s;transition: opacity .3s, color .3s}
+body.theme .section.is-on {background: rgb(59 59 59)}
 body.theme .photo-list li+li {border-top:1px dotted #6b6a55;}
 body.theme .photo-list .info .name{color: #bf9e72;}
 body.theme .photo-list .info dd {color:#cac7b6}

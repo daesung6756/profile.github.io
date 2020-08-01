@@ -10,8 +10,8 @@ var UI = {
         this.visualMouseClickEvent();
         this.gnbListDraw();
         this.popup();
-        this.gnbPathCheck();
-        this.windowPathCheck();
+        // this.gnbPathCheck();
+        // this.windowPathCheck();
         this.utilControlEvent();
         this.snsShare();
 
@@ -519,7 +519,9 @@ var UI = {
                         $(this).text('접기');
                     }
                 });
+                console.log(1)
             } else {
+                console.log(2)
                 return false;
             }
 
@@ -612,7 +614,7 @@ var UI = {
             }
         })
     },
-    gnbPathCheck : function() {
+    /*gnbPathCheck : function() {
         var $gnbLink = $('.gnb .nav-list li');
         var $gnbGroup =[];
 
@@ -635,8 +637,8 @@ var UI = {
                 }
             });
         });
-    },
-    windowPathCheck : function (){
+    },*/
+    /*windowPathCheck : function (){
         var $thisPath = window.location.href;
         var $pathArray = $thisPath.split("/");
         if($pathArray[4].match("#theme=on")){
@@ -644,7 +646,7 @@ var UI = {
         } else {
             return false;
         }
-    },
+    },*/
     utilControlEvent : function() {
         var $utils = $("div.util .nav-list li a");
         var $utilGroup = [];

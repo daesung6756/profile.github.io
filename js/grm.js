@@ -128,8 +128,8 @@ function grm () {
         '<div class="bg-box">' +
         '</div>' +
         '<div class="desc-group">' +
-        '<h1>The CATS</h1>' +
-        '<p class="desc">Daesung Lee<br>Profile Website</p>' +
+        '<h1>The CAT</h1>' +
+        '<p class="desc" data-tooltip="고양이들은 음악과 같아요. <br>고양이들을 인정하지 않는 사람들에게 <br>고양이의 가치를 설명하려고 노력하는 것은 <br>정말로 어리석은 짓입니다.">Cats are like Music. <br>It'+"'"+'s foolish to try to <br>explain their worth to those who <br>don'+"'"+'t appreciate them</p>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -146,9 +146,9 @@ function grm () {
     $('.footer').append(
         '<div class="inner">' +
         '<div class="address-group">' +
-        '<p>777, Cheonhoyet-gil, Gangdong-gu, Seoul, Republic of Korea</p>' +
-        '<p>통신판매업 어쩌구 저쩌구 : 42342323 호</p>' +
-        '<p>copyright @Lee dae-sung.</p>' +
+        '<p>Daesung.Lee</p>' +
+        '<p>Profile Website</p>' +
+        '<p>Update : 2020.08.01<br>Version: 0.4</p>' +
         '</div>' +
         '</div>'
     );
