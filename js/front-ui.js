@@ -1,8 +1,6 @@
-var windowWidth = $(window).width(),
-    windowSize = false;
 var UI = {
     init : function(){
-        this.resizeCheck();
+        this.resizeCheckReset();
         this.lampDraw();
         this.sectionToggleSwitchEvent();
         this.headetStickyBar();
@@ -354,23 +352,19 @@ var UI = {
             var $btn = $('[data-dropdown=' + value + ']');
             var $panel = $('[data-dropdown-panel=' + value + ']');
 
-            if(!windowSize){
-                $btn.on('click', function(e){
-                    e.preventDefault();
-                    $(this).toggleClass("is-active");
-                    $panel.toggleClass('is-show');
-                });
+            $btn.on('click', function(e){
+                e.preventDefault();
+                $(this).toggleClass("is-active");
+                $panel.toggleClass('is-show');
+            });
 
-                $panel.find("button").each(function(){
-                  $(this).on("click",function(){
-                      $btn.removeClass("is-active");
-                      $panel.removeClass("is-show");
-                  });
-                })
-            } else {
-                $btn.removeClass("is-active");
-                $panel.removeClass("is-show");
-            }
+            $panel.find("button").each(function(){
+                $(this).on("click",function(){
+                    $btn.removeClass("is-active");
+                    $panel.removeClass("is-show");
+                });
+            });
+
 
         });
     },
@@ -740,11 +734,12 @@ var UI = {
         $input.select();
         document.execCommand("copy");
     },
-    resizeCheck : function () {
+    resizeCheckReset : function () {
+        var windowWidth = $(window).width();
+
         if(windowWidth > 768) {
-            windowSize = true;
-        } else {
-            windowSize = false;
+          $('[data-dropdown="util"]').removeClass("is-active");
+          $('.header-drop').removeClass("is-show");
         }
     }
 };
@@ -774,8 +769,7 @@ $(window).on('scroll', function(){
 //resize
 $(window).on('resize', function(){
     UI.tooltip();
-    UI.resizeCheck();
-    UI.dropdown();
+    UI.resizeCheckReset();
 });
 
 //event

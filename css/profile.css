@@ -8,6 +8,8 @@ body.is-lock {overflow:hidden;}
 img {display:block;max-width:100%;}
 * {outline:none;}
 
+.wrap {position:relative;overflow: hidden;}
+
 /* header */
 .header {height:50px;position:absolute;top:0;left:0;width:100%;min-width:320px;z-index:99;background:rgba(0,0,0, 0);-webkit-transition: height .3s,  background .3s;-o-transition: height .3s,  background .3s;transition: height .3s,  background .3s}
 .header .inner {position:relative;}
@@ -17,6 +19,7 @@ img {display:block;max-width:100%;}
 .header .inner .visual-toggle {opacity:1;}
 .header .inner button.is-active,
 .header .inner button:hover {opacity:1;-webkit-transition: width .3s, height .3s, opacity .3s;-o-transition: width .3s, height .3s, opacity .3s;transition: width .3s, height .3s, opacity .3s;}
+
 .header .inner button .icon {width:30px;height:30px;}
 .header .inner .visual-toggle.is-on .icon {background-image:url('../images/icons/icon-switch-button-white-on.png');background-repeat:no-repeat;background-size:contain;}
 .header .inner .in-left{position: absolute;top: 0;left: 0;}
@@ -28,9 +31,9 @@ img {display:block;max-width:100%;}
 .header .inner .util > li:nth-child(3),
 .header .inner .util > li:nth-child(4){display:none;}
 .header .inner .util > li+ li:after {content:'';position:absolute;top:50%;left:0;width:1px;height:14px;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);background:rgba(255,255,255,.3)}
-.header .header-drop {position:absolute;top:auto;bottom:100%;right:0;width:140%;opacity:0;transition: all .3s}
-.header .header-drop.is-show {opacity:1;top:100%;bottom:auto;transition: all .3s}
-.header .header-drop button {width:100%;display:table;font-size:12px;color:#fff;}
+.header .header-drop {position:absolute;top:100%;right:-160%;width:0;padding:10px;opacity:0;transition: right .1s, opacity .1s}
+.header .header-drop.is-show {opacity:1;top:100%;right:0;width:160%;background:rgba(0,0,0,.4);border-radius:10px 0 0 10px;transition: right .3s, opacity .3s}
+.header .header-drop button {width:100%;display:table;font-size:12px;color:#fff;opacity:.6}
 .header .header-drop button > .icon,
 .header .header-drop button > span {display:table-cell;padding-left:10px;vertical-align: middle;}
 

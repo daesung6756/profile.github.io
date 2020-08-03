@@ -29,7 +29,7 @@ var gnbList = [
         name:'History',
         url:'work-list.html'
     },
-    {
+/*    {
         name:"It 용어 번역 검색",
         url:'ittt.html'
     },
@@ -44,7 +44,7 @@ var gnbList = [
     {
         name:"Code Snippet",
         url:'event-group.html'
-    },
+    },*/
 ];
 
 //업무 내역
