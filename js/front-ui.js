@@ -1,19 +1,21 @@
+var windowWidth = $(window).width(),
+    windowSize = false;
 var UI = {
     init : function(){
-        this.tabs();
+        this.resizeCheck();
         this.lampDraw();
         this.sectionToggleSwitchEvent();
-        this.tooltip();
         this.headetStickyBar();
         this.windowKeyCodeCheck();
         this.mainVisualSwitchEvent();
         this.visualMouseClickEvent();
         this.gnbListDraw();
-        this.popup();
-        // this.gnbPathCheck();
-        // this.windowPathCheck();
-        this.utilControlEvent();
         this.snsShare();
+
+        if($("[data-tooltip]").length > 0){this.tooltip()}
+        if($("[data-tab]").length > 0){this.tabs()}
+        if($("[data-pop-open]").length > 0){this.popup()}
+        if($("[data-dropdown]").length > 0){this.dropdown()}
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -339,6 +341,39 @@ var UI = {
             });
         });
     },
+    dropdown: function () {
+        var dropdownGroup = [];
+
+        $('[data-dropdown]').each(function() {
+            if($.inArray($(this).data('dropdown'), dropdownGroup) === -1){
+                dropdownGroup.push($(this).data('dropdown'));
+            }
+        });
+
+        $.each(dropdownGroup, function(key, value){
+            var $btn = $('[data-dropdown=' + value + ']');
+            var $panel = $('[data-dropdown-panel=' + value + ']');
+
+            if(!windowSize){
+                $btn.on('click', function(e){
+                    e.preventDefault();
+                    $(this).toggleClass("is-active");
+                    $panel.toggleClass('is-show');
+                });
+
+                $panel.find("button").each(function(){
+                  $(this).on("click",function(){
+                      $btn.removeClass("is-active");
+                      $panel.removeClass("is-show");
+                  });
+                })
+            } else {
+                $btn.removeClass("is-active");
+                $panel.removeClass("is-show");
+            }
+
+        });
+    },
     singleToggleBtn : function(el, className) {
         var $el = $(el);
         var $toggleClass = className;
@@ -614,64 +649,6 @@ var UI = {
             }
         })
     },
-    /*gnbPathCheck : function() {
-        var $gnbLink = $('.gnb .nav-list li');
-        var $gnbGroup =[];
-
-        $gnbLink.each(function() {
-            $gnbGroup.push($(this).children());
-        });
-
-        $.each($gnbGroup, function( key, value ){
-            var $link = $(this);
-            $link.on('click',function (e) {
-                var $thisPath = window.location.href;
-                var $path =  $link.attr('href');
-                e.preventDefault();
-
-                if(checkTheme){
-                    location.href = $path + '#theme=on'
-                } else {
-                    location.href = $path;
-                    return false;
-                }
-            });
-        });
-    },*/
-    /*windowPathCheck : function (){
-        var $thisPath = window.location.href;
-        var $pathArray = $thisPath.split("/");
-        if($pathArray[4].match("#theme=on")){
-            $('.visual-toggle').click();
-        } else {
-            return false;
-        }
-    },*/
-    utilControlEvent : function() {
-        var $utils = $("div.util .nav-list li a");
-        var $utilGroup = [];
-        var $utilPop = $("#util");
-        var $body = $("body");
-
-            $utils.each(function() {
-            if($.inArray($(this), $utilGroup) === -1){
-                $utilGroup.push($(this));
-            }
-        });
-
-        $.each($utilGroup , function(key, value){
-            $(this).on('click', function(e){
-                $body.removeClass("is-lock");
-                $utilPop.removeClass('is-show');
-                e.preventDefault();
-                if($(this).hasClass('love-event')){
-                    $('.header .love-btn').click();
-                } else {
-                    return false;
-                }
-            });
-        });
-    },
     snsShare : function(){
         var shareGroup = [];
 
@@ -762,6 +739,13 @@ var UI = {
 
         $input.select();
         document.execCommand("copy");
+    },
+    resizeCheck : function () {
+        if(windowWidth > 768) {
+            windowSize = true;
+        } else {
+            windowSize = false;
+        }
     }
 };
 
@@ -776,6 +760,9 @@ $(function(){
     if($themeOncheck){
         $('.visual-toggle').trigger("click");
     }
+
+
+
 });
 
 //scroll
@@ -787,6 +774,8 @@ $(window).on('scroll', function(){
 //resize
 $(window).on('resize', function(){
     UI.tooltip();
+    UI.resizeCheck();
+    UI.dropdown();
 });
 
 //event

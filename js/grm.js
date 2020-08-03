@@ -116,8 +116,15 @@ function grm () {
         '<li><button type="button" class="love-btn" title="위로 해줄께!"><i class="icon icon-cardiogram-white"><span class="blind">팝업 열기</span></i></button></li>' +
         '<li><button type="button" data-pop-open="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
         '<li><button type="button" data-pop-open="share" title="현재 페이지 공유하기"><i class="icon icon-sns-share-white"><span class="blind">Share 열기</span></i></button></li>' +
-        '<li><button type="button" data-pop-open="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
+        '<li><button type="button" data-dropdown="util"><i class="icon icon-more-circle-white"><span class="blind">UTIL 창 열기</span></i></button></li>' +
         '</ul>' +
+        '<div class="header-drop" data-dropdown-panel="util">' +
+        '<ul class="hidden-util">' +
+        '<li><button type="button" class="love-btn" title="위로 메세지"><i class="icon icon-cardiogram-white"></i><span>위로 메세지</span></button></li>' +
+        '<li><button type="button" data-pop-open="search" title="프로젝트 검색"><i class="icon icon-search-white"></i><span>프로젝트 검색</span></button></li>' +
+        '<li><button type="button" data-pop-open="share" title="SNS 공유하기"><i class="icon icon-sns-share-white"></i><span>SNS 공유하기</span></button></li>' +
+        '</ul>'+
+        '</div>'+
         '</div>' +
         '</div>'
     );
@@ -134,12 +141,12 @@ function grm () {
         '</div>' +
         '</div>' +
         '<div class="full-event-area">' +
-        '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png"></span></span>' +
-        '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png"></span></span>' +
-        '<span class="mouse type3" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png"></span></span>' +
-        '<span class="mouse type4" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png"></span></span>' +
-        '<span class="mouse type5" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png"></span></span>' +
-        '<span class="mouse type6" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png"></span></span>' +
+        '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+        '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
+        '<span class="mouse type3" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+        '<span class="mouse type4" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
+        '<span class="mouse type5" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+        '<span class="mouse type6" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
         '</div>'
     );
     // footer
