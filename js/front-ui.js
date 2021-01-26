@@ -151,7 +151,7 @@ var UI = {
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
                 '<dd class="agency">' + value.agency + '</dd>' +
-                '<dd class="customer">' + value.customer + '</dd>' +
+                '<dd class="customer">' + value.customer + '</dd>' +1
                 '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
                 '<dd class="language">' + value.language + '</dd>' +
@@ -548,9 +548,7 @@ var UI = {
                         $(this).text('접기');
                     }
                 });
-                console.log(1)
             } else {
-                console.log(2)
                 return false;
             }
 
