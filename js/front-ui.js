@@ -14,6 +14,7 @@ var UI = {
         if($("[data-tab]").length > 0){this.tabs()}
         if($("[data-pop-open]").length > 0){this.popup()}
         if($("[data-dropdown]").length > 0){this.dropdown()}
+        if($("[data-slick]").length > 0){this.techListDraw(techLists);}
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -21,6 +22,24 @@ var UI = {
         this.historyLogDraw(historyLog);
         this.moreText('.feedback', '22');
         this.patOnTheBack('.love-btn',encouragement );
+
+    },
+    techListDraw : function( data ){
+        $.each(data, function (i) {
+            $(".tech_list .slick-slider").append(
+                '<div class="slick-list">' +
+                    '<div class="row">' +
+                        '<div class="column n2"><img src="' + data[i].image + '" alt="' + data[i].title + '" /></div>' +
+                        '<div class="column n2"><p class="title">' + data[i].title + '</p><p class="desc">' + data[i].description + '</p></div>' +
+                    '</div>' +
+                '</div>'
+            )
+            $(function() {
+                $(".tech_list .slick-dots li:eq('" + i + "')").find("button").attr("title", data[i].title )
+                $(".tech_list .slick-dots li:eq('" + i + "')").find("button").append("<img src='" +  data[i].image + "'>");
+            })
+            // $(".tech_list .slick-dots li:eq(" + i +")"));
+        })
     },
     tableColDraw: function(wrap, cols, rows){
         if(cols && rows) {

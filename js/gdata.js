@@ -650,4 +650,118 @@ var encouragement = [
     '내가 특별해지는 건, 내가 나를 특별하다고 생각하는 그 순간 부터래',
 ];
 
+var techLists = [
+    {
+        image: "images/logo/logo_photoshop.png",
+        title: "Photoshop",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_illustrator.png",
+        title: "Illustartor",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_html5.png",
+        title: "HTML5",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_css3.png",
+        title: "CSS3",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_scss.png",
+        title: "SCSS",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_javascript.png",
+        title: "Javascript",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_jquery.png",
+        title: "Jquery",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_node.png",
+        title: "Node",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_npm.png",
+        title: "NPM",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_vue.png",
+        title: "VUE.JS",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_git.png",
+        title: "Git",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_subversion.png",
+        title: "Svn",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_aem.png",
+        title: "AEM",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_eclipse.png",
+        title: "Eclipse",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_bootstrap.png",
+        title: "Bootstrap",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_vuetify.png",
+        title: "Vuetify",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_el_ui.png",
+        title: "Element UI",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_fiddler.png",
+        title: "Fiddler",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_ms_teams.png",
+        title: "MS Teams",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_ms_planner.png",
+        title: "MS Planner",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_slack.png",
+        title: "Slack",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+    {
+        image: "images/logo/logo_jandi.png",
+        title: "Jandi",
+        description: "테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트",
+    },
+
+]
+
 var $themeOncheck = false;

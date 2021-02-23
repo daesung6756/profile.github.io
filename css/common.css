@@ -3,22 +3,22 @@ html, body {min-width:320px;}
 /* h ~  or desc */
 .tit {position:relative;font-weight:900;line-height:1.4;}
 .tit.box-type {margin:40px 0 0 0;}
-h1.tit {font-size:28px}
-h2.tit {font-size:24px}
-h3.tit {font-size:20px}
-h4.tit {font-size:18px}
-h5.tit {font-size:14px}
-h6.tit {font-size:12px}
+h1.tit {font-size:1.5rem}
+h2.tit {font-size:1.4rem}
+h3.tit {font-size:1.2rem}
+h4.tit {font-size:1rem}
+h5.tit {font-size:.8rem}
+h6.tit {font-size:.6rem}
 
 .desc {line-height:1.4;color:#8f9da8}
 p.desc {margin:10px 0 0 0;}
 span.desc {margin:0 0 0 10px;font-weight:400;}
-h1 .desc {font-size:16px;}
-h2 .desc {font-size:14px;}
-h3 .desc {font-size:12px;}
+h1 .desc {font-size:.8rem}
+h2 .desc {font-size:.7rem}
+h3 .desc {font-size:.6rem}
 h4 .desc,
 h5 .desc,
-h6 .desc {font-size:10px;}
+h6 .desc {font-size:.5rem;}
 
 .h1-type {font-size:18px;}
 .h2-type {font-size:15px;}
@@ -78,44 +78,44 @@ h6.d-sign:before {width:3px;top:8px;}
 .tar {text-align:right}
 
 /* margin */
-.mt50 {margin-top:50px;}
-.mt40 {margin-top:40px;}
-.mt30 {margin-top:30px;}
-.mt20 {margin-top:20px;}
-.mt10 {margin-top:10px;}
+.mt50 {margin-top:2.5rem;}
+.mt40 {margin-top:2rem;}
+.mt30 {margin-top:1.5rem;}
+.mt20 {margin-top:1rem;}
+.mt10 {margin-top:.5rem;}
 
-.mr50 {margin-right:50px}
-.mr40 {margin-right:40px}
-.mr30 {margin-right:30px}
-.mr20 {margin-right:20px}
-.mr10 {margin-right:10px}
+.mr50 {margin-right:2.5rem}
+.mr40 {margin-right:2rem}
+.mr30 {margin-right:1.5rem}
+.mr20 {margin-right:1rem}
+.mr10 {margin-right:.5rem}
 
-.mb50 {margin-bottom:50px}
-.mb40 {margin-bottom:40px}
-.mb30 {margin-bottom:30px}
-.mb20 {margin-bottom:20px}
-.mb10 {margin-bottom:10px}
+.mb50 {margin-bottom:2.5rem}
+.mb40 {margin-bottom:2rem}
+.mb30 {margin-bottom:1.5rem}
+.mb20 {margin-bottom:1rem}
+.mb10 {margin-bottom:.5rem}
 
-.ml50 {margin-left:50px}
-.ml40 {margin-left:40px}
-.ml30 {margin-left:30px}
-.ml20 {margin-left:20px}
-.ml10 {margin-left:10px}
+.ml50 {margin-left:2.5rem}
+.ml40 {margin-left:2rem}
+.ml30 {margin-left:1.5rem}
+.ml20 {margin-left:1rem}
+.ml10 {margin-left:.5rem}
 
 /* list */
 .list-01 {}
-.list-01 .list-02 {margin-left:20px;}
+.list-01 .list-02 {margin-left:1rem;}
 .list-02 {}
 .list-03 {}
 
 .list-01 > li{}
-.list-01 > li + li{margin-top:10px;}
+.list-01 > li + li{margin-top:.5rem;}
 .list-02 > li{}
-.list-02 > li + li{margin-top:6px;}{}
+.list-02 > li + li{margin-top:.3rem;}{}
 .list-03 > li{}
 
 .b-circle > li,
-.b-dash > li{position:relative;padding-left:12px;}
+.b-dash > li{position:relative;padding-left:.6rem;}
 
 .b-dash > li::before,
 .b-circle > li::before{content:'';position:absolute;left:0;}

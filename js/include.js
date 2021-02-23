@@ -10,7 +10,8 @@ var include = {
             document.write('<link rel="stylesheet" href="css/reset.css">');
             document.write('<link rel="stylesheet" href="css/common.css">');
             document.write('<link rel="stylesheet" href="css/profile.css">');
-            document.write('<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />');
+            document.write('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>');
+
         },
         scripts : function() {
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
@@ -23,7 +24,7 @@ var include = {
     },
     footer : {
         scripts : function(){
-            document.write('<script src="https://unpkg.com/swiper/swiper-bundle.min.js""></script>');
+            document.write('<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>');
             document.write('<script src="js/draw-visual.js"></script>');
         }
     }
