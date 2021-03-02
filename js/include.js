@@ -12,20 +12,20 @@ var include = {
                 document.write('<link rel="stylesheet" href="css/common.css">');
             },
             index : function () {
-                document.write('<link rel="stylesheet" href="css/profile.css">');
+                document.write('<link rel="stylesheet" href="css/index.css">');
                 document.write('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>');
             },
             profile : function () {
                 document.write('<link rel="stylesheet" href="css/profile.css">');
             }
         },
-        scripts : function() {
+        scripts : function (){
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
             document.write('<script src="js/vendor/p5.min.js"></script>');
             document.write('<script src="js/grm.js"></script>');
             document.write('<script src="js/gdata.js"></script>');
-            document.write('<script src="js/profile.js"></script>');
             document.write('<script src="js/front-ui.js"></script>');
+            document.write('<script src="js/profile.js"></script>');
         }
     },
     footer : {

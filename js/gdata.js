@@ -27,7 +27,7 @@ var gnbList = [
     },
     {
         name:'History',
-        url:'work-list.html'
+        url:'profile.html'
     },
 /*    {
         name:"It 용어 번역 검색",
