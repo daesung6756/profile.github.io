@@ -36,9 +36,8 @@
                         <div class="article">
                             <h4 class="tit mt20">Technology & Experience</h4>
 
-                            <div class="tech_list mt50">
+                            <div class="tech_list mt30">
                                 <div class="slick-slider" data-slick="tech_list"></div>
-
                             </div>
                         </div>
 
@@ -98,8 +97,9 @@
             });
 
             $.each(slickGroup, function(key, value) {
-                var slick =  $("[data-slick='" + value + "']").slick( option );
-
+                var slickSlide =  $("[data-slick='" + value + "']")
+                slickSlide.slick( option );
+                slickSlide.find(".slick-current").addClass("animated")
             })
         },
     };

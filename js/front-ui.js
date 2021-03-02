@@ -1,5 +1,6 @@
 var UI = {
     init : function(){
+        this.loaderAdd();
         this.resizeCheckReset();
         this.lampDraw();
         this.sectionToggleSwitchEvent();
@@ -22,7 +23,6 @@ var UI = {
         this.historyLogDraw(historyLog);
         this.moreText('.feedback', '22');
         this.patOnTheBack('.love-btn',encouragement );
-
     },
     techListDraw : function( data ){
         $.each(data, function (i) {
@@ -758,6 +758,17 @@ var UI = {
           $('[data-dropdown="util"]').removeClass("is-active");
           $('.header-drop').removeClass("is-show");
         }
+    },
+    loaderAdd : function () {
+        var body = $("body");
+        var loader = '<div class="loader-wrap"><span class="loader"></span></div>';
+        body.prepend(loader);
+    },
+    loaderRemove : function () {
+        var body = $("body");
+        setTimeout(function () {
+            body.find(".loader-wrap").fadeOut(300);
+        }, 400)
     }
 };
 
@@ -773,14 +784,17 @@ $(function(){
         $('.visual-toggle').trigger("click");
     }
 
-
-
 });
+
+// load
+$(window).on("load", function () {
+    UI.loaderRemove()
+})
 
 //scroll
 $(window).on('scroll', function(){
     UI.headetStickyBar();
-    UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show");
+    UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show")
 });
 
 //resize

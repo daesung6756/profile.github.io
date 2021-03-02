@@ -1,32 +1,47 @@
 @charset "utf-8";
 
+.section.is-on .tech_list .slick-slider {background-color:#686a6f;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
+.section.is-on .tech_list .slick-slider .title {color:#333;}
+.section.is-on .tech_list .slick-slider .desc {color:#8f9da8;}
+.section.is-on .tech_list .slick-slide .row .column img {background-color:#686a6f;opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
+.section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
+
+body.theme .section.is-on .tech_list .slick-slider {background-color:#fff;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
+body.theme .section.is-on .tech_list .slick-slider .title {color: #507401;}
+body.theme .section.is-on .tech_list .slick-slider .desc {color:#333;}
+body.theme .section.is-on .tech_list .slick-slide .row .column img {background-color:#fff;opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
+body.theme .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
+body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(255, 75, 20)}
+
 .tech_list {position:relative;margin-bottom:20px;font-size:0;}
-.tech_list .slick-slider {padding:2.5rem 36% 2.5rem 0;background:rgba(255,255,255,1);border-radius:10px}
+.tech_list .slick-slider {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:2.5rem 0 2.5rem;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
 .tech_list .slick-slide .row {display:table;width:100%;}
 .tech_list .slick-slide .row .column {display:table-cell;vertical-align: top;}
 .tech_list .slick-slide .row .column.n2 {width:50%;}
 .tech_list .slick-slide .row .column.n2:first-child {width:40%;max-width:350px;padding:25px;vertical-align: middle;}
 .tech_list .slick-slide .row .column.n2:last-child {width:calc(100% - 350px);padding:10px;}
-.tech_list .slick-slide .row .column img {max-width:100%;background:#fff;border-radius:10px;}
-.tech_list .slick-slide .row .column .title {font-size:1.2rem;color:#333;font-weight:800;word-break: keep-all;transform:translateX(200px);opacity: 0;transition: opacity .1s, transform .2s ease-in-out}
-.tech_list .slick-slide .row .column .desc {font-size:.8rem;margin-top:20px;transform:translateY(100px);opacity: 0;transition: opacity .1s, transform .2s  ease-in-out}
-.tech_list .animated .row .column .title {opacity:1;transform:translateX(0);transition: opacity .2s, transform .3s ease-in-out}
-.tech_list .animated .row .column .desc {opacity:1;transform:translateY(0);transition: opacity .2s, transform .3s ease-in-out}
+.tech_list .slick-slide .row .column img {max-width:100%;background-color:#1c1c1c;border-radius:10px;opacity:.1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
+.tech_list .slick-slide .row .column .title {font-size:1.2rem;color:#333;font-weight:900;word-break: keep-all;-webkit-transform:translateX(200px);-ms-transform:translateX(200px);transform:translateX(200px);opacity: 0;-webkit-transition: opacity .1s, -webkit-transform .2s ease-in-out;transition: opacity .1s, -webkit-transform .2s ease-in-out;-o-transition: opacity .1s, transform .2s ease-in-out;transition: opacity .1s, transform .2s ease-in-out;transition: opacity .1s, transform .2s ease-in-out, -webkit-transform .2s ease-in-out}
+.tech_list .slick-slide .row .column .desc {font-size:.8rem;margin-top:20px;color:#333;-webkit-transform:translateY(100px);-ms-transform:translateY(100px);transform:translateY(100px);opacity: 0;-webkit-transition: opacity .1s, -webkit-transform .2s  ease-in-out;transition: opacity .1s, -webkit-transform .2s  ease-in-out;-o-transition: opacity .1s, transform .2s  ease-in-out;transition: opacity .1s, transform .2s  ease-in-out;transition: opacity .1s, transform .2s  ease-in-out, -webkit-transform .2s  ease-in-out}
+.tech_list .animated .row .column .title {opacity:1;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);-webkit-transition: opacity .2s, -webkit-transform .3s ease-in-out;transition: opacity .2s, -webkit-transform .3s ease-in-out;-o-transition: opacity .2s, transform .3s ease-in-out;transition: opacity .2s, transform .3s ease-in-out;transition: opacity .2s, transform .3s ease-in-out, -webkit-transform .3s ease-in-out}
+.tech_list .animated .row .column .desc {opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition: opacity .2s, -webkit-transform .3s ease-in-out;transition: opacity .2s, -webkit-transform .3s ease-in-out;-o-transition: opacity .2s, transform .3s ease-in-out;transition: opacity .2s, transform .3s ease-in-out;transition: opacity .2s, transform .3s ease-in-out, -webkit-transform .3s ease-in-out}
 
-.tech_list .slick-dots {position:absolute;top:20px;right:0;width:30%;font-size:0;overflow-y:auto;height:360px;}
-.tech_list .slick-dots li {display:inline-block;vertical-align: top;}
-.tech_list .slick-dots li button{font-size:0;width:2.6rem;height:2.6rem;margin:0;border:0;background:transparent;transition: background .3s, width .3s, padding .3s;padding:10px;}
-.tech_list .slick-dots li:hover button{padding:0;transition: padding .3s;}
-.tech_list .slick-dots li.slick-active button{position:relative;background: rgb(233, 233, 233);padding:0;transition: background .3s, width .3s, padding .3s;}
+.tech_list .slick-slider > .slick-list.draggable {width:70%;}
+.tech_list .slick-dots {position:relative;width:30%;font-size:0;}
+.tech_list .slick-dots li {display:inline-block;vertical-align: top;opacity:.1;}
+.tech_list .slick-dots li button{font-size:0;width:2.6rem;height:2.6rem;margin:0;border:0;background:transparent;-webkit-transition: background .3s, width .3s, padding .3s;-o-transition: background .3s, width .3s, padding .3s;transition: background .3s, width .3s, padding .3s;padding:10px;}
+.tech_list .slick-dots li:hover button{padding:0;-webkit-transition: padding .3s;-o-transition: padding .3s;transition: padding .3s;}
+.tech_list .slick-dots li.slick-active button{position:relative;background: rgb(233, 233, 233);padding:0;-webkit-transition: background .3s, width .3s, padding .3s;-o-transition: background .3s, width .3s, padding .3s;transition: background .3s, width .3s, padding .3s;}
 .tech_list .slick-dots li.slick-active button:before {content:''}
 .tech_list .slick-custom-control {position:absolute;top:10px;right:20px;font-size:0;}
-.tech_list .slick-custom-control .custom-btn {width:auto;height:30px;border:0;border-radius:6px;font-weight:900;background:rgba(255,255,255,.6);transition: background .3s, color.3s;color:#333;}
-.tech_list .slick-custom-control .custom-btn:hover{background: rgb(255, 50, 23);transition: background .3s,color.3s;color:#fff;}
+.tech_list .slick-custom-control .custom-btn {width:auto;height:30px;border:0;border-radius:6px;font-weight:900;background:rgba(255,255,255,.6);-webkit-transition: background .3s, color.3s;-o-transition: background .3s, color.3s;transition: background .3s, color.3s;color:#333;}
+.tech_list .slick-custom-control .custom-btn:hover{background: rgb(255, 50, 23);-webkit-transition: background .3s,color.3s;-o-transition: background .3s,color.3s;transition: background .3s,color.3s;color:#fff;}
 .tech_list .slick-custom-control .custom-btn:active {position:relative;top:1px;}
 .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
 
 @media screen and (max-width:1024px){
-    .tech_list .slick-slider {padding-right:0;}
+    .tech_list .slick-slider {-ms-flex-wrap:wrap;flex-wrap:wrap;padding:2.5rem 1rem 2.5rem;}
+    .tech_list .slick-slider > .slick-list.draggable {width:100%;border-bottom:1px dotted #ddd;}
     .tech_list .slick-dots {position:relative;top:auto;right:auto;width:100%;overflow:auto;height:auto;padding:0 20px;margin-top:1.6rem}
 }
 @media screen and (max-width:768px){
