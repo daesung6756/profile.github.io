@@ -6,7 +6,8 @@
     <script>
         include.head.title("Daesung.lee Info");
         include.head.meta();
-        include.head.styles();
+        include.head.styles.common();
+        include.head.styles.index();
         include.head.scripts();
     </script>
 </head>
@@ -56,49 +57,15 @@
     <!-- //footer -->
 <style>
 
-    .tech_list {position:relative;margin-bottom:20px;font-size:0;}
-    .tech_list .slick-slider {padding:2.5rem 36% 2.5rem 0;background:rgba(255,255,255,1);border-radius:10px}
-    .tech_list .slick-slide .row {display:table;width:100%;}
-    .tech_list .slick-slide .row .column {display:table-cell;vertical-align: top;}
-    .tech_list .slick-slide .row .column.n2 {width:50%;}
-    .tech_list .slick-slide .row .column.n2:first-child {width:40%;max-width:350px;padding:25px;vertical-align: middle;}
-    .tech_list .slick-slide .row .column.n2:last-child {width:calc(100% - 350px);padding:10px;}
-    .tech_list .slick-slide .row .column img {max-width:100%;background:#fff;border-radius:10px;}
-    .tech_list .slick-slide .row .column .title {font-size:1.2rem;color:#333;font-weight:800;word-break: keep-all;transform:translateX(200px);opacity: 0;transition: opacity .1s, transform .2s ease-in-out}
-    .tech_list .slick-slide .row .column .desc {font-size:.8rem;margin-top:20px;transform:translateY(100px);opacity: 0;transition: opacity .1s, transform .2s  ease-in-out}
-    .tech_list .animated .row .column .title {opacity:1;transform:translateX(0);transition: opacity .2s, transform .3s ease-in-out}
-    .tech_list .animated .row .column .desc {opacity:1;transform:translateY(0);transition: opacity .2s, transform .3s ease-in-out}
 
-    .tech_list .slick-dots {position:absolute;top:20px;right:0;width:30%;font-size:0;overflow-y:auto;height:360px;}
-    .tech_list .slick-dots li {display:inline-block;vertical-align: top;}
-    .tech_list .slick-dots li button{font-size:0;width:2.6rem;height:2.6rem;margin:0;border:0;background:transparent;transition: background .3s, width .3s, padding .3s;padding:10px;}
-    .tech_list .slick-dots li:hover button{padding:0;transition: padding .3s;}
-    .tech_list .slick-dots li.slick-active button{position:relative;background: rgb(233, 233, 233);padding:0;transition: background .3s, width .3s, padding .3s;}
-    .tech_list .slick-dots li.slick-active button:before {content:''}
-    .tech_list .slick-custom-control {position:absolute;top:10px;right:20px;font-size:0;}
-    .tech_list .slick-custom-control .custom-btn {width:auto;height:30px;border:0;border-radius:6px;font-weight:900;background:rgba(255,255,255,.6);transition: background .3s, color.3s;color:#333;}
-    .tech_list .slick-custom-control .custom-btn:hover{background: rgb(255, 50, 23);transition: background .3s,color.3s;color:#fff;}
-    .tech_list .slick-custom-control .custom-btn:active {position:relative;top:1px;}
-    .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
-
-    @media screen and (max-width:1024px){
-        .tech_list .slick-slider {padding-right:0;}
-        .tech_list .slick-dots {position:relative;top:auto;right:auto;width:100%;overflow:auto;height:auto;padding:0 20px;margin-top:1.6rem}
-    }
-    @media screen and (max-width:768px){
-        html {font-size:18px}
-    }
-    @media screen and (max-width:480px){
-        html {font-size:16px}
-    }
-    @media screen and (max-width:375px){
-        html {font-size:14px}
-    }
 </style>
 <script>
     include.footer.scripts();
 </script>
 <script type="text/javascript">
+    function initAnimationSlick(event, slick) {
+        $(slick.$slides[0]).addClass("animated")
+    }
     function beforeAnimationSlick(event, slick, nextSlide) {
         $(slick.$slides[nextSlide]).addClass("animated")
     }
@@ -132,6 +99,7 @@
 
             $.each(slickGroup, function(key, value) {
                 var slick =  $("[data-slick='" + value + "']").slick( option );
+
             })
         },
     };
@@ -139,7 +107,7 @@
     $(function(){
 
         slickSlide.init();
-
+        $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
         $(document).on("afterChange", "[data-slick=tech_list]", beforeAnimationSlick)
         $(document).on("beforeChange","[data-slick=tech_list]", aftereAnimationSlick)
     })

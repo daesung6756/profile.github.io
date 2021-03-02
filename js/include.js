@@ -6,12 +6,18 @@ var include = {
         meta :function () {
             document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
         },
-        styles : function(tit) {
-            document.write('<link rel="stylesheet" href="css/reset.css">');
-            document.write('<link rel="stylesheet" href="css/common.css">');
-            document.write('<link rel="stylesheet" href="css/profile.css">');
-            document.write('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>');
-
+        styles : {
+            common : function () {
+                document.write('<link rel="stylesheet" href="css/reset.css">');
+                document.write('<link rel="stylesheet" href="css/common.css">');
+            },
+            index : function () {
+                document.write('<link rel="stylesheet" href="css/profile.css">');
+                document.write('<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>');
+            },
+            profile : function () {
+                document.write('<link rel="stylesheet" href="css/profile.css">');
+            }
         },
         scripts : function() {
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
