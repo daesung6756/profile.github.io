@@ -5,6 +5,7 @@ body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
 body.theme .header {background:rgba(127, 160, 61, 0); -webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
 body.theme .header.is-fixed {background: rgba(0,0,0, .2);-webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
 body.theme .header.is-active {background:rgba(127, 160, 61, 1);-webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
+body.theme .header .inner .util > li .blink-text {opacity:0;transition: opacity .3s ease;}
 
 body.theme .overlay table.tbl-col th {border-top: 1px solid #7d3226;border-bottom: 1px solid #7d3226;background: #7d3226;}
 body.theme .overlay .intro-tbl-col {border: 3px solid #7d3226;}
@@ -13,12 +14,12 @@ body.theme .overlay .intro-tbl-col a {color: #303030;}
 body.theme .overlay table.tbl-col .num-box {border:1px solid #7d3226;background: #7d3226;}
 body.theme .overlay table.tbl-col th + th {border-left: 1px solid #7d3226;}
 
-body.theme .visual-spot{background:#333;-webkit-box-shadow: 20px 20px 20px rgba(0,0,0,.8);box-shadow: 20px 20px 20px rgba(0,0,0,.8);border-color:#000;}
+body.theme .visual-spot{background:#333;-webkit-box-shadow: 20px 20px 20px rgba(0,0,0,.8);box-shadow: 20px 20px 20px rgba(0,0,0,.8);}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;background:url("../images/window.png") right center no-repeat;background-size:cover;}
 body.theme .visual-spot .spot-inner .bg-area{position:relative;background:url("../images/sky-bg.jpg") center center no-repeat;background-size:cover;background-attachment: fixed}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;transition: opacity .3s, color .3s, transform .7s ease;transform:translateX(0);}
 body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;transition: opacity .3s, color .3s, transform .8s ease;transform: translateX(0);}
-body.theme .visual-spot.is-on .p5Canvas {animation: catComeIn 3s forwards}
+body.theme .visual-spot.is-on .p5Canvas {animation: catComeIn 3.2s forwards}
 
 body.theme .section.is-on {background-color: rgb(59 59 59);}
 
@@ -32,14 +33,12 @@ body.theme .scroll-floating button{background: rgba(19, 103, 33, 1);}
 body.theme .footer {background:rgb(53 53 53)}
 body.theme .footer .address-group > p {color:#9c9566}
 
+
+@-webkit-keyframes catComeIn {
+    89% {-webkit-transform: translateY(60%);transform: translateY(60%);}
+    100% {-webkit-transform: translateY(0);transform: translateY(0);}
+}
 @keyframes catComeIn {
-    12%, 48% , 80% {
-        transform: translateY(100%);
-    }
-    36%, 60% {
-        transform: translateY(60%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    89% {-webkit-transform: translateY(60%);transform: translateY(60%);}
+    100% {-webkit-transform: translateY(0);transform: translateY(0);}
 }
