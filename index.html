@@ -62,6 +62,14 @@
     include.footer.scripts();
 </script>
 <script type="text/javascript">
+    function elBrInput (el) {
+        var td = $(el),
+            text = td.text();
+        console.log(1);
+        text.replace(",",", <br>")
+
+
+    }
     function initAnimationSlick(event, slick) {
         $(slick.$slides[0]).addClass("animated")
     }
@@ -72,7 +80,7 @@
         $(slick.$slides[currentSlide]).removeClass("animated")
     }
     var slickOption = {
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed: 3000,
         centerMode: true,
         fade: true,
@@ -103,8 +111,23 @@
             })
         },
     };
+    // test
+    function testTable(ele) {
+
+        var table = $(ele);
+
+        table.find("th").each(function(key) {
+            if(key === 9){
+                var runflat = table.find(".runflat").index()
+                table.find("th:eq('" + runflat + "')").addClass("t_w110");
+            }
+
+        })
+    }
 
     $(function(){
+
+        testTable(".test-table")
 
         slickSlide.init();
         $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
