@@ -6,12 +6,8 @@
 .section.is-on .tech_list .slick-slide .row .column img {background-color:#686a6f;opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
 .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
 
-body.theme .section.is-on .tech_list .slick-slider {background-color:#fff;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
-body.theme .section.is-on .tech_list .slick-slider .title {color: #507401;}
-body.theme .section.is-on .tech_list .slick-slider .desc {color:#333;}
-body.theme .section.is-on .tech_list .slick-slide .row .column img {background-color:#fff;opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
-body.theme .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
-body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(255, 75, 20)}
+.section.is-on .profile .info > .question{color:#777;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.section.is-on .profile .info > .answer{color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
 .tech_list {position:relative;margin-bottom:20px;font-size:0;}
 .tech_list .slick-slider {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:2.5rem 0 2.5rem;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
@@ -38,6 +34,14 @@ body.theme .section.is-on .tech_list .slick-dots li.slick-active button {backgro
 .tech_list .slick-custom-control .custom-btn:hover{background: rgb(255, 50, 23);-webkit-transition: background .3s,color.3s;-o-transition: background .3s,color.3s;transition: background .3s,color.3s;color:#fff;}
 .tech_list .slick-custom-control .custom-btn:active {position:relative;top:1px;}
 .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
+
+.profile .info {color:#ddd}
+.profile .info > .question{color:#333;font-size:.7rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.profile .info > .answer{color:#444;font-size:.6rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.profile .info > .question + .answer {margin-top:.2rem}
+.profile .info > .answer + .question {margin-top:1rem}
+
+.section.is-on {}
 
 @media screen and (max-width:1024px){
     .tech_list .slick-slider {-ms-flex-wrap:wrap;flex-wrap:wrap;padding:2.5rem 1rem 2.5rem;}

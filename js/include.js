@@ -18,6 +18,9 @@ var include = {
             },
             profile : function () {
                 document.write('<link rel="stylesheet" href="css/profile.css">');
+            },
+            mailCodingTest : function() {
+                document.write('<link rel="stylesheet" href="css/mail-test.css">');
             }
         },
         scripts : function (){

@@ -769,6 +769,19 @@ var UI = {
         setTimeout(function () {
             body.find(".loader-wrap").fadeOut(300);
         }, 400)
+    },
+    checkMailAdd : function(selectName, inputName) {
+        var $input = $(inputName);
+
+        if($(selectName).val() === ""){
+            $input.attr("readonly", false);
+            $input.val("");
+            $input.focus()
+        } else {
+            $input.attr("readonly", true);
+            $input.val($(selectName).val());
+        }
+
     }
 };
 
