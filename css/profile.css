@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* photo-list */
-.photo-list {position:relative;margin-top:30px;font-size:0;opacity:.1;}
+.photo-list {position:relative;margin-top:30px;font-size:0;opacity:1;}
 .photo-list li {position:relative;font-size:14px;display:block;padding:0;min-height:170px;}
 .photo-list li + li {margin-top:10px;padding-top:11px;border-top:1px solid #3a3a3a;}
 .photo-list li .pic {position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
@@ -13,9 +13,9 @@
 .photo-list li .pic .case3 {}
 .photo-list li .pic .item:active {position:relative;top:1px;left:1px;}
 
-.photo-list .info {margin-top:20px;color: #797979;word-break: break-all}
+.photo-list .info {margin-top:1rem;color: #303030;word-break: break-all}
 .photo-list .info a {color:inherit}
-.photo-list .info .name {font-size:16px;font-weight:bold;color: #f5a63c}
+.photo-list .info .name {font-size:.9rem;font-weight:bold;color: #442c0e;line-height:1.6;}
 .photo-list .info .type:before {content:'구분 : '}
 .photo-list .info .date:before {content:'기간 : '}
 .photo-list .info .position:before {content:'직무 : '}
@@ -34,8 +34,8 @@
 .photo-list .info .description > p {line-height:24px}
 .photo-list .info .feedback > p {overflow:hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis; white-space:nowrap;line-height:24px;}
 .photo-list .info dt {margin-bottom:10px;padding-bottom:10px;border-bottom:1px dotted #303030;}
-.photo-list .info dd {position:relative;margin-top:4px;font-size:14px;line-height:20px;word-break: keep-all}
-.photo-list .info dd:before {color: #a1632d}
+.photo-list .info dd {position:relative;margin-top:.2rem;font-size:.7rem;line-height:1.6;word-break: keep-all}
+.photo-list .info dd:before {color: #422913}
 .photo-list .info .more-event {position:absolute;bottom:0;right:0;}
 
 /* profile */

@@ -433,7 +433,7 @@ var UI = {
         var $scroll = $(document).scrollTop();
         var $float = $(btn);
         var $floatHeight = $float.outerHeight();
-        var $floatOffsetTop = $(btn).offset().top;
+        var $floatOffsetTop = $float.offset().top;
         var $minTop = $(min).offset().top;
         var $maxTop = $(max).offset().top - $floatHeight;
 
@@ -799,18 +799,24 @@ var UI = {
     httpStatusSearchLog : function (value) {
         var $find = value;
         var header = $(".header").height() + 10;
+        var test = null;
 
         $(".em-text").each(function(key, value) {
-            if($(value).text() === $find) {
+            if($(value).text() !== $find) {
+                if($(this).hasClass("is-find")){
+                    $(this).removeClass("is-find")
+                    $(this).parent().removeClass("is-find")
+                    alert("찾으시는 상태 값이 없습니다.")
+                } else {
+                    return;
+                }
+            } else {
                 $(this).addClass("is-find")
                 $(this).parent().addClass("is-find")
                 $(window).scrollTop( $(this).offset().top - header )
-            } else {
-                $(this).removeClass("is-find")
-                $(this).parent().removeClass("is-find")
             }
-        })
 
+        })
 
     }
 };

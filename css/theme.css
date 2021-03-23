@@ -10,10 +10,14 @@
 .section.is-on .em-text {color:#9c761e;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .disc-list li.is-find {color:#fff;}
 .section.is-on .em-text.is-find {background: #ffff00;color:#f70000;}
+.section.is-on .photo-list .info dd:before {color: #975e2b;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
 .section.is-on .bim {background:rgba(255,255,255, .4);}
 .section.is-on .pic {opacity:1}
 .section.is-on .article-wrap {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
+
+.section.is-on .photo-list .info .name{color: #bf9e72;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.section.is-on .photo-list .info dd {color:#cac7b6;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
 body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
 body.theme .section.is-on h4.tit {color:rgb(255,255,255)}
@@ -24,6 +28,7 @@ body.theme .section.is-on dl.desc-list > dt {color:#ffff97;-webkit-transition: c
 body.theme .section.is-on .em-text {color: #ff9c00;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 body.theme .section.is-on .disc-list li.is-find {color:#fff;}
 body.theme .section.is-on .em-text.is-find {background: #ffff00;color:#f70000;}
+body.theme .section.is-on .photo-list .info dd:before {color: #e5832b}
 
 body.theme .header {background:rgba(127, 160, 61, 0); -webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
 body.theme .header.is-fixed {background: rgba(0,0,0, .2);-webkit-transition: background .3s; -o-transition: background .3s; transition: background .3s;}
