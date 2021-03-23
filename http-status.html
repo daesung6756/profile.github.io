@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/include.js"></script>
+    <script>
+        include.head.title("Daesung.lee Info");
+        include.head.meta();
+        include.head.styles.common();
+        include.head.styles.index();
+        include.head.scripts();
+    </script>
+</head>
+<body>
+<div class="wrap">
+
+    <!-- header -->
+    <div class="header"></div>
+    <!--// header -->
+
+    <!-- visual spot -->
+    <div class="visual-spot"></div>
+    <!-- //visual spot -->
+
+    <!-- container -->
+    <div class="container">
+        <div class="content">
+
+            <!-- section -->
+            <div class="section">
+                <div class="section-inner">
+                    <!-- tItle -->
+                    <h3 class="tit box-blink-ani">HTTP Status</h3>
+                    <div class="article-wrap">
+                        <div class="form-set search-field">
+                            <div class="search-input">
+                                <input type="search" id="httpStatusSearch" placeholder="Status 값을 넣으세요.">
+                                <button type="button"><i class="icon icon-search-white"><span class="blind">검색하기</span></i></button>
+                            </div>
+                        </div>
+                        <div class="article mt50">
+                            <h4 class="tit">HTTP 상태 코드란?</h4>
+                            <p class="desc">HTTP 상태 코드는 클라이언트가 보낸 HTTP 요청에 대한 서버의 응답 코드로, 상태 코드에 따라 요청의 성공/실패 여부를 판단합니다.</p>
+
+                            <h4 class="tit">HTTP 상태 코드 분류</h4>
+                            <ul class="disc-list">
+                                <li>1xx : Informational</li>
+                                <li>2xx : Success</li>
+                                <li>3xx : Redirection</li>
+                                <li>4xx : Client Error</li>
+                                <li>5xx : Server Error</li>
+                            </ul>
+
+                            <h4 class="tit">HTTP 상태 코드 상세</h4>
+                            <dl class="desc-list">
+                                <dt class="dash-tit">1xx (조건부 응답) - Informational</dt>
+                                <dd>
+                                    <p class="desc">요청을 받았으며 작업을 계속함 을 의미합니다.(이 상태 코드를 만날 일은 거의 없다고 합니다)</p>
+                                    <ul class="disc-list">
+                                        <li><em class="em-text">100</em> : 요청의 시작 부분 일부가 받아들여졌으며, 클라이언트는 나머지를 계속 이어서 보내야 함을 의미함</li>
+                                        <li><em class="em-text">101</em> : 요청자가 서버에 프로토콜 전환을 요청했으며, 서버에서 이를 승인하는 중을 의미함</li>
+                                    </ul>
+                                </dd>
+
+                                <dt>2xx (성공) Success</dt>
+                                <dd>
+                                    <p class="desc">요청을 성공적으로 받았으며, 인식했고, 수용함 을 의미합니다.</p>
+                                    <ul class="disc-list">
+                                        <li><em class="em-text">200</em> (성공 - OK) : 서버가 요청을 제대로 처리했다는 뜻이다. 이는 주로 서버가 요청한 페이지를 제공했다는 의미로 쓰인다.</li>
+                                        <li><em class="em-text">201</em> (작성됨) : 성공적으로 요청되었으며 서버가 새 리소스를 작성했다.</li>
+                                        <li><em class="em-text">202</em> (허용됨) : 서버가 요청을 접수했지만 아직 처리하지 않았다.</li>
+                                        <li><em class="em-text">203</em> (신뢰할 수 없는 정보) : 서버가 요청을 성공적으로 처리했지만 다른 소스에서 수신된 정보를 제공하고 있다.</li>
+                                        <li><em class="em-text">204</em> (콘텐츠 없음 - No Content) : 서버가 요청을 성공적으로 처리했지만 콘텐츠를 제공하지 않는다. 서버에서 처리후 클라이언트에 정보를 보낼필요없는경우 사용.</li>
+                                        <li><em class="em-text">205</em> (콘텐츠 재설정) : 서버가 요청을 성공적으로 처리했지만 콘텐츠를 표시하지 않는다. 204 응답과 달리 이 응답은 요청자가 문서 보기를 재설정할 것을 요구한다(예: 새 입력을 위한 양식 비우기).</li>
+                                        <li><em class="em-text">206</em> (일부 콘텐츠 - partial Content) : 서버가 GET 요청의 일부만 성공적으로 처리했다. 지정된 범위만큼의 요청을 받았다는 것을 알려줌</li>
+                                    </ul>
+                                </dd>
+
+                                <dt class="dash-tit">3xx (리다이렉션 완료) Redirection</dt>
+                                <dd>
+                                    <p class="desc">요청 완료를 위해 추가 작업 조치가 필요함 을 의미합니다.</p>
+                                    <ul class="disc-list">
+                                        <li><em class="em-text">300</em> (여러 선택항목) : 서버가 요청에 따라 여러 조치를 선택할 수 있다. 서버가 사용자 에이전트에 따라 수행할 작업을 선택하거나, 요청자가 선택할 수 있는 작업 목록을 제공한다.</li>
+                                        <li><em class="em-text">301</em> (영구 이동) : 요청한 페이지를 새 위치로 영구적으로 이동했다. GET 또는 HEAD 요청에 대한 응답으로 이 응답을 표시하면 요청자가 자동으로 새 위치로 전달된다.</li>
+                                        <li><em class="em-text">302</em> (임시 이동) : 현재 서버가 다른 위치의 페이지로 요청에 응답하고 있지만 요청자는 향후 요청 시 원래 위치를 계속 사용해야 한다.</li>
+                                        <li><em class="em-text">303</em> (기타 위치 보기) : 요청자가 다른 위치에 별도의 GET 요청을 하여 응답을 검색할 경우 서버는 이 코드를 표시한다. HEAD 요청 이외의 모든 요청을 다른 위치로 자동으로 전달한다.</li>
+                                        <li><em class="em-text">304</em> (수정되지 않음) : 마지막 요청 이후 요청한 페이지는 수정되지 않았다. 서버가 이 응답을 표시하면 페이지의 콘텐츠를 표시하지 않는다. 요청자가 마지막으로 페이지를 요청한 후 페이지가 변경되지 않으면 이 응답(If-Modified-Since HTTP 헤더라고 함)을 표시하도록 서버를 구성해야 한다.</li>
+                                        <li><em class="em-text">305</em> (프록시 사용) : 요청자는 프록시를 사용하여 요청한 페이지만 액세스할 수 있다. 서버가 이 응답을 표시하면 요청자가 사용할 프록시를 가리키는 것이기도 하다.</li>
+                                        <li><em class="em-text">307</em> (임시 리다이렉션) : 현재 서버가 다른 위치의 페이지로 요청에 응답하고 있지만 요청자는 향후 요청 시 원래 위치를 계속 사용해야 한다.</li>
+                                        <li><em class="em-text">308</em> (영구 리다이렉션, RFC에서 실험적으로 승인됨)</li>
+                                    </ul>
+                                </dd>
+
+                                <dt class="dash-tit">4xx (요청 오류) Client Error</dt>
+                                <dd>
+                                    <p class="desc">요청의 문법이 잘못되었거나 요청을 처리할 수 없음 을 의미합니다.</p>
+                                    <ul class="disc-list">
+                                        <li><em class="em-text">400</em> (잘못된 요청) : 서버가 요청의 구문을 인식하지 못했다.</li>
+                                        <li><em class="em-text">401</em> (권한 없음) : 이 요청은 인증이 필요하다. 서버는 로그인이 필요한 페이지에 대해 이 요청을 제공할 수 있다. 상태 코드 이름이 권한 없음(Unauthorized)으로 되어 있지만 실제 뜻은 인증 안됨(Unauthenticated)에 더 가깝다.[2]</li>
+                                        <li><em class="em-text">402</em> (결제 필요) : 이 요청은 결제가 필요합니다.</li>
+                                        <li><em class="em-text">403</em> (Forbidden, 금지됨) : 서버가 요청을 거부하고 있다. 예를 들자면, 사용자가 리소스에 대한 필요 권한을 갖고 있지 않다. (401은 인증 실패, 403은 인가 실패라고 볼 수 있음)</li>
+                                        <li><em class="em-text">404</em> (Not Found, 찾을 수 없음) : 서버가 요청한 페이지(Resource)를 찾을 수 없다. 예를 들어 서버에 존재하지 않는 페이지에 대한 요청이 있을 경우 서버는 이 코드를 제공한다.</li>
+                                        <li><em class="em-text">405</em> (허용되지 않는 방법) : 요청에 지정된 방법을 사용할 수 없다. 예를 들어 POST 방식으로 요청을 받는 서버에 GET 요청을 보내는 경우, 또는 읽기 전용 리소스에 PUT 요청을 보내는 경우에 이 코드를 제공한다.</li>
+                                        <li><em class="em-text">406</em> (허용되지 않음) : 요청한 페이지가 요청한 콘텐츠 특성으로 응답할 수 없다.</li>
+                                        <li><em class="em-text">407</em> (프록시 인증 필요) : 이 상태 코드는 401(권한 없음)과 비슷하지만 요청자가 프록시를 사용하여 인증해야 한다. 서버가 이 응답을 표시하면 요청자가 사용할 프록시를 가리키는 것이기도 한다.</li>
+                                        <li><em class="em-text">408</em> (요청 시간초과) : 서버의 요청 대기가 시간을 초과하였다.</li>
+                                        <li><em class="em-text">409</em> (충돌) : 서버가 요청을 수행하는 중에 충돌이 발생했다. 서버는 응답할 때 충돌에 대한 정보를 포함해야 한다. 서버는 PUT 요청과 충돌하는 PUT 요청에 대한 응답으로 이 코드를 요청 간 차이점 목록과 함께 표시해야 한다.</li>
+                                        <li><em class="em-text">410</em> (사라짐) : 서버는 요청한 리소스가 영구적으로 삭제되었을 때 이 응답을 표시한다. 404(찾을 수 없음) 코드와 비슷하며 이전에 있었지만 더 이상 존재하지 않는 리소스에 대해 404 대신 사용하기도 한다. 리소스가 영구적으로 이동된 경우 301을 사용하여 리소스의 새 위치를 지정해야 한다.</li>
+                                        <li><em class="em-text">411</em> (길이 필요) : 서버는 유효한 콘텐츠 길이 헤더 입력란 없이는 요청을 수락하지 않는다.</li>
+                                        <li><em class="em-text">412</em> (사전조건 실패) : 서버가 요청자가 요청 시 부과한 사전조건을 만족하지 않는다.</li>
+                                        <li><em class="em-text">413</em> (요청 속성이 너무 큼) : 요청이 너무 커서 서버가 처리할 수 없다.</li>
+                                        <li><em class="em-text">414</em> (요청 URI가 너무 긺) : 요청 URI(일반적으로 URL)가 너무 길어 서버가 처리할 수 없다.</li>
+                                        <li><em class="em-text">415</em> (지원되지 않는 미디어 유형) : 요청이 요청한 페이지에서 지원하지 않는 형식으로 되어 있다.</li>
+                                        <li><em class="em-text">416</em> (처리할 수 없는 요청범위) : 요청이 페이지에서 처리할 수 없는 범위에 해당되는 경우 서버는 이 상태 코드를 표시한다.</li>
+                                        <li><em class="em-text">417</em> (예상 실패) : 서버는 Expect 요청 헤더 입력란의 요구사항을 만족할 수 없다.</li>
+                                        <li><em class="em-text">418</em> (I'm a teapot, RFC 2324 ,https://google.com/teapot) ://google.com/teapot)</li>
+                                        <li><em class="em-text">420</em> (Enhance Your Calm, 트위터)</li>
+                                        <li><em class="em-text">422</em> (처리할 수 없는 엔티티, WebDAV; RFC 4918)</li>
+                                        <li><em class="em-text">423</em> (잠김,WebDAV; RFC 4918) : 접근하려는 리소스가 잠겨 있다.</li>
+                                        <li><em class="em-text">424</em> (실패된 의존성, WebDAV; RFC 4918)</li>
+                                        <li><em class="em-text">424</em> (메쏘드 실패, WebDAV)</li>
+                                        <li><em class="em-text">425</em> (정렬되지 않은 컬렉션, 인터넷 초안)</li>
+                                        <li><em class="em-text">426</em> (업그레이드 필요, RFC 2817) : 클라이언트는 업그레이드 헤더 필드에 주어진 프로토콜로 요청을 보내야 한다.</li>
+                                        <li><em class="em-text">428</em> (전제조건 필요, RFC 6585)</li>
+                                        <li><em class="em-text">429</em> (너무 많은 요청, RFC 6585) : 사용자가 일정 시간 동안 너무 많은 요청을 보냈다.</li>
+                                        <li><em class="em-text">431</em> (요청 헤더 필드가 너무 큼, RFC 6585)</li>
+                                        <li><em class="em-text">444</em> (응답 없음, Nginx)</li>
+                                        <li><em class="em-text">449</em> (다시 시도, 마이크로소프트)</li>
+                                        <li><em class="em-text">450</em> (윈도 자녀 보호에 의해 차단됨, 마이크로소프트)</li>
+                                        <li><em class="em-text">451</em> (법적인 이유로 이용 불가, 인터넷 초안)</li>
+                                        <li><em class="em-text">451</em> (리다이렉션, 마이크로소프트)</li>
+                                        <li><em class="em-text">494</em> (요청 헤더가 너무 큼, Nginx)</li>
+                                        <li><em class="em-text">495</em> (Cert 오류, Nginx)</li>
+                                        <li><em class="em-text">496</em> (Cert 없음, Nginx)</li>
+                                        <li><em class="em-text">497</em> (HTTP to HTTPS, Nginx)</li>
+                                        <li><em class="em-text">499</em> (클라이언트가 요청을 닫음, Nginx) ://google.com/teapot)</li>
+                                    </ul>
+                                </dd>
+
+                                <dt class="dash-tit">5xx (서버 오류) Server Error</dt>
+                                <dd>
+                                    <p class="desc">서버가 명백히 유효한 요청에 대해 충족을 실패했음 을 의미합니다.</p>
+                                    <ul class="disc-list">
+                                        <li><em class="em-text">500</em> (내부 서버 오류) : 서버에 오류가 발생하여 요청을 수행할 수 없다.</li>
+                                        <li><em class="em-text">501</em> (구현되지 않음) : 서버에 요청을 수행할 수 있는 기능이 없다. 예를 들어 서버가 요청 메소드를 인식하지 못할 때 이 코드를 표시한다.</li>
+                                        <li><em class="em-text">502</em> (Bad Gateway, 불량 게이트웨이) : 서버가 게이트웨이나 프록시 역할을 하고 있거나 또는 업스트림 서버에서 잘못된 응답을 받았다.</li>
+                                        <li><em class="em-text">503</em> (서비스를 사용할 수 없음) : 서버가 오버로드되었거나 유지관리를 위해 다운되었기 때문에 현재 서버를 사용할 수 없다. 이는 대개 일시적인 상태이다.</li>
+                                        <li><em class="em-text">504</em> (게이트웨이 시간초과) : 서버가 게이트웨이나 프록시 역할을 하고 있거나 또는 업스트림 서버에서 제때 요청을 받지 못했다.</li>
+                                        <li><em class="em-text">505</em> (HTTP 버전이 지원되지 않음) : 서버가 요청에 사용된 HTTP 프로토콜 버전을 지원하지 않는다.</li>
+                                        <li><em class="em-text">506</em> (Variant Also Negotiates, RFC 2295)</li>
+                                        <li><em class="em-text">507</em> (용량 부족, WebDAV; RFC 4918)</li>
+                                        <li><em class="em-text">508</em> (루프 감지됨, WebDAV; RFC 5842)</li>
+                                        <li><em class="em-text">509</em> (대역폭 제한 초과, Apache bw/limited extension)</li>
+                                        <li><em class="em-text">510</em> (확장되지 않음, RFC 2774)</li>
+                                        <li><em class="em-text">511</em> (네트워크 인증 필요, RFC 6585)</li>
+                                        <li><em class="em-text">520</em> (Unknown Error, 알 수 없음)</li>
+                                        <li><em class="em-text">598</em> (네트워크 읽기 시간초과 오류, 알 수 없음)</li>
+                                        <li><em class="em-text">599</em> (네트워크 연결 시간초과 오류, 알 수 없음)</li>
+                                    </ul>
+                                </dd>
+
+                            </dl>
+                            <p><a href="https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C" target="_blank">출처: 위키백과</a></p>
+                            <p><a href="https://velog.io/@sangyeon217/http-status-code" target="_blank">출처: sangyeon217 vlog</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--// section -->
+
+        </div>
+    </div>
+    <!--// container -->
+
+    <!-- footer -->
+    <div class="footer"></div>
+    <!-- //footer -->
+    <script>
+        include.footer.scripts();
+    </script>
+</div>
+</body>
+</html>

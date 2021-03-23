@@ -45,7 +45,7 @@
 
 @media screen and (max-width:1024px){
     .tech_list .slick-slider {-ms-flex-wrap:wrap;flex-wrap:wrap;padding:2.5rem 1rem 2.5rem;}
-    .tech_list .slick-slider > .slick-list.draggable {width:100%;border-bottom:1px dotted #ddd;}
+    .tech_list .slick-slider > .slick-list.draggable {width:100%;border-bottom:1px dotted #333;}
     .tech_list .slick-dots {position:relative;top:auto;right:auto;width:100%;overflow:auto;height:auto;padding:0 20px;margin-top:1.6rem}
 }
 @media screen and (max-width:768px){

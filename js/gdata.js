@@ -29,6 +29,10 @@ var gnbList = [
         name:'History',
         url:'profile.html'
     },
+    {
+        name:'HTTP Status',
+        url:'http-status.html'
+    },
 /*    {
         name:"It 용어 번역 검색",
         url:'ittt.html'
@@ -46,6 +50,19 @@ var gnbList = [
         url:'event-group.html'
     },*/
 ];
+//관심사 리스트
+var InterestList = [
+    {
+        name:'VR',
+        src:"",
+        desc:"현재 오큘러스 퀘스트2를 구매하였고, 열심히 즐기고 있다."
+    },
+    {
+        name:'VR',
+        src:"",
+        desc:"현재 오큘러스 퀘스트2를 구매하였고, 열심히 즐기고 있다."
+    },
+]
 
 //업무 내역
 var historyLog = [
@@ -57,16 +74,16 @@ var historyLog = [
         ],
         type :'운영',
         name:'[KR][GLOBAL][LOCAL]한국타이어 글로벌 사이트 운영 업무 (진행중)',
-        date:'2020.04 ~ 2021.01~',
+        date:'2020.04 ~ 2021.03~',
         agency:'Concentrix Korea',
         customer:'한국타이어',
         position: 'PL (PL:1명)',
         process:'Pc & Mobile Web Publishing',
         language:'Doctype : XHtml 1.0(PC), Doctype : HTML5(Mobile). Css1~3, jQuery',
         tool: 'Svn, eclipse, AEM',
-        support :'PC는 ie 9 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
+        support :'PC는 ie 11 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
         description:'',
-        feedback:'AEM 환경구성으로 CMS 제공하여 웹지식이 부족한 사람도 수정, 추가 할 수 있도록 퍼블리싱, 개발이 컴퍼넌트 개발이 진행된다. 이미지의 경우 아카마이사의 CDN을 사용중이다.',
+        feedback:'jAVA(이클립스) & AEM(CMS) 환경구성으로 편집툴이 제공된다. 편집툴이 제공 된다는 것은 모든 페이지가 템플릿화(GUI) 되어 있어 접근성이 좋다는 의미이다. 웹에 대한 지식이 부족한 사람도 AEM 사용 방법을 배워 컨텐츠를 수정하고 등록하는게 어렵지 않다. 프론트 및 백 엔드 파트에 대한 의존성이 JAVA만 사용하는 환경 구성보다 낮은 편이다. 퍼블리셔 1명에 개발자 2명이 50개가 넘는 홈페이지를 관리 할 수 있는 것도 그때문이다.',
         url:'https://www.hankooktire.com/kr/',
         rate  : 4
     },
@@ -77,7 +94,7 @@ var historyLog = [
             'images/list/hankook-all-pdp-modify-mo.jpg',
         ],
         type :'단기 고도화 프로젝트 (추가 계약)',
-        name:'[ALL] 한국 타이어 제품 상세 페이지 사이드 컨텐츠 고도화 작업',
+        name:'[KR][GLOBAL][LOCAL] 한국 타이어 제품 상세 페이지 사이드 컨텐츠 고도화 작업',
         date:'2020.11 ~ 2021.01',
         agency:'Concentrix Korea',
         customer:'한국타이어',
@@ -85,10 +102,10 @@ var historyLog = [
         process:'Pc & Mobile Web Publishing',
         language:'Doctype : XHtml 1.0(PC), Doctype : HTML5(Mobile). Css1~3, jQuery',
         tool: 'Svn, eclipse, AEM',
-        support :'PC는 ie 9 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
+        support :'PC는 ie 11 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
         description:'',
-        feedback:'일부긴 하지만 사이드 컨테츠 레이아웃을 통일하여 공통화 시킨게 가장 큰 성과이다. 전에는 레이아웃 사용 이유가 명확하지 않아서 중구난방으로 노출되어 있었다.',
-        url:'https://www.hankooktire.com/kr/tires-product/ventus.html',
+        feedback:'사이드 컨테츠 마크업이 동일한 레이아웃인데도 불구하고 여러 타입의 마크업이 혼용되어 사용되고 있었다. 해당 작업을 진행하면서 해당 사이드 쪽을 공통화하는게 큰 목표였다.',
+        url:'https://www.hankooktire.com/kr/tires-product/passenger-cars/hankook-kinergy-4s2-h750.html',
         rate  : 4
     },
     {
@@ -106,17 +123,17 @@ var historyLog = [
         process:'Pc & Mobile Web Publishing',
         language:'Doctype : XHtml 1.0(PC), Doctype : HTML5(Mobile). Css1~3, jQuery',
         tool: 'Svn, eclipse, AEM',
-        support :'PC는 ie 9 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
-        description:'',
-        feedback:'브랜드 페이지 제작 시 템플릿을 기반으로 제작 되었다. 비쥬얼 영역 랜드스케이프 처리가 백엔드 파트에서 진행되었는데 고객사의 요청사항들이 기존의 동영상 처리방식 이외에 변칙적인 내용들이 많아서 프론트 쪽에서 변동사항에 대응 할 수 있도록 새로 제작 하여, 삽입 하였다.',
+        support :'PC는 ie 11 이상, 기타 다른 브라우져 최신버전, Mobile은 최소해상도 360, 최적 해상도 375 Iphone 6/7/8.',
+        description:'앞서 만든 브랜드 벤투스 페이지 템플릿을 복사하여 제작하였다. ',
+        feedback:'',
         url:'https://www.hankooktire.com/kr/tires-product/ventus.html',
         rate  : 4
     },
     {
         img: [
-            'images/list/hankook-brand-page-renewal-pc.jpg',
+            'images/list/hankook-brand-page-renewal-pc.png',
             '',
-            'images/list/hankook-brand-page-renewal-mobile.jpg',
+            'images/list/hankook-brand-page-renewal-mobile.png',
         ],
         type : '단기 제작 프로젝트 (추가 계약)',
         name:'[KR] 한국타이어 브랜드 벤투스 페이지 리뉴얼',

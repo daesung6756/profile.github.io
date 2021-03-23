@@ -10,6 +10,7 @@ var UI = {
         this.visualMouseClickEvent();
         this.gnbListDraw();
         this.snsShare();
+        this.InterestListDraw(InterestList)
 
         if($("[data-tooltip]").length > 0){this.tooltip()}
         if($("[data-tab]").length > 0){this.tabs()}
@@ -770,17 +771,46 @@ var UI = {
             body.find(".loader-wrap").fadeOut(300);
         }, 400)
     },
-    checkMailAdd : function(selectName, inputName) {
-        var $input = $(inputName);
-
-        if($(selectName).val() === ""){
-            $input.attr("readonly", false);
-            $input.val("");
-            $input.focus()
-        } else {
-            $input.attr("readonly", true);
-            $input.val($(selectName).val());
+    InterestListDraw : function ( data ){
+        if($(".Interest-list")){
+            $.each(data , function (key, value) {
+                if(data[key].name && data[key].src && data[key].desc) {
+                    $(".Interest-list").append("" +
+                        "<li>" +
+                        "   <div><span>'" + data[key].name +"'</span></div>" +
+                        "<span></span>" +
+                        "</li>")
+                } else {
+                    console.log("Interest list data 작성이 잘 못 되었습니다. 확인 바랍니다.")
+                }
+            })
         }
+    },
+    toggleSwitchScrollEvent : function () {
+        var $ts = $(".toggle-switch");
+        var $header = $(".header");
+
+        if($header.hasClass("is-active") ){
+            $ts.addClass("is-fixed")
+        } else {
+            $ts.removeClass("is-fixed")
+        }
+    },
+    httpStatusSearchLog : function (value) {
+        var $find = value;
+        var header = $(".header").height() + 10;
+
+        $(".em-text").each(function(key, value) {
+            if($(value).text() === $find) {
+                $(this).addClass("is-find")
+                $(this).parent().addClass("is-find")
+                $(window).scrollTop( $(this).offset().top - header )
+            } else {
+                $(this).removeClass("is-find")
+                $(this).parent().removeClass("is-find")
+            }
+        })
+
 
     }
 };
@@ -807,6 +837,7 @@ $(window).on("load", function () {
 //scroll
 $(window).on('scroll', function(){
     UI.headetStickyBar();
+    UI.toggleSwitchScrollEvent()
     UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show")
 });
 
@@ -821,8 +852,13 @@ $(document).on('click', '.scroll-floating button', function(e){
     e.preventDefault();
     $('html, body').stop(e).animate({scrollTop : 0}, 300);
 });
+$(document).on('keyup', "#httpStatusSearch" , function(event){
+    if(event.keyCode === 13) {
+        UI.httpStatusSearchLog(this.value);
+    }
+});
 $(document).on('keyup', "#searcTtList" , function(){
-    UI.itTtListSearch(this);
+        UI.itTtListSearch(this);
 });
 $(document).on('click', "#getSearchText", function() {
     UI.popupLogSearch('#searchTit',historyLog);
