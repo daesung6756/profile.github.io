@@ -368,8 +368,8 @@ span.tooltip::after {content:'';display:block;position:absolute;top:100%;right:0
 .desc-group em {font-weight:bold;}
 
 dl.desc-list  p.desc + .disc-list {margin-top:1rem}
-dl.desc-list > dt {margin-top:2rem;font-size:.8rem;color: #4c4c47;font-weight:800;}
-dl.desc-list > dd {margin-top:1rem;font-size:.6rem;line-height:1.6;color:#303030}
+dl.desc-list > dt {margin-top:2rem;font-size:.9rem;color: #4c4c47;font-weight:800;}
+dl.desc-list > dd {margin-top:1rem;font-size:.8rem;line-height:1.6;color:#303030}
 
 .article > .tit + p.desc,
 .article > .tit + .disc-list {margin-top:1rem;color:#303030;}
@@ -378,8 +378,8 @@ dl.desc-list > dd {margin-top:1rem;font-size:.6rem;line-height:1.6;color:#303030
 .article .disc-list li.is-find {color:#fff}
 .article .em-text {font-weight:700;color: #49370e}
 .article .em-text.is-find {display:inline-block;background: #ffff00;color:#f70000;padding:0 5px;}
-.article p.desc {color: #3b4145;font-size:.7rem}
-.article > .disc-list{font-size:.8rem}
+.article p.desc {color: #3b4145;font-size:.9rem}
+.article > .disc-list{font-size:1rem}
 
 /* h */
 .h1 {font-size:20px;}
