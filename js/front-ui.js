@@ -22,8 +22,8 @@ var UI = {
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
         this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
         this.historyLogDraw(historyLog);
-        this.moreText('.feedback', '22');
         this.patOnTheBack('.love-btn',encouragement );
+        this.moreText();
     },
     techListDraw : function( data ){
         $.each(data, function (i) {
@@ -171,7 +171,7 @@ var UI = {
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
                 '<dd class="agency">' + value.agency + '</dd>' +
-                '<dd class="customer">' + value.customer + '</dd>' +1
+                '<dd class="customer">' + value.customer + '</dd>' +
                 '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
                 '<dd class="language">' + value.language + '</dd>' +
@@ -429,20 +429,31 @@ var UI = {
             $this.removeClass('is-active');
         }
     },
-    scrollLimitEvent: function(btn ,min, max , classNmae) { //버튼클래스, 최소높이 클래스, 최대 높이 클래스, 컨트롤 클래스
-        var $scroll = $(document).scrollTop();
-        var $float = $(btn);
-        var $floatHeight = $float.outerHeight();
-        var $floatOffsetTop = $float.offset().top;
-        var $minTop = $(min).offset().top;
-        var $maxTop = $(max).offset().top - $floatHeight;
+    scrollLimitEvent: function(target ,min, max , classNmae) { //버튼클래스, 최소높이 클래스, 최대 높이 클래스, 컨트롤 클래스
+        var $scroll = parseInt($(document).scrollTop());
+        var $target = $(target);
+        var $floatHeight = parseInt($target.outerHeight());
+        var $floatOffsetTop = parseInt($target.offset().top) ;
+        var $minTop = parseInt($(min).offset().top);
+        var $maxTop = parseInt($(max).offset().top) - $floatHeight;
+
+        console.log(
+            "$scroll ( 현재 스크롤 값 ) : ", $scroll + "\n",
+            "$floatHeight ( 버튼 세로 높이 값 ) :", $floatHeight + "\n",
+            "$floatOffsetTop ( 현재 버튼 상단 위치 값 ) :", $floatOffsetTop + "\n",
+            "$minTop ( 지정한 최소 높이 위치 값 ):", $minTop +"\n",
+            "$maxTop ( 지정한 최대 높이 위치 값 ):", $maxTop
+        )
+
 
         if($scroll < $minTop){
-            $float.removeClass(classNmae);
-        } else if($floatOffsetTop < $maxTop) {
-            $float.addClass(classNmae);
-        } else {
-            $float.removeClass(classNmae);
+            $target.removeClass(classNmae);
+        }
+        else if($floatOffsetTop < $maxTop) {
+            $target.addClass(classNmae);
+        }
+        else {
+            $target.removeClass(classNmae);
         }
     },
     windowKeyCodeCheck : function () {
@@ -547,32 +558,31 @@ var UI = {
         })
 
     },
-    moreText : function(el, height) {
-        var $height = Number(height);
-        $(el).each(function() {
-            var length = $(this).children('p').text().length;
+    moreText : function() {
+        var $height = Number("22");
+        $(".photo-list").each(function (){
+            $(this).find(".feedback").each(function(key, value) {
+                var length = $(value).children('p').text().length;
+                if(length > 30) {
+                    $(this).append('<a href="" class="more-event">더보기</a>');
+                    var $btn = $(this).find('.more-event');
+                    $btn.on('click', function (e) {
+                        e.preventDefault();
+                        var $el = $(this).parents(".feedback");
+                        var $text = String($(this).text());
 
-            if(length > 30) {
-                $(this).append('<a href="" class="more-event">더보기</a>');
-                var $btn = $(this).find('.more-event');
-                $btn.on('click', function (e) {
-                    e.preventDefault();
-                    var $el = $(this).parents(el);
-                    var $text = String($(this).text());
+                        if ($text !== '더보기') {
+                            $el.children('p').css({'height': $height + 'px', 'white-space': 'nowrap'});
+                            $(this).text('더보기');
+                        } else {
+                            $el.children('p').css({'height': 'auto', 'white-space': 'normal'});
+                            $(this).text('접기');
+                        }
+                    });
+                }
+            });
+        })
 
-                    if ($text !== '더보기') {
-                        $el.children('p').css({'height': $height + 'px', 'white-space': 'nowrap'});
-                        $(this).text('더보기');
-                    } else {
-                        $el.children('p').css({'height': 'auto', 'white-space': 'normal'});
-                        $(this).text('접기');
-                    }
-                });
-            } else {
-                return false;
-            }
-
-        });
     },
     itTtListSearch : function(list) {
         var $el = $(".search-wrap .search-output");
@@ -797,9 +807,16 @@ var UI = {
         }
     },
     httpStatusSearchLog : function (value) {
+        var statusGroup = [];
         var $find = value;
         var header = $(".header").height() + 10;
         var test = null;
+
+        $(".em-text").each(function () {
+            statusGroup.push($(".em-text").text());
+        })
+
+        console.log(statusGroup);
 
         $(".em-text").each(function(key, value) {
             if($(value).text() !== $find) {
