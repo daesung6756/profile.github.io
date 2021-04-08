@@ -525,7 +525,7 @@ var UI = {
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
 
-            $open.on('click', function(){
+            $open.on('mousedown, click', function(){
 
                 alert(popGroup);
 
@@ -554,7 +554,7 @@ var UI = {
                 alert("이벤트 시작");
             });
 
-            $close.on('click', function(){
+            $close.on('mousedown, click', function(){
                 $body.removeClass("is-lock");
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
