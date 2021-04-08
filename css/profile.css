@@ -32,7 +32,7 @@
 .photo-list .info .feedback:before {content:'성찰 : ';position:absolute;left:0;top:0;}
 .photo-list .info .description:before {content:'설명 : ';position:absolute;left:0;top:0;}
 .photo-list .info .description > p {line-height:24px}
-.photo-list .info .feedback > p {overflow:hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis; white-space:nowrap;line-height:24px;}
+.photo-list .info .feedback > p {overflow:hidden;-o-text-overflow: ellipsis;text-overflow: ellipsis; white-space:nowrap;line-height:1.2rem;}
 .photo-list .info dt {margin-bottom:10px;padding-bottom:10px;border-bottom:1px dotted #303030;}
 .photo-list .info dd {position:relative;margin-top:.2rem;font-size:.7rem;line-height:1.6;word-break: keep-all}
 .photo-list .info dd:before {color: #422913}
