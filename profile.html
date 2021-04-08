@@ -59,7 +59,7 @@
 <script>
     include.footer.scripts();
     $(window).on("load",function() {
-        UI.popup();
+        if($("[data-pop-open]").length > 0){UI.popup()}
     })
 </script>
 

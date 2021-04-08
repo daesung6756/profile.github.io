@@ -14,7 +14,7 @@ var UI = {
 
         if($("[data-tooltip]").length > 0){this.tooltip()}
         if($("[data-tab]").length > 0){this.tabs()}
-        if($("[data-pop-open]").length > 0){this.popup()}
+
         if($("[data-dropdown]").length > 0){this.dropdown()}
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
 
@@ -519,16 +519,21 @@ var UI = {
             }
         });
 
+        console.log(popGroup)
+
         $.each(popGroup, function(key, value){
             var $popup = $("[data-pop=" + value +"]");
             var $open = $("[data-pop-open=" + value +"]");
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
 
+
             $open.on('click', function(){
+
                 alert("클릭이 정상적으로 이루어 졌습니다.");
-                if($popup.hasClass('is-dim')){
-                    $popup.append("<div class='dimmed'></div>")
+
+                if($popup.hasClass('is-dim')) {
+                    $popup.append("<div class='dimmed'></div>");
                 }
 
                 if($(this).data("pop-src")){
@@ -794,8 +799,6 @@ var UI = {
                         "   <div><span>'" + data[key].name +"'</span></div>" +
                         "<span></span>" +
                         "</li>")
-                } else {
-                    console.log("Interest list data 작성이 잘 못 되었습니다. 확인 바랍니다.")
                 }
             })
         }
