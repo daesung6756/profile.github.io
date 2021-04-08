@@ -21,7 +21,7 @@ var UI = {
 
         if($("[data-tooltip]").length > 0){this.tooltip()}
         if($("[data-tab]").length > 0){this.tabs()}
-        if($("[data-pop-open]").length > 0){this.popup()}
+        if($("[data-pop-open]").length > 0){this.popup(); alert("팝업 불러옴")}
         if($("[data-dropdown]").length > 0){this.dropdown()}
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
     },
