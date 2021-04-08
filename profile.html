@@ -55,14 +55,6 @@
 
 </div>
 
-
-<script>
-    include.footer.scripts();
-    $(window).on("load",function() {
-        if($("[data-pop-open]").length > 0){UI.popup()}
-    })
-</script>
-
 <!-- img gallery popup -->
 <div class="popup-wrap is-dim wide" data-pop="imgPopup">
     <div class="pop">
@@ -76,6 +68,16 @@
         </div>
     </div>
 </div>
+
+<script>
+    include.footer.scripts();
+    window.addEventListener('DOMContentLoaded', function() {
+        alert($("[data-pop-open]").length > 0)
+        if ($("[data-pop-open]").length > 0) {
+            UI.popup()
+        }
+    })
+</script>
 
 </body>
 </html>
