@@ -527,7 +527,8 @@ var UI = {
 
             $open.on('click', function(){
 
-                console.log(1);
+                alert(popGroup);
+
                 if($popup.hasClass('is-dim')){
                     $popup.append("<div class='dimmed'></div>")
                 }
@@ -535,6 +536,8 @@ var UI = {
                 if($(this).data("pop-src")){
                     if($popup.find(".pop-load-img")){
                         $popup.find(".pop-load-img").remove();
+                    } else {
+                        console.log("$popup.find(\".pop-load-img\").remove(); 실패")
                     }
 
                     $popup.find(".pop-content").append(
