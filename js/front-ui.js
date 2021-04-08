@@ -530,8 +530,6 @@ var UI = {
 
             $open.on('click', function(){
 
-                alert("클릭이 정상적으로 이루어 졌습니다.");
-
                 if($popup.hasClass('is-dim')) {
                     $popup.append("<div class='dimmed'></div>");
                 }
