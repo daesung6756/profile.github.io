@@ -525,8 +525,8 @@ var UI = {
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
 
-            $open.on('mousedown,  click', function(){
-
+            $open.on('click', function(){
+                alert("클릭이 정상적으로 이루어 졌습니다.");
                 if($popup.hasClass('is-dim')){
                     $popup.append("<div class='dimmed'></div>")
                 }
@@ -534,8 +534,6 @@ var UI = {
                 if($(this).data("pop-src")){
                     if($popup.find(".pop-load-img")){
                         $popup.find(".pop-load-img").remove();
-                    } else {
-                        console.log("$popup.find(\".pop-load-img\").remove(); 실패")
                     }
 
                     $popup.find(".pop-content").append(
@@ -552,7 +550,7 @@ var UI = {
 
             });
 
-            $close.on('mousedown, click', function(){
+            $close.on('click', function(){
                 $body.removeClass("is-lock");
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
