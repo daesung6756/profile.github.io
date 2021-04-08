@@ -673,6 +673,7 @@ var UI = {
     },
     snsShare : function(){
         var shareGroup = [];
+        var _location = window.location.href;
 
         $('[data-share]').each(function(){
             if($.inArray($(this).data('share'), shareGroup > -1)){
@@ -681,6 +682,9 @@ var UI = {
         });
         $.each(shareGroup, function(key, value) {
             var $btn = $("[data-share=" + value + "]");
+            var $input = $(".share-url").find(".get-url-input")
+
+            $input.val(_location)
 
             $btn.on('click', function(){
                 UI.sendSns(value , exhibitionTitle );
