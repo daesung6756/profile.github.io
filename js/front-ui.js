@@ -525,9 +525,9 @@ var UI = {
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
 
-            $open.on('click, touch', function(){
+            $open.on('click', function(){
 
-
+                console.log(1);
                 if($popup.hasClass('is-dim')){
                     $popup.append("<div class='dimmed'></div>")
                 }
@@ -548,9 +548,10 @@ var UI = {
 
                 $body.addClass("is-lock");
                 $popup.addClass('is-show');
+                alert("이벤트 시작");
             });
 
-            $close.on('click, touch', function(){
+            $close.on('click', function(){
                 $body.removeClass("is-lock");
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
