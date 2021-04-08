@@ -12,18 +12,18 @@ var UI = {
         this.snsShare();
         this.InterestListDraw(InterestList)
 
-        if($("[data-tooltip]").length > 0){this.tooltip()}
-        if($("[data-tab]").length > 0){this.tabs()}
-
-        if($("[data-dropdown]").length > 0){this.dropdown()}
-        if($("[data-slick]").length > 0){this.techListDraw(techLists);}
-
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
         this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
         this.historyLogDraw(historyLog);
         this.patOnTheBack('.love-btn',encouragement );
         this.moreText();
+
+        if($("[data-tooltip]").length > 0){this.tooltip()}
+        if($("[data-tab]").length > 0){this.tabs()}
+        if($("[data-pop-open]").length > 0){this.popup()}
+        if($("[data-dropdown]").length > 0){this.dropdown()}
+        if($("[data-slick]").length > 0){this.techListDraw(techLists);}
     },
     techListDraw : function( data ){
         $.each(data, function (i) {
