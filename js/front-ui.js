@@ -525,7 +525,7 @@ var UI = {
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
 
-            $open.on('click', function(){
+            $open.on('click, touch', function(){
 
 
                 if($popup.hasClass('is-dim')){
@@ -550,7 +550,7 @@ var UI = {
                 $popup.addClass('is-show');
             });
 
-            $close.on('click', function(){
+            $close.on('click, touch', function(){
                 $body.removeClass("is-lock");
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
