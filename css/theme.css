@@ -47,7 +47,7 @@ body.theme .section.is-on .tech_list .slick-slider .title {color: #507401;}
 body.theme .section.is-on .tech_list .slick-slider .desc {color:#333;}
 body.theme .section.is-on .tech_list .slick-slide .row .column img {background-color:#fff;opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
 body.theme .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
-body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(255, 75, 20)}
+body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(176 195 137);}
 
 body.theme .visual-spot{background:#333;-webkit-box-shadow: 20px 20px 20px rgba(0,0,0,.8);box-shadow: 20px 20px 20px rgba(0,0,0,.8);}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;background:url("../images/window.png") right center no-repeat;background-size:cover;}
@@ -63,8 +63,13 @@ body.theme .photo-list .info .name{color: #bf9e72;}
 body.theme .photo-list .info dd {color:#cac7b6}
 body.theme .photo-list .info dd:before {color:#ccc27d}
 
-body.theme .section.is-on .profile .info > .question{color: #d6ee6c;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
-body.theme .section.is-on .profile .info > .answer{color:#fff;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+body.theme .section.is-on .profile .info > li {background:rgb(150 175 99);box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,.2 );}
+body.theme .section.is-on .profile .info .question{color: #e2ffba;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+body.theme .section.is-on .profile .info .question:before{background:#f2ffe2;transition: color .2s linear, transform .1s linear}
+body.theme .section.is-on .profile .info .question:after{background:#f2ffe2;transition: color .2s linear, transform .1s linear}
+body.theme .section.is-on .profile .info .answer{color:#fff;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+
+body.theme .section.is-on .tech_list .slick-slider > .slick-list.draggable {border-bottom: 1px dotted #ddd;}
 
 body.theme .scroll-floating button{background: rgba(19, 103, 33, 1);}
 

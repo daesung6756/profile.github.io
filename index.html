@@ -52,7 +52,7 @@
 
                         <div class="article">
                             <h4 class="tit">- QnA</h4>
-                            <div class="profile mt30"><div class="info desc-group"></div></div>
+                            <div class="profile mt30"><ul class="info desc-group"></ul></div>
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
 
     var slickSlide = {
         init: function () {
-            if($("[data-slick]").length > 0){ this.event( slickOption ); console.log("슬라이드 실행")}
+            if($("[data-slick]").length > 0){ this.event( slickOption );}
         },
         event : function ( option ){
             var slickGroup = [];
@@ -110,6 +110,7 @@
 
             $.each(slickGroup, function(key, value) {
                 var slickSlide =  $("[data-slick='" + value + "']")
+
                 slickSlide.slick( option );
                 slickSlide.find(".slick-current").addClass("animated")
             })

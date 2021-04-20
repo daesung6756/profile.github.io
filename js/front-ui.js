@@ -24,6 +24,7 @@ var UI = {
         if($("[data-pop-open]").length > 0){this.popup()}
         if($("[data-dropdown]").length > 0){this.dropdown()}
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
+        if($("[data-toggle]").length > 0){this.toggleClassDefault;}
     },
     techListDraw : function( data ){
         $.each(data, function (i) {
@@ -243,6 +244,28 @@ var UI = {
             $el.append('<li><a href="' + value.url + '">' + value.name + '</a></li>');
         });
     },
+    toggleClassDefault : function () {
+        var toggleGroup = [];
+
+
+        $("[data-toggle]").each(function(){
+            if($.inArray( $(this).data("toggle"), toggleGroup ) === -1  ){
+                toggleGroup.push($(this).data("toggle"))
+            }
+        })
+
+        $.each(toggleGroup, function(key, value) {
+            var btn = $("[data-toggle='" +  value + "']");
+            var panel = $("[data-toggle-panel='" +  value + "']");
+
+            btn.on("click", function () {
+                $(this).toggleClass("is-on")
+                panel.toggleClass("is-active");
+            });
+
+        })
+
+    },
     profileQaDraw: function(el, array) {
         var $el = $(el);
         var $array = array;
@@ -260,7 +283,7 @@ var UI = {
         $random.splice(0, ($random.length - 5));
 
         $.each($random ,function(key, value){
-            $(el).append('<p class="question">' + value.question + '</p><p class="answer">' + value.answer + '</p>')
+            $(el).append('<li data-toggle="qaToggle' + key + '"><p class="question">' + value.question + '</p><p class="answer" data-toggle-panel="qaToggle' + key + '">' + value.answer + '</p></li>')
         });
 
     },
@@ -437,13 +460,13 @@ var UI = {
         var $minTop = parseInt($(min).offset().top);
         var $maxTop = parseInt($(max).offset().top) - $floatHeight;
 
-        console.log(
+       /* console.log(
             "$scroll ( 현재 스크롤 값 ) : ", $scroll + "\n",
             "$floatHeight ( 버튼 세로 높이 값 ) :", $floatHeight + "\n",
             "$floatOffsetTop ( 현재 버튼 상단 위치 값 ) :", $floatOffsetTop + "\n",
             "$minTop ( 지정한 최소 높이 위치 값 ):", $minTop +"\n",
             "$maxTop ( 지정한 최대 높이 위치 값 ):", $maxTop
-        )
+        )*/
 
 
         if($scroll < $minTop){
@@ -519,7 +542,7 @@ var UI = {
             }
         });
 
-        console.log(popGroup)
+        /*console.log(popGroup)*/
 
         $.each(popGroup, function(key, value){
             var $popup = $("[data-pop=" + value +"]");
@@ -733,7 +756,7 @@ var UI = {
             $btn = $el.children('button');
 
         $btn.each(function () {
-            console.log($number);
+            /*console.log($number);*/
             $(this).on('click', function() {
                 if($(this).hasClass('plus')){
                     $number[0].stepUp();
@@ -752,7 +775,7 @@ var UI = {
             $length = $valueGroup.length,
             $valueClass = String("" + $length);
 
-        console.log(event.target);
+        /*console.log(event.target);*/
         $.each($valueGroup, function(key, value) {
             $el.append('<div class="r-fill clip-' + $length + '"></div>');
         });
@@ -860,6 +883,7 @@ $(function(){
 // load
 $(window).on("load", function () {
     UI.loaderRemove()
+    UI.toggleClassDefault()
 })
 
 //scroll
