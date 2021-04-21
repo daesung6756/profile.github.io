@@ -19,7 +19,7 @@
 .section.is-on .photo-list .info .name{color: #bf9e72;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .photo-list .info dd {color:#cac7b6;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
-.section.is-on .profile .info > li.is-on {background: #ffda00}
+.section.is-on .profile .info > li.is-on {background: #fff2a6}
 
 body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
 body.theme .section.is-on h4.tit {color:rgb(255,255,255)}
@@ -51,7 +51,7 @@ body.theme .section.is-on .tech_list .slick-slide .row .column img {background-c
 body.theme .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
 body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(176 195 137);}
 
-body.theme .visual-spot{background:#004f67;-webkit-box-shadow: 20px 20px 20px rgba(0,0,0,.8);box-shadow: 20px 20px 20px rgba(0,0,0,.8);}
+body.theme .visual-spot{background:#004f67;}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;
     /*background:url("../images/window.png") right center no-repeat;background-size:cover;*/}
 /*body.theme .visual-spot .spot-inner .bg-area{position:relative;background:url("../images/sky-bg.jpg") center center no-repeat;background-size:cover;background-attachment: fixed}*/
@@ -75,7 +75,7 @@ body.theme .section.is-on .profile .info > li.is-on {background:rgb(47 125 171)}
 body.theme .section.is-on .profile .info > li.is-on  .question {color:#a3d3f1}
 body.theme .section.is-on .profile .info > li.is-on  .question:before {background:#fff;}
 body.theme .section.is-on .profile .info > li.is-on  .question:after {background:#fff;}
-body.theme .section.is-on .profile .info > li.is-on  .answer {color:#fff}
+body.theme .section.is-on .profile .info > li.is-on  .answer {color:#fff;border-color:#103850;}
 
 body.theme .section.is-on .tech_list .slick-slider > .slick-list.draggable {border-bottom: 1px dotted #ddd;}
 

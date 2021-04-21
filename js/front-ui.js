@@ -283,7 +283,7 @@ var UI = {
         $random.splice(0, ($random.length - 5));
 
         $.each($random ,function(key, value){
-            $(el).append('<li data-toggle="qaToggle' + key + '"><p class="question">' + value.question + '</p><p class="answer" data-toggle-panel="qaToggle' + key + '">' + value.answer + '</p></li>')
+            $(el).append('<li data-toggle="qaToggle' + key + '"><p class="question">Q : ' + value.question + '</p><p class="answer" data-toggle-panel="qaToggle' + key + '">A : ' + value.answer + '</p></li>')
         });
 
     },
@@ -672,19 +672,24 @@ var UI = {
         $btn.on('click', function(e){
             e.preventDefault();
 
-            if(!$body.children().is('.layer-pop')) {
-                $.each($array, function (key, value) {$random.push(value);});
-                $random.sort(function () {return Math.random() - Math.random();}); // 랜덤 정렬
-                $random.splice(0, ($random.length - 1)); // 1개만 가져오기
+            UI.loaderAdd()
+            UI.loaderRemove()
+            setTimeout(function(){
+                if(!$body.children().is('.layer-pop')) {
+                    $.each($array, function (key, value) {$random.push(value);});
+                    $random.sort(function () {return Math.random() - Math.random();}); // 랜덤 정렬
+                    $random.splice(0, ($random.length - 1)); // 1개만 가져오기
 
-                $body.append('<div class="layer-pop"><div class="pop-body"><span class="text">' + $random + '</span></div><div class="pop-foot"><button type="button" class="close-layer-pop">닫기</button></div></div>');
-                $body.find('.layer-pop .close-layer-pop').focus();
+                    $body.append('<div class="layer-pop"><div class="pop-body"><span class="text">' + $random + '</span></div><div class="pop-foot"><button type="button" class="close-layer-pop">닫기</button></div></div>');
+                    $body.find('.layer-pop .close-layer-pop').focus();
 
-                $popOn = true;
-            } else {
-                alert("먼저 팝업을 닫아 주세요.");
-                return false;
-            }
+                    $popOn = true;
+                } else {
+                    alert("먼저 팝업을 닫아 주세요.");
+                    return false;
+                }
+            }, 800)
+
         });
 
         $(document).on('click','button.close-layer-pop', function(e){
