@@ -112,7 +112,7 @@ function grm () {
         '</div>' +
         '<div class="in-right">' +
         '<ul class="util">' +
-        '<li><button type="button" class="visual-toggle" title="테마 열기/닫기"><i class="icon icon-switch-white-off"><span class="blind">테마 열기/닫기</span></i></button><span class="tooltip-block dir-bottom">테마를 키면 더 밝아져요!!</span></li>' +
+        '<li><button type="button" class="visual-toggle" title="테마 열기/닫기"><i class="icon icon-switch-white-off"><span class="blind">테마 열기/닫기</span></i></button><span class="tooltip-block dir-bottom">테마 !!</span></li>' +
         '<li><button type="button" class="love-btn" title="위로 해줄께!"><i class="icon icon-cardiogram-white"><span class="blind">팝업 열기</span></i></button></li>' +
         '<li><button type="button" data-pop-open="search" title="투입 프로젝트 검색하기"><i class="icon icon-search-white"><span class="blind">Search 열기</span></i></button></li>' +
         '<li><button type="button" data-pop-open="share" title="현재 페이지 공유하기"><i class="icon icon-sns-share-white"><span class="blind">Share 열기</span></i></button></li>' +

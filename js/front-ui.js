@@ -30,10 +30,10 @@ var UI = {
         $.each(data, function (i) {
             $(".tech_list .slick-slider").append(
                 '<div class="slick-list">' +
-                    '<div class="row">' +
-                        '<div class="column n2"><img src="' + data[i].image + '" alt="' + data[i].title + '" /></div>' +
-                        '<div class="column n2"><p class="title">' + data[i].title + '</p><p class="desc">' + data[i].description + '</p></div>' +
-                    '</div>' +
+                '<div class="row">' +
+                '<div class="column n2"><img src="' + data[i].image + '" alt="' + data[i].title + '" /></div>' +
+                '<div class="column n2"><p class="title">' + data[i].title + '</p><p class="desc">' + data[i].description + '</p></div>' +
+                '</div>' +
                 '</div>'
             )
             $(function() {
@@ -296,12 +296,12 @@ var UI = {
 
         $.each(sectionInnerGroup, function(){
             $(this).append(
-            '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
-            '<div class="blink-event-set">' +
+                '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
+                '<div class="blink-event-set">' +
                 '<span class="bim box-blink-ani"></span>' +
                 '<span class="lamp"></span>' +
                 '<span class="light box-blink-ani box-shadow-ani"></span>' +
-            '</div>');
+                '</div>');
 
         });
     },
@@ -460,13 +460,13 @@ var UI = {
         var $minTop = parseInt($(min).offset().top);
         var $maxTop = parseInt($(max).offset().top) - $floatHeight;
 
-       /* console.log(
-            "$scroll ( 현재 스크롤 값 ) : ", $scroll + "\n",
-            "$floatHeight ( 버튼 세로 높이 값 ) :", $floatHeight + "\n",
-            "$floatOffsetTop ( 현재 버튼 상단 위치 값 ) :", $floatOffsetTop + "\n",
-            "$minTop ( 지정한 최소 높이 위치 값 ):", $minTop +"\n",
-            "$maxTop ( 지정한 최대 높이 위치 값 ):", $maxTop
-        )*/
+        /* console.log(
+             "$scroll ( 현재 스크롤 값 ) : ", $scroll + "\n",
+             "$floatHeight ( 버튼 세로 높이 값 ) :", $floatHeight + "\n",
+             "$floatOffsetTop ( 현재 버튼 상단 위치 값 ) :", $floatOffsetTop + "\n",
+             "$minTop ( 지정한 최소 높이 위치 값 ):", $minTop +"\n",
+             "$maxTop ( 지정한 최대 높이 위치 값 ):", $maxTop
+         )*/
 
 
         if($scroll < $minTop){
@@ -796,8 +796,8 @@ var UI = {
         var windowWidth = $(window).width();
 
         if(windowWidth > 768) {
-          $('[data-dropdown="util"]').removeClass("is-active");
-          $('.header-drop').removeClass("is-show");
+            $('[data-dropdown="util"]').removeClass("is-active");
+            $('.header-drop').removeClass("is-show");
         }
     },
     loaderAdd : function () {
@@ -910,7 +910,7 @@ $(document).on('keyup', "#httpStatusSearch" , function(event){
     }
 });
 $(document).on('keyup', "#searcTtList" , function(){
-        UI.itTtListSearch(this);
+    UI.itTtListSearch(this);
 });
 $(document).on('click', "#getSearchText", function() {
     UI.popupLogSearch('#searchTit',historyLog);
@@ -922,3 +922,135 @@ $(document).on("keypress",'#searchTit', function(event){//input enter key
         $('#searchTit').val('');
     }
 });
+
+$(document).ready(function($){
+    "use strict";
+    $(".visual-toggle").on("click",function(){
+        if($(this).hasClass("is-on")) {
+
+            (function() {
+                var lastTime = 0;
+                var vendors = ['ms', 'moz', 'webkit', 'o'];
+                for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+                    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame']
+                        || window[vendors[x] + 'CancelRequestAnimationFrame'];
+                }
+
+                if (!window.requestAnimationFrame)
+                    window.requestAnimationFrame = function (callback, element) {
+                        var currTime = new Date().getTime();
+                        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                        var id = window.setTimeout(function () {
+                                callback(currTime + timeToCall);
+                            },
+                            timeToCall);
+                        lastTime = currTime + timeToCall;
+
+                        return id;
+                    };
+
+                if (!window.cancelAnimationFrame)
+                    window.cancelAnimationFrame = function (id) {clearTimeout(id);};
+            }());
+
+            (function() {
+                var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
+
+                // Main
+                initHeader();
+                addListeners();
+
+                function initHeader() {
+                    width = document.querySelector(".spot-inner").offsetWidth;
+                    height = document.querySelector(".spot-inner").offsetHeight;
+                    target = { x: 0, y: height };
+
+                    largeHeader = document.getElementById("visual-spot");
+                    largeHeader.style.height = height + 'px';
+
+                    canvas = document.getElementById('water-bell-canvas');
+                    canvas.style.display = "block";
+                    canvas.width = width;
+                    canvas.height = height;
+                    ctx = canvas.getContext('2d');
+
+                    // create particles
+                    circles = [];
+                    for (var x = 0; x < width * 0.5; x++) {
+                        var c = new Circle();
+                        circles.push(c);
+                    }
+                    animate();
+                }
+
+                // Event handling
+                function addListeners() {
+                    window.addEventListener('scroll', scrollCheck);
+                    window.addEventListener('resize', resize);
+                }
+
+                function scrollCheck() {
+                    if (document.body.scrollTop > height) animateHeader = false;
+                    else animateHeader = true;
+                }
+
+                function resize() {
+                    width = document.querySelector(".spot-inner").offsetWidth;
+                    height = document.querySelector(".spot-inner").offsetHeight;
+                    largeHeader.style.height = height + 'px';
+                    canvas.width = width;
+                    canvas.height = height;
+                }
+
+                function animate() {
+                    if (animateHeader) {
+                        ctx.clearRect(0, 0, width, height);
+                        for (var i in circles) {
+                            circles[i].draw();
+                        }
+                    }
+                    requestAnimationFrame(animate);
+                }
+
+                // Canvas manipulation
+                function Circle() {
+                    var _this = this;
+
+                    // constructor
+                    (function () {
+                        _this.pos = {};
+                        init();
+                    })();
+
+                    function init() {
+                        _this.pos.x = Math.random() * width;
+                        _this.pos.y = height + Math.random() * 100;
+                        _this.alpha = 0.1 + Math.random() * 0.3;
+                        _this.scale = 0.3 + Math.random() * 0.3;
+                        _this.velocity = Math.random();
+                    }
+
+                    this.draw = function () {
+                        if (_this.alpha <= 0) {
+                            init();
+                        }
+                        _this.pos.y -= _this.velocity;
+                        _this.alpha -= 0.0005;
+                        ctx.beginPath();
+                        ctx.arc(_this.pos.x, _this.pos.y, _this.scale * 10, 0, 2 * Math.PI, false);
+                        ctx.fillStyle = 'rgba(255,255,255,' + _this.alpha + ')';
+                        ctx.fill();
+                    };
+                }
+            }())
+
+        } else {
+            (function() {
+                var canvas;
+                canvas = document.getElementById('water-bell-canvas');
+                canvas.style.display = "none"
+            }())
+        }
+    })
+})
