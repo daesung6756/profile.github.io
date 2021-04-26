@@ -8,7 +8,7 @@
 
 .section.is-on .profile .info > .question{color:#777;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .profile .info > .answer{color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
-.section.is-on .info > li {background:#fff;transition: background .3s ease-in-out}
+.section.is-on .info > li {background:#fff;}
 
 .tech_list {position:relative;margin-bottom:20px;font-size:0;}
 .tech_list .slick-slider {padding:1rem 0 1rem;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
@@ -25,7 +25,7 @@
 .tech_list .animated .row .column .desc {opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition: opacity .2s, -webkit-transform .1s ease-out;transition: opacity .2s, -webkit-transform .1s ease-out;-o-transition: opacity .2s, transform .1s ease-out;transition: opacity .2s, transform .1s ease-out;transition: opacity .2s, transform .1s ease-out, -webkit-transform .1s ease-out}
 
 .tech_list .slick-slider > .slick-list.draggable {width:100%;}
-.tech_list .slick-dots {position:relative;width:100%;font-size:0;padding:1rem;margin-top: 1.6rem;}
+.tech_list .slick-dots {position:relative;width:100%;font-size:0;padding:1rem;border-top:1px dotted #333}
 .tech_list .slick-dots li {display:inline-block;vertical-align: top;opacity:.1;}
 .tech_list .slick-dots li button{font-size:0;width:2.6rem;height:2.6rem;margin:0;border:0;background:transparent;-webkit-transition: background .3s, width .3s, padding .3s;-o-transition: background .3s, width .3s, padding .3s;transition: background .3s, width .3s, padding .3s;padding:10px;}
 .tech_list .slick-dots li:hover button{padding:0;-webkit-transition: padding .3s;-o-transition: padding .3s;transition: padding .3s;}
@@ -38,7 +38,7 @@
 .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
 
 .profile .info {color:#ddd;display:flex;align-items:end;flex-wrap:wrap;justify-content: space-between;margin-top:-10px}
-.profile .info > li {background: #191919;width:100%;margin-top:10px;border-radius:4px;cursor:pointer;transition: background .3s ease-in-out}
+.profile .info > li {background: #191919;width:100%;margin-top:10px;border-radius:4px;cursor:pointer;}
 .profile .info .question{position:relative;color:#333;font-size:.7rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;padding:1rem 1rem 1rem 3rem;font-weight:700}
 .profile .info .question:before,
 .profile .info .question:after  {content:"";position:absolute;top:25px;left:14px;width:20px;height:4px;background:#000;}
@@ -51,22 +51,22 @@
 .profile .info .answer + .question {margin-top:1rem}
 
 @media screen and (min-width:768px){
-    .tech_list .slick-slider {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:2.5rem 0 2.5rem;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
+    .tech_list .slick-slider {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}
     .tech_list .slick-slide .row {display:table;width:100%;}
     .tech_list .slick-slide .row .column {display:table-cell;vertical-align: top;}
     .tech_list .slick-slide .row .column.n2 {width:50%;}
     .tech_list .slick-slide .row .column.n2:first-child {display:table-cell;width:40%;max-width:350px;padding:25px;vertical-align: middle;}
-    .tech_list .slick-slide .row .column.n2:last-child {width:calc(100% - 350px);padding:10px;}
+    .tech_list .slick-slide .row .column.n2:last-child {width:calc(100% - 350px);padding:10px;vertical-align: middle;}
 
     .tech_list .slick-slider > .slick-list.draggable {width:70%;}
-    .tech_list .slick-dots {width:30%;}
+    .tech_list .slick-dots {width:30%;border-top:0;border-left:1px dotted #333;padding:0 20px}
 
     .profile .info > li {width:calc(50% - 5px)}
 }
 @media screen and (min-width:1024px){
     html {font-size:18px}
-    .tech_list .slick-slider {-ms-flex-wrap:wrap;flex-wrap:wrap;padding:2.5rem 1rem 2.5rem;}
+    .tech_list .slick-slider {-ms-flex-wrap:wrap;flex-wrap:wrap;padding:0}
     .tech_list .slick-slider > .slick-list.draggable {width:70%;border-bottom:0;}
-    .tech_list .slick-dots {position:relative;top:auto;right:auto;width:30%;overflow:auto;height:auto;padding:0 20px;margin-top:0}
+    .tech_list .slick-dots {position:relative;top:auto;right:auto;width:30%;overflow:auto;height:auto;padding:10px 20px;margin-top:0}
 
 }

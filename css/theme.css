@@ -11,7 +11,7 @@
 .section.is-on .disc-list li.is-find {color:#fff;}
 .section.is-on .em-text.is-find {background: #ffff00;color:#f70000;}
 .section.is-on .photo-list .info dd:before {color: #975e2b;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
-
+.section.is-on .tech_list .slick-dots {border-color:#ddd}
 .section.is-on .bim {background:rgba(255,255,255, .4);}
 .section.is-on .pic {opacity:1}
 .section.is-on .article-wrap {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}

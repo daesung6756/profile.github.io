@@ -1,3 +1,4 @@
+var patOnTheBackPop = false;
 var UI = {
     init : function(){
         this.loaderAdd();
@@ -16,7 +17,7 @@ var UI = {
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
         this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
         this.historyLogDraw(historyLog);
-        this.patOnTheBack('.love-btn',encouragement );
+        this.patOnTheBack(encouragement);
         this.moreText();
 
         if($("[data-tooltip]").length > 0){this.tooltip()}
@@ -662,45 +663,55 @@ var UI = {
             $resualt.text('검색 결과가 없습니다.');
         }
     },
-    patOnTheBack: function (el, array) {
-        var $body = $('body');
-        var $btn = $(el);
+    patOnTheBack: function (array) {
+        var $open = $(".love-btn");
+        var $close = ".close-layer-pop";
         var $array = array;
-        var $random = [];
-        var $popOn = false;
 
-        $btn.on('click', function(e){
+        $open.on('click', function(e){
             e.preventDefault();
-
-            UI.loaderAdd()
-            UI.loaderRemove()
-            setTimeout(function(){
-                if(!$body.children().is('.layer-pop')) {
-                    $.each($array, function (key, value) {$random.push(value);});
-                    $random.sort(function () {return Math.random() - Math.random();}); // 랜덤 정렬
-                    $random.splice(0, ($random.length - 1)); // 1개만 가져오기
-
-                    $body.append('<div class="layer-pop"><div class="pop-body"><span class="text">' + $random + '</span></div><div class="pop-foot"><button type="button" class="close-layer-pop">닫기</button></div></div>');
-                    $body.find('.layer-pop .close-layer-pop').focus();
-
-                    $popOn = true;
-                } else {
-                    alert("먼저 팝업을 닫아 주세요.");
-                    return false;
-                }
-            }, 800)
-
+            if(patOnTheBackPop === true){
+                alert("먼저 팝업을 닫아 주세요.");
+                return false;
+            } else {
+                UI.patOnTheBackOpen(patOnTheBackPop, $array)
+            }
+            patOnTheBackPop = true
         });
 
-        $(document).on('click','button.close-layer-pop', function(e){
+        $(document).on('click', $close, function(e){
             e.preventDefault();
-            if($popOn){
-                $body.find('.layer-pop').remove();
-                $popOn = false;
-            } else {
-                return false;
-            }
+            UI.patOnTheBackClose(patOnTheBackPop)
+            patOnTheBackPop = false
         })
+    },
+    patOnTheBackOpen: function ( status, array ) {
+        if(!status) {
+            var $body = $('body');
+            var $random = [];
+            UI.loaderAdd()
+            UI.loaderRemove()
+            setTimeout(function () {
+                $.each(array, function (key, value) {$random.push(value);});
+                $random.sort(function () {return Math.random() - Math.random();}); // 랜덤 정렬
+                $random.splice(0, ($random.length - 1)); // 1개만 가져오기
+
+                $body.append('<div class="layer-pop"><div class="pop-body"><span class="text">' + $random + '</span></div><div class="pop-foot"><button type="button" class="close-layer-pop">닫기</button></div></div>');
+                setTimeout(function () {
+                    $body.find('.layer-pop').addClass("is-show");
+                },300)
+                $body.find('.layer-pop .close-layer-pop').focus();
+            }, 300)
+        }
+    },
+    patOnTheBackClose: function (status) {
+        var $body = $('body');
+        if(status !== false){
+            $body.find('.layer-pop').removeClass("is-show")
+            setTimeout(function () {
+                $body.find('.layer-pop').remove();
+            }, 300)
+        }
     },
     snsShare : function(){
         var shareGroup = [];
@@ -812,8 +823,9 @@ var UI = {
     },
     loaderRemove : function () {
         var body = $("body");
+        body.find(".loader-wrap").fadeOut(400);
         setTimeout(function () {
-            body.find(".loader-wrap").fadeOut(300);
+            body.find(".loader-wrap").remove();
         }, 400)
     },
     InterestListDraw : function ( data ){
