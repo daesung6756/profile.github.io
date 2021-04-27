@@ -414,13 +414,11 @@ var UI = {
                         $(this).attr("href", value + "?theme=on")
                     }
                 } else {
-                    $(this).attr("href", value)
-                }
-
-                if(checkLight) {
-                    $(this).attr("href", value + "?section=on")
-                } else {
-                    $(this).attr("href", value)
+                    if(checkLight) {
+                        $(this).attr("href", value + "?section=on")
+                    } else {
+                        $(this).attr("href", value)
+                    }
                 }
             })
         });
