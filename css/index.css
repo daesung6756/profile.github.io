@@ -32,7 +32,7 @@
 .profile .info > li {background: #191919;width:100%;margin-top:10px;border-radius:4px;cursor:pointer;}
 .profile .info .question{position:relative;color:#333;font-size:.7rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;padding:1rem 1rem 1rem 3rem;font-weight:700}
 .profile .info .question:before,
-.profile .info .question:after  {content:"";position:absolute;top:25px;left:14px;width:20px;height:4px;background:#000;}
+.profile .info .question:after  {content:"";position:absolute;top:25px;left:14px;width:20px;height:4px;background:#272727;}
 .profile .info .question:before  {transform: rotate(0deg);transition: transform .1s linear}
 .profile .info .question:after  {transform: rotate(90deg);transition: transform .1s linear}
 .profile .info .is-on .question:before {transform: rotate(-45deg);transition: transform .1s linear}
