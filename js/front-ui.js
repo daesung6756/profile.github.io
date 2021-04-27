@@ -37,8 +37,6 @@ var UI = {
         var $sectionLight = this.searchParam("section");
         var $parameter = location.href;
 
-        console.log($parameter, $theme, $sectionLight)
-
         if($theme === "on"){
             var $toggleBtn = $('.visual-toggle');
             var $visual = $('.visual-spot');
@@ -401,7 +399,6 @@ var UI = {
             }
         })
 
-        console.log(gnbGroup);
         $.each(gnbGroup, function (key, value){
             var $body = $("body");
             var $btn = $("[data-href='" + value + "']");
@@ -1044,8 +1041,6 @@ var UI = {
         $(".em-text").each(function () {
             statusGroup.push($(".em-text").text());
         })
-
-        console.log(statusGroup);
 
         $(".em-text").each(function(key, value) {
             if($(value).text() !== $find) {
