@@ -37,7 +37,7 @@ var UI = {
         var $sectionLight = this.searchParam("section");
         var $parameter = location.href;
 
-        console.log($theme, $sectionLight)
+        console.log($parameter, $theme, $sectionLight)
 
         if($theme === "on"){
             var $toggleBtn = $('.visual-toggle');
@@ -48,7 +48,7 @@ var UI = {
             $toggleBtn.addClass('is-on');
             $visual.addClass('is-on');
             $theme.addClass('theme');
-            checkTheme = true;
+
 
             (function() {
                 var lastTime = 0;
@@ -166,6 +166,8 @@ var UI = {
                     };
                 }
             }())
+
+            checkTheme = true;
         }
         if($sectionLight === "on"){
             $(".content > .section").addClass("is-on")
@@ -406,11 +408,17 @@ var UI = {
 
             $btn.on("click", function () {
                 if(checkTheme) {
-                    if (checkLight){
+                    if(checkLight) {
                         $(this).attr("href", value + "?theme=on&section=on")
                     } else {
                         $(this).attr("href", value + "?theme=on")
                     }
+                } else {
+                    $(this).attr("href", value)
+                }
+
+                if(checkLight) {
+                    $(this).attr("href", value + "?section=on")
                 } else {
                     $(this).attr("href", value)
                 }
