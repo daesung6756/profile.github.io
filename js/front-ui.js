@@ -300,15 +300,15 @@ var UI = {
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
-                '<dd class="agency">' + value.agency + '</dd>' +
-                '<dd class="customer">' + value.customer + '</dd>' +
-                '<dd class="position">' + value.position + '</dd>' +
+                // '<dd class="agency">' + value.agency + '</dd>' +
+                // '<dd class="customer">' + value.customer + '</dd>' +
+                // '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
                 '<dd class="language">' + value.language + '</dd>' +
                 '<dd class="tool">' + value.tool + '</dd>' +
                 '<dd class="support">' + value.support + '</dd>' +
-                '<dd class="description"><p>' + value.description + '</p></dd>' +
-                '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
+                // '<dd class="description"><p>' + value.description + '</p></dd>' +
+                // '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
                 '<dd class="url"><a href="' + value.url + '" target="_blank" title="' + value.url + ' 바로가기">사이트 바로가기</a></dd>' +
                 '</dl>';
 
@@ -317,15 +317,15 @@ var UI = {
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.date + '</dd>' +
-                '<dd class="agency">' + value.agency + '</dd>' +
-                '<dd class="customer">' + value.customer + '</dd>' +
-                '<dd class="position">' + value.position + '</dd>' +
+                // '<dd class="agency">' + value.agency + '</dd>' +
+                // '<dd class="customer">' + value.customer + '</dd>' +
+                // '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
                 '<dd class="language">' + value.language + '</dd>' +
                 '<dd class="tool">' + value.tool + '</dd>' +
                 '<dd class="support">' + value.support + '</dd>' +
-                '<dd class="description"><p>' + value.description + '</p></dd>' +
-                '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
+                // '<dd class="description"><p>' + value.description + '</p></dd>' +
+                // '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
                 '</dl>';
 
             var $pic1 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +

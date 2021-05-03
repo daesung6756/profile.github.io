@@ -299,9 +299,9 @@ img {display:block;max-width:100%;}
 .tabs-nav li a{color: #f5e0d9}
 .tabs-nav li .is-active{color:#f56c6c}
 
-.years-tab {text-align:right;padding:10px 0;margin:10px 0;opacity:.3;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
-.years-tab .partion-list li{color:#999;cursor:pointer;}
-.years-tab .partion-list li.is-active {color:#ddd;}
+.years-tab {text-align:right;padding:10px 0;margin:10px 0;}
+.years-tab .partion-list li{color:#444;cursor:pointer;}
+.years-tab .partion-list li.is-active {color:#666;}
 
 .main-tab-nav {position:relative;left:-10px;}
 .main-tab-nav li{position:relative;display:inline-block;cursor:pointer;padding:5px 0;margin:0 10px;}

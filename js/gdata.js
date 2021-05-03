@@ -50,17 +50,18 @@ var gnbList = [
         url:'event-group.html'
     },*/
 ];
+
 //관심사 리스트
 var InterestList = [
     {
-        name:'VR',
+        name:'부동산',
         src:"",
-        desc:"현재 오큘러스 퀘스트2를 구매하였고, 열심히 즐기고 있다."
+        desc:""
     },
     {
         name:'VR',
         src:"",
-        desc:"현재 오큘러스 퀘스트2를 구매하였고, 열심히 즐기고 있다."
+        desc:""
     },
 ]
 
