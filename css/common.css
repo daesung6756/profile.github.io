@@ -485,6 +485,16 @@ dl.desc-list > dd {margin-top:1rem;font-size:.8rem;line-height:1.6;color:#303030
 /* canvas */
 #water-bell-canvas {position:absolute;top:0;left:0;width:100%;height:100%;}
 
+/* toggleClass */
+.toggleClassTarget {border:0;background:transparent;}
+.toggleClassTarget.is-on {position:fixed;bottom:10px;right:10px;z-index:100000;}
+.toggleClassTarget.is-on .icon-x-circle-white {"../images/icons/icon-x-circle-white.png"}
+.toggleClassTarget .icon {width:30px;height:30px;}
+
+/**/
+body {overflow: auto}
+body.is-fixed {position:relative;width:100%;height:100%;overflow: hidden;}
+
 /* animation */
 @keyframes textOpacity {
     0%{opacity:.2;}

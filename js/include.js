@@ -21,6 +21,9 @@ var include = {
             },
             mailCodingTest : function() {
                 document.write('<link rel="stylesheet" href="css/mail-test.css">');
+            },
+            snippet : function () {
+                document.write('<link rel="stylesheet" href="css/snippet.css">');
             }
         },
         scripts : function (){
@@ -37,6 +40,10 @@ var include = {
             document.write('<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>');
             document.write('<script src="js/draw-visual.js"></script>');
         }
+    },
+    addFunction : {
+        snippet : function(){
+            document.write('<script type="text/javascript" src="js/snippet.js"></script>');
+        }
     }
-
 }

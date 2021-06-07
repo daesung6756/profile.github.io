@@ -1,4 +1,20 @@
 var patOnTheBackPop = false;
+var toggleTarget = [];
+
+function toggleClassTarget( el, className) {
+    var elem = $(el);
+    var button = $(".toggleClassTarget");
+
+    if(elem.hasClass(className)){
+        button.removeClass("is-on");
+        elem.removeClass(className);
+    } else {
+        button.addClass("is-on");
+        elem.addClass(className);
+    }
+
+}
+
 var UI = {
     init : function(){
         this.loaderAdd();
@@ -1059,7 +1075,7 @@ var UI = {
 
         })
 
-    }
+    },
 };
 
 var checkTheme = false;
@@ -1070,7 +1086,6 @@ var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지
 $(function(){
 
     UI.init();
-
 });
 
 // load

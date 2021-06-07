@@ -33,10 +33,11 @@ var gnbList = [
         name:'HTTP Status',
         url:'http-status.html'
     },
-/*    {
-        name:"It 용어 번역 검색",
-        url:'ittt.html'
+    {
+        name:"Snippet",
+        url:'snippet.html'
     },
+    /*
     {
         name:"웹 접근성 정보",
         url:'web-accessibility.html'
