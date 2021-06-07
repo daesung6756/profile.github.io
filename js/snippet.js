@@ -126,17 +126,18 @@ let rotateSlide = {
         let $currentTarget = null;
         let $currentTargetPop = null;
         let $sliders = $(this.el).find(".sliders");
+        let $booy = $("body");
 
         $sliders.on("click", function (e) {
 
             let elem = $(e.target);
 
-            $("body").toggleClass("is-fixed")
 
             if ($currentTarget !== null) {
                 console.log(1)
                 return;
             } else {
+                $booy.addClass("is-locked")
                 if (!elem.hasClass("slide")) {
                     if (elem.hasClass("inner") || elem.nodeName === "BODY") {
                         elem = null;
@@ -166,12 +167,14 @@ let rotateSlide = {
                     _this.open($sliders.find(".slide-pop"), _activateClassName)
                 }
             }
+
         })
 
         $(document).on("click", this.button, function (e) {
             if (!$(e.target).hasClass("slide-close-btn")) {
                 return;
             } else {
+                $booy.removeClass("is-locked")
                 _this.close($sliders.find(".slide-pop"), _activateClassName)
                 $sliders.find(".slide-pop").remove()
                 $currentTarget = null;
