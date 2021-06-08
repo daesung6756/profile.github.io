@@ -1,5 +1,91 @@
 'use strict';
 
+function elementToggleClass ( el, className ) {
+    let elem = document.querySelector(el);
+    elem.classList.toggle( className )  // classList.add , classList.remove
+}
+
+function elementAddClass ( el, className ) {
+    let elem = document.querySelector(el);
+    elem.classList.add( className )  // classList.add , classList.remove
+}
+
+function elementRemoveClass ( el, className ) {
+    let elem = document.querySelector(el);
+    elem.classList.remove( className )  // classList.add , classList.remove
+}
+
+// 선언식
+let multiTab = {
+    init : function (data , index) {
+        if(document.querySelectorAll("[data-jstab]").length > 0){
+            this.events(data, index);
+        }
+    },
+    events : function ( dataName , firstIndex ) {
+        let _this = this;
+        let tabGroup = [];
+        let tabs = document.querySelectorAll("[data-jstab='" +  dataName  + "']");
+        let buttonActive = null;
+        let contentActive = null;
+
+        Array.prototype.forEach.call(tabs , function ( value, key){
+            if(Array.prototype.indexOf(tabs[key].dataset.jstab, tabGroup) === -1){
+                tabGroup.push(value.dataset.jstab)
+            }
+        })
+
+        Array.prototype.forEach.call(tabGroup , function (value,  key  ){
+            let tabBtns = document.querySelectorAll("[data-jstab='" + value + "']");
+            let tabContents = document.querySelectorAll("[data-jstab-content='" + value + "']");
+
+            buttonActive = tabBtns[firstIndex]
+            contentActive = tabContents[firstIndex]
+
+            tabBtns[firstIndex].classList.add("is-active")
+            tabContents[firstIndex].classList.add("is-show")
+
+            Array.prototype.forEach.call(tabBtns , function (value,  key  ){
+                tabBtns[key].addEventListener("click",function() {
+
+                    if(buttonActive !== null){
+                        _this.inActivate( buttonActive , "is-active")
+                        _this.inActivate( contentActive , "is-show")
+                    }
+
+                    buttonActive = this;
+                    contentActive = tabContents[key];
+
+                    _this.activate( this, "is-active")
+                    _this.activate( tabContents[key], "is-show")
+                })
+            });
+
+            console.log(tabBtns)
+        })
+    },
+    activate : function ( el , className) {
+        el.classList.add( className )
+    },
+    inActivate : function ( el, className ){
+        el.classList.remove( className )
+    }
+}
+
+
+// DOMContentLoaded cycle (jquery ready)
+document.addEventListener("DOMContentLoaded", function () {
+
+    multiTab.init("test1",0) // multi tab
+    multiTab.init("test2",0) // multi tab
+    console.log("cycle : ready end")
+})
+
+// load cycle (jquery window load)
+window.addEventListener("load", function() {
+    console.log("cycle : load end")
+})
+
 const rotateSlidedata = [
     {
         title: "test1",
