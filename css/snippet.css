@@ -1,18 +1,15 @@
 @charset "utf-8";
 
 .article.card-type {padding:20px;border:1px solid #333;background:#222;border-radius: 20px}
-.article.card-type + .article.card-type {margin-top:100px;}
+.article.card-type + .article.card-type {margin-top:50px;}
 
-.article .desc  + .example {margin-top:50px;}
-.article .example + .code-wrap {margin-top:50px;}
-
-.example .flex-row {display:flex;width:100%;align-items: center}
-.example .flex-row .column {font-size:0;}
-.example .flex-row .n2 {width:50%;}
-.example .test-group {margin-left:-5px;}
-.example .test-box {display:flex;width:100%;align-items:center;justify-content:center;background:#002936;text-align:center;font-size:14px;min-height:100px;}
-.example .test-btn {font-size:14px;margin:5px;}
-.example .test-box.is-active {background:#f5513c}
+.view .flex-row {display:flex;width:100%;align-items: center}
+.view .flex-row .column {font-size:0;}
+.view .flex-row .n2 {width:50%;}
+.view .test-group {margin-left:-5px;}
+.view .test-box {display:flex;width:100%;align-items:center;justify-content:center;background:#002936;text-align:center;font-size:14px;min-height:100px;}
+.view .test-btn {font-size:14px;margin:5px;}
+.view .test-box.is-active {background:#f5513c}
 
 .code-wrap .colorscripter-code {font-size:14px;line-height:1.4;}
 .code-wrap .colorscripter-code .colorscripter-code-table {background: #002936 !important}
