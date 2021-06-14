@@ -33,7 +33,9 @@
                     <h3 class="tit box-blink-ani">Snippets</h3>
                     <ul class="tabs-nav snippet-category-tab-nav">
                         <li><button type="button" class="is-active" data-tab="snippetCategory">Function</button></li>
-                        <li ><button type="button" data-tab="snippetCategory">UI</button></li>
+                        <li><button type="button" data-tab="snippetCategory">UI</button></li>
+                        <li><button type="button" data-tab="snippetCategory">HTML</button></li>
+                        <li><button type="button" data-tab="snippetCategory">CSS</button></li>
                     </ul>
                     <div class="article-wrap tab-container">
 
@@ -91,31 +93,35 @@
                                 <div class="view">
                                     <div class="flex-row flex-wrap">
                                         <div class="column n1">
-                                            <ul class="tab-list">
-                                                <li data-jstab="test1" title="하나">하나</li>
-                                                <li data-jstab="test1" title="둘">둘</li>
-                                                <li data-jstab="test1" title="셋">셋</li>
-                                            </ul>
+                                            <div class="ex-radius pl10 pt10 pr10">
+                                                <ul class="tab-list">
+                                                    <li data-jstab="test1" title="하나">하나</li>
+                                                    <li data-jstab="test1" title="둘">둘</li>
+                                                    <li data-jstab="test1" title="셋">셋</li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="column n1">
-                                            <div class="tab-container">
-                                                <div class="tab-content" data-jstab-content="test1">
-                                                    부모 탭 컨텐츠 1
-                                                    <ul class="tab-list">
-                                                        <li data-jstab="test2" title="자식 탭 ) 하나">자식 탭 ) 하나</li>
-                                                        <li data-jstab="test2" title="자식 탭 ) 둘">자식 탭 ) 둘</li>
-                                                        <li data-jstab="test2" title="자식 탭 ) 셋">자식 탭 ) 셋</li>
-                                                    </ul>
+                                            <div class="ex-radius pl10 pb10 pr10">
+                                                <div class="tab-container">
+                                                    <div class="tab-content" data-jstab-content="test1">
+                                                        부모 탭 컨텐츠 1
+                                                        <ul class="tab-list mt20">
+                                                            <li data-jstab="test2" title="자식 탭 ) 하나">자식 탭 ) 하나</li>
+                                                            <li data-jstab="test2" title="자식 탭 ) 둘">자식 탭 ) 둘</li>
+                                                            <li data-jstab="test2" title="자식 탭 ) 셋">자식 탭 ) 셋</li>
+                                                        </ul>
 
-                                                    <div class="tab-container">
-                                                        <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 1</div>
-                                                        <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 2</div>
-                                                        <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 3</div>
+                                                        <div class="tab-container">
+                                                            <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 1</div>
+                                                            <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 2</div>
+                                                            <div class="tab-content" data-jstab-content="test2">자식 컨텐츠) 3</div>
+                                                        </div>
+
                                                     </div>
-
+                                                    <div class="tab-content" data-jstab-content="test1">부모 탭 컨텐츠 2</div>
+                                                    <div class="tab-content" data-jstab-content="test1">부모 탭 컨텐츠 3</div>
                                                 </div>
-                                                <div class="tab-content" data-jstab-content="test1">부모 탭 컨텐츠 2</div>
-                                                <div class="tab-content" data-jstab-content="test1">부모 탭 컨텐츠 3</div>
                                             </div>
                                         </div>
                                     </div>
@@ -150,6 +156,13 @@
                             </div>
                         </div>
 
+                        <dIV class="tab-content" data-tab-content="snippetCategory">
+                            HTML 관련 추가 예정
+                        </dIV>
+
+                        <dIV class="tab-content" data-tab-content="snippetCategory">
+                            CSS 관련 추가 예정
+                        </dIV>
                     </div>
                 </div>
             </div>
