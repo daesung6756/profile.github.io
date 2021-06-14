@@ -22,28 +22,24 @@ let multiTab = {
             this.events(data, index);
         }
     },
-    events : function ( dataName , firstIndex ) {
+    events : function ( dataName , targetIndex ) {
         let _this = this;
         let tabGroup = [];
         let tabs = document.querySelectorAll("[data-jstab='" +  dataName  + "']");
         let buttonActive = null;
         let contentActive = null;
 
-        Array.prototype.forEach.call(tabs , function ( value, key){
-            if(Array.prototype.indexOf(tabs[key].dataset.jstab, tabGroup) === -1){
-                tabGroup.push(value.dataset.jstab)
-            }
-        })
+        this.usingElementMakeArrayGroup ( tabs , tabGroup )
 
         Array.prototype.forEach.call(tabGroup , function (value,  key  ){
             let tabBtns = document.querySelectorAll("[data-jstab='" + value + "']");
             let tabContents = document.querySelectorAll("[data-jstab-content='" + value + "']");
 
-            buttonActive = tabBtns[firstIndex]
-            contentActive = tabContents[firstIndex]
+            buttonActive = tabBtns[targetIndex]
+            contentActive = tabContents[targetIndex]
 
-            tabBtns[firstIndex].classList.add("is-active")
-            tabContents[firstIndex].classList.add("is-show")
+            _this.activate( tabBtns[targetIndex] , "is-active")
+            _this.activate( tabContents[targetIndex] , "is-show")
 
             Array.prototype.forEach.call(tabBtns , function (value,  key  ){
                 tabBtns[key].addEventListener("click",function() {
@@ -62,6 +58,13 @@ let multiTab = {
             });
 
             console.log(tabBtns)
+        })
+    },
+    usingElementMakeArrayGroup : function ( variation , arrayGroup ) {
+        Array.prototype.forEach.call(variation , function ( value, key){
+            if(Array.prototype.indexOf(variation[key].dataset.jstab, arrayGroup) === -1){
+                arrayGroup.push(value.dataset.jstab)
+            }
         })
     },
     activate : function ( el , className) {
@@ -86,7 +89,7 @@ window.addEventListener("load", function() {
     console.log("cycle : load end")
 })
 
-const rotateSlidedata = [
+const rotatePopdata = [
     {
         title: "test1",
         desc: "가나다라마바사아자차카타파하 ㄴㅇㄹㅇㄴㄹㄴㅇㄹㄴㅇㄹ"
@@ -153,8 +156,8 @@ const rotateSlidedata = [
     },
 ]
 
-// 회전 슬라이드
-let rotateSlide = {
+// 회전 레이어 팝업
+let rotatePop = {
     init: function (el, data) {
         this.el = $("[data-rslide='" + el + "']");
         this.data = data;
@@ -312,5 +315,5 @@ let rotateSlide = {
     }
 }
 $(function () {
-    rotateSlide.init( "slide1", rotateSlidedata )
+    rotatePop.init( "slide1", rotatePopdata )
 })

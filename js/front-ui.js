@@ -747,30 +747,40 @@ var UI = {
             var $open = $("[data-pop-open=" + value +"]");
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
+            var $openPop = false;
 
 
             $open.on('click', function(){
 
-                if($popup.hasClass('is-dim')) {
-                    $popup.append("<div class='dimmed'></div>");
-                }
+                if($openPop !== false) {
+                   return
+                } else {
 
-                if($(this).data("pop-src")){
-                    if($popup.find(".pop-load-img")){
-                        $popup.find(".pop-load-img").remove();
+                    if($popup.hasClass('is-dim')) {
+                        $popup.append("<div class='dimmed'></div>");
                     }
 
-                    $popup.find(".pop-content").append(
-                        '<div class="pop-load-img"><div class="inner"><img src="' + $(this).data("pop-src") + '" alt=""></div></div>'
-                    )
+                    if($(this).data("pop-src")){
+                        if($popup.find(".pop-load-img")){
+                            $popup.find(".pop-load-img").remove();
+                        }
+
+                        $popup.find(".pop-content").append(
+                            '<div class="pop-load-img"><div class="inner"><img src="' + $(this).data("pop-src") + '" alt=""></div></div>'
+                        )
+                    }
+
+                    if($(this).data("pop") === "share"){
+                        $('#' + value).find('.get-url-input').val(location.href);
+                    }
+
+                    $body.addClass("is-lock");
+                    $popup.addClass('is-show');
+
+                    $openPop = true
                 }
 
-                if($(this).data("pop") === "share"){
-                    $('#' + value).find('.get-url-input').val(location.href);
-                }
 
-                $body.addClass("is-lock");
-                $popup.addClass('is-show');
 
             });
 
@@ -778,6 +788,7 @@ var UI = {
                 $body.removeClass("is-lock");
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
+                $openPop = false;
             });
         })
 
