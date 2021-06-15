@@ -50,6 +50,10 @@ function getTargetPositionOffset ( target ) {
     elem.innerHTML = "<p>" + draw + "</p>"
 }
 
+function removeChild ( el ) {
+    el.innerHTML = ""
+}
+
 // 선언식
 let multiTab = {
     init : function (data , index) {
@@ -109,6 +113,49 @@ let multiTab = {
         el.classList.remove( className )
     }
 }
+
+const dragBox = document.getElementById("exDragBox");
+let dragOffset = [0,0];
+let isDragStatus = false;
+
+function dragMouseDown (e) {
+
+    removeChild(e.target)
+
+    isDragStatus = true;
+    dragOffset = [
+        dragBox.offsetLeft - e.clientX,
+        dragBox.offsetTop - e.clientY
+    ];
+}
+
+function dragMouseUp () {
+    isDragStatus = false;
+}
+
+function dragMouseMove (e){
+    let parent = dragBox.parentElement;
+    e.preventDefault();
+
+    if (isDragStatus) {
+
+        console.log(parent.offsetTop, )
+
+        dragBox.style.left = (e.clientX + dragOffset[0]) + 'px';
+        dragBox.style.top  = (e.clientY + dragOffset[1]) + 'px';
+    }
+}
+
+function dragOffsetMoveScope ( el) {
+
+}
+
+dragBox.addEventListener("mousedown", dragMouseDown , true)
+document.addEventListener("mouseup", dragMouseUp , true)
+document.addEventListener("mousemove", dragMouseMove , true)
+
+
+
 
 
 // DOMContentLoaded cycle (jquery ready)
