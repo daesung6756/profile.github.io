@@ -68,6 +68,13 @@
 .ex-radius .tab-content .tab-content.is-show {background:#f5513c;color:#fff;}
 .ex-radius .tab-list + .tab-container {margin:0;}
 
+.ex-fieldset input[type="text"]{height:40px;text-indent:10px;font-size:14px;border:1px solid #ff5100;vertical-align: top}
+.ex-fieldset button[type="button"]{height:40px;border:0;width:120px;font-size:14px;font-weight:800;background:#ff5100;color:#fff;vertical-align: top}
+
+.wrap-box {position:relative;height:300px;background:#efefef;}
+.wrap-box .in-box {position:absolute;top:10%;left:20%;width:20px;height:20px;background:#db712e}
+.wrap-box .in-box > p {position:absolute;top:100%;left:50%;transform: translateX(-50%);height:auto;font-size:14px;width:120px;color:#000;}
+
 /* section */
 .section.is-on .article.card-type .view {opacity:1;-webkit-transition: opacity .3s ease-in-out;-o-transition: opacity .3s ease-in-out;transition: opacity .3s ease-in-out;}
 .section.is-on .article.card-type h5.tit{color: #cdcdcd; -webkit-transition: color .3s ease-in-out; -o-transition: color .3s ease-in-out; transition: color .3s ease-in-out}

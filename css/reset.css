@@ -70,15 +70,11 @@ button {
     cursor:pointer;
 }
 
-@media screen and (min-width:375px){
-    html {font-size:18px}
-}
-@media screen and (min-width:480px){
-    html {font-size:19px}
-}
-@media screen and (min-width:768px){
-    html {font-size:20px}
-}
-@media screen and (min-width:1024px) {
-    html {font-size:20px}
-}
+@media (min-width:375px){html{font-size:18px}}
+@media (min-width:480px){html{font-size:19px}}
+@media (min-width:768px){html{font-size:20px}}
+@media (min-width:1024px){html{font-size:20px}}
+
+@media (orientation: landscape) {} /* 가로모드 */
+@media (orientation: portrait) {} /* 세로모드 */
+

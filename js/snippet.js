@@ -15,6 +15,41 @@ function elementRemoveClass ( el, className ) {
     elem.classList.remove( className )  // classList.add , classList.remove
 }
 
+function getTextClipboardCopy( el ) {
+    let elem = document.querySelector( el );
+    let blankCheck =  /^\s+|\s+$/g;
+
+    if(elem.value.replace(blankCheck, "") === ""){
+        elem.value = "";
+        alert("공백은 복사 되지 않습니다. 값을 입력해주세요.")
+        elem.select();
+
+    } else {
+        elem.select()
+        document.execCommand("copy");
+        elem.blur();
+
+        alert("정상적으로 클립보드에 복사 되었습니다.")
+    }
+}
+
+function getTargetPositionOffset ( target ) {
+    let elem = document.querySelector( target );
+    let parent = elem.parentElement;
+    let parentRect = parent.getBoundingClientRect();
+    let elemRect = elem.getBoundingClientRect();
+    let top = elemRect.top - parentRect.top;
+    let left = elemRect.left - parentRect.left;
+    let width = elemRect.width;
+    let height = elemRect.height;
+    let draw = "Top : " + parseInt(top)+ "px<br>" +
+        "Left : " + parseInt(left)+ "px<br>" +
+        "Width : " + parseInt(width)+ "px<br>" +
+        "Height : " + parseInt(height)+ "px<br>";
+
+    elem.innerHTML = "<p>" + draw + "</p>"
+}
+
 // 선언식
 let multiTab = {
     init : function (data , index) {

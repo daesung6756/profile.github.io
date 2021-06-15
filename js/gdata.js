@@ -353,7 +353,7 @@ var historyLog = [
         agency:'이모션 글로벌',
         customer:'율촌',
         position: 'PA',
-        process:'하자 보수' ,
+        process:'미완성 페이지 제작 및 하자 보수' ,
         language:'Html, css, jQuery',
         tool:'FTP',
         support :'최신 브라우저',
