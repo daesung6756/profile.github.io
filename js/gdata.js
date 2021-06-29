@@ -66,6 +66,46 @@ var InterestList = [
     },
 ]
 
+//유틸리티 프로그램 내역
+var utilsList = [
+    {
+        pic:"https://images.altools.co.kr/altoolsRenewal/icon_8.gif",
+        name:"알캡처",
+        date:"2021.03.22",
+        os: "XP, Vista(32/64bit), 7(32/64bit), 8(32/64bit), 8.1(32/64bit), 10(32/64bit)",
+        license:"알송 / 알툴바 / 알캡처는 국가 및 대상, 버전에 관계없이 기업, 개인 누구나 무료로 사용이 가능합니다.",
+        link: "https://www.altools.co.kr/download/alcapture.aspx",
+        desc :"모니터 화면 안의 무엇이든 원하는 순간에 보이는 그대로 캡처해주는 화면 캡쳐 프로그램 입니다. 직접지정 캡처는 물론 단위영역 캡처, 창캡처, 전체화면 캡처,스크롤 캡처, 지정사이즈 캡처, 꾸미기 등의 기능을 제공하는 캡쳐도구 입니다. 알캡처는 제한없이 누구나 무료로 사용이 가능합니다."
+    },
+    {
+        pic:"https://images.altools.co.kr/altoolsRenewal/icon_8.gif",
+        name:"알캡처",
+        date:"2021.03.22",
+        os: "XP, Vista(32/64bit), 7(32/64bit), 8(32/64bit), 8.1(32/64bit), 10(32/64bit)",
+        license:"알송 / 알툴바 / 알캡처는 국가 및 대상, 버전에 관계없이 기업, 개인 누구나 무료로 사용이 가능합니다.",
+        link: "https://www.altools.co.kr/download/alcapture.aspx",
+        desc :"모니터 화면 안의 무엇이든 원하는 순간에 보이는 그대로 캡처해주는 화면 캡쳐 프로그램 입니다. 직접지정 캡처는 물론 단위영역 캡처, 창캡처, 전체화면 캡처,스크롤 캡처, 지정사이즈 캡처, 꾸미기 등의 기능을 제공하는 캡쳐도구 입니다. 알캡처는 제한없이 누구나 무료로 사용이 가능합니다."
+    },
+    {
+        pic:"https://images.altools.co.kr/altoolsRenewal/icon_8.gif",
+        name:"알캡처",
+        date:"2021.03.22",
+        os: "XP, Vista(32/64bit), 7(32/64bit), 8(32/64bit), 8.1(32/64bit), 10(32/64bit)",
+        license:"알송 / 알툴바 / 알캡처는 국가 및 대상, 버전에 관계없이 기업, 개인 누구나 무료로 사용이 가능합니다.",
+        link: "https://www.altools.co.kr/download/alcapture.aspx",
+        desc :"fdffdf"
+    },
+    {
+        pic:"https://images.altools.co.kr/altoolsRenewal/icon_8.gif",
+        name:"알캡처",
+        date:"2021.03.22",
+        os: "XP, Vista(32/64bit), 7(32/64bit), 8(32/64bit), 8.1(32/64bit), 10(32/64bit)",
+        license:"알송 / 알툴바 / 알캡처는 국가 및 대상, 버전에 관계없이 기업, 개인 누구나 무료로 사용이 가능합니다.",
+        link: "https://www.altools.co.kr/download/alcapture.aspx",
+        desc :"모니터 화면 안의 무엇이든 원하는 순간에 보이는 그대로 캡처해주는 화면 캡쳐 프로그램 입니다. 직접지정 캡처는 물론 단위영역 캡처, 창캡처, 전체화면 캡처,스크롤 캡처, 지정사이즈 캡처, 꾸미기 등의 기능을 제공하는 캡쳐도구 입니다. 알캡처는 제한없이 누구나 무료로 사용이 가능합니다."
+    },
+]
+
 //업무 내역
 var historyLog = [
     {

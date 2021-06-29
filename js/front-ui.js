@@ -30,6 +30,7 @@ var UI = {
         this.gnbLinkThemeCheckEvent();
         this.snsShare();
         this.InterestListDraw(InterestList)
+        this.utilsListDraw("utilsList", utilsList)
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -271,6 +272,29 @@ var UI = {
         }else {
             return false;
         }
+    },
+    utilsListDraw: function ( id , rowData ) {
+        var $el = $("#" + id );
+
+        $.each(rowData, function (key, value ) {
+            $el.append(
+                '<li><div class="flex-wrap">' +
+                        '<div class="column"><div class="pic" style="background:url(' + value.pic + ') center center/cover no-repeat;"></div></div>' +
+                        '<div class="column">' +
+                            '<ul class="util-info">' +
+                                '<li><h5 class="title">' + value.name + '</h5></li>' +
+                                '<li><span>등록일</span>' + value.date + '</li>' +
+                                '<li><span>운영체제</span>' + value.os + '</li>' +
+                                '<li><span>라이센스</span> ' + value.license + '</li>' +
+                            '</ul>' +
+                        '</div>' +
+                    '</div>' +
+                    '<p class="util-desc">' + value.desc + '</p>' +
+                    '<p class="util-link"><a href="' + value.link + '" target="_blank">다운로드 페이지 이동</a></p>' +
+                '</li>'
+            )
+        })
+
     },
     historyLogDraw : function(obj) {
         var $obj = obj;

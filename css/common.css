@@ -282,7 +282,7 @@ img {display:block;max-width:100%;}
 .section .section-inner .toggle-switch.is-fixed {position:fixed;top:4rem;}
 .section .section-inner .toggle-switch .tooltip {display:none;}
 .section .article-wrap {opacity:1;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;color:#fff;margin-top:1rem;}
-.section .article-wrap .article + .article{margin-top:1.5rem}
+.section .article-wrap .article + .article{margin-top:3rem}
 
 /* form set */
 .form-set.search-pop {position:relative;width:100%;max-width:800px;margin:0 auto;}
