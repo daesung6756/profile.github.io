@@ -90,6 +90,8 @@
 .theme .section.is-on .article.card-type h5.tit{color: #fff;-webkit-transition: color .3s ease-in-out;-o-transition: color .3s ease-in-out;transition: color .3s ease-in-out}
 .theme .section.is-on .snippet-category-tab-nav li .is-active {background: #92b519;color:#fff;-webkit-transition: background .3s ease-in-out;-o-transition: background .3s ease-in-out;transition: background .3s ease-in-out}
 
+.scroll-box {height:300px;overflow:hidden;overflow-y:auto;}
+
 @keyframes openPage {
     0% {margin:0;-webkit-transform:rotate(0);transform:rotate(0);opacity:0;}
     100% {top:0;left:0;width:100%;height:100%;-webkit-transform:rotate(720deg);transform:rotate(720deg);opacity:1;}

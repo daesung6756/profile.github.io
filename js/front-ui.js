@@ -277,6 +277,12 @@ var UI = {
         var $el = $("#" + id );
 
         $.each(rowData, function (key, value ) {
+            var index = key + 1 ;
+
+            if(index <= 3 ){ //rank check
+
+            }
+
             $el.append(
                 '<li><div class="flex-wrap">' +
                         '<div class="column"><div class="pic" style="background:url(' + value.pic + ') center center/cover no-repeat;"></div></div>' +

@@ -1,5 +1,87 @@
 'use strict';
 
+function deviceCheck () {
+    var txt = "";
+    txt += "Browser CodeName: " + navigator.appCodeName + "\n";
+    txt += "Browser Name: " + navigator.appName + "\n";
+    txt += "Browser Version: " + navigator.appVersion + "\n";
+    txt += "Cookies Enabled: " + navigator.cookieEnabled + "\n";
+    txt += "Browser Language: " + navigator.language + "\n";
+    txt += "Browser Online: " + navigator.onLine + "\n";
+    txt += "Platform: " + navigator.platform + "\n";
+    txt += "User-agent header: " + navigator.userAgent + "\n";
+
+    alert(txt)
+}
+
+//lazy loading
+let lazyLoading = {
+    init : function () {
+        if($("[data-src]").length > 0){
+            this.event();
+        }
+    },
+    event : function (){
+        let lazyGroup = [];
+        let lazyLoadTimeout;
+
+        $("[data-src]").each(function () {
+            if($.inArray($(this).data("src"), lazyGroup) === -1 ) {
+                lazyGroup.push($(this).data("src"))
+            }
+        })
+
+        $.each(lazyGroup , function (key , value) {
+            let $src = $("[data-src='" + value +"']");
+
+            setTimeout(function () {
+                let scrollTop = window.pageYOffset;
+
+                if($src.offsetTop < (window.innerHeight + scrollTop)){
+                    $src.attr("src", value);
+                    $src.removeClass("lazy");
+                }
+            }, 20);
+
+        })
+
+    }
+}
+
+function lazyLoadTimeout () {
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyloadImages = document.querySelectorAll("img.lazy");
+    var lazyloadThrottleTimeout;
+
+    function lazyload () {
+        if(lazyloadThrottleTimeout) {
+            clearTimeout(lazyloadThrottleTimeout);
+        }
+
+        lazyloadThrottleTimeout = setTimeout(function() {
+            var scrollTop = window.pageYOffset;
+            lazyloadImages.forEach(function(img) {
+                if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                }
+            });
+            if(lazyloadImages.length == 0) {
+                document.removeEventListener("scroll", lazyload);
+                window.removeEventListener("resize", lazyload);
+                window.removeEventListener("orientationChange", lazyload);
+            }
+        }, 20);
+    }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+});
+
 function elementToggleClass ( el, className ) {
     let elem = document.querySelector(el);
     elem.classList.toggle( className )  // classList.add , classList.remove
@@ -146,10 +228,6 @@ function dragMouseMove (e){
     }
 }
 
-function dragOffsetMoveScope ( el) {
-
-}
-
 dragBox.addEventListener("mousedown", dragMouseDown , true)
 document.addEventListener("mouseup", dragMouseUp , true)
 document.addEventListener("mousemove", dragMouseMove , true)
@@ -237,6 +315,7 @@ const rotatePopdata = [
         desc: "가나다라마바사아자차카타파하"
     },
 ]
+
 
 // 회전 레이어 팝업
 let rotatePop = {
@@ -396,6 +475,24 @@ let rotatePop = {
         }
     }
 }
+
+// 동영상 그룹 전역 변수
+var keyVisualVideoGroup = new Array();
+
+
 $(function () {
-    rotatePop.init( "slide1", rotatePopdata )
+
+    //Lazy init
+    lazyLoading.init();
+
+    rotatePop.init( "slide1", rotatePopdata );
+
+    $("scroll", function(){
+        lazyLoading.init();
+    })
+    $("resize", function(){
+        lazyLoading.init();
+    })
+
 })
+
