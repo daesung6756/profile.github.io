@@ -533,10 +533,11 @@ body {overflow: auto}
 body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 
 .center-box {position:absolute;top:50%;left:50%;transform: translate(-50%,-50%)}
-.orange-round {position:relative;color:#fff;border-radius:10px;border:0;padding:0 20px;height:20px;background:transparent;animation:cheeseAni 8s infinite ease-in-out}
-.orange-round:after {content:"";position:absolute;top:-360px;width:1px;height:380px;background: #121212;z-index:-1;}
+.orange-round {position:relative;color:#fff;border-radius:10px;border:0;padding:0 20px;height:20px;background:transparent;animation:cheeseAni 2s infinite ease-in-out}
+.orange-round:after {content:"";position:absolute;top:-360px;width:1px;height:380px;background: #313131;z-index:-1;}
 .theme .orange-round {display:none;}
 
+/* guide */
 .tutorial {display:none;}
 .tutorial.is-fixed {display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba( 0, 0, 0, .6);z-index:9999}
 .tutorial .inner {position:relative;height:100%;}
@@ -553,12 +554,6 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 .tutorial .inner .btn-area > button.circle-type:hover:before {animation: fadeOutScale .6s infinite}
 .tutorial .inner .desc {display:inline-block;vertical-align: top;max-width:240px;}
 
-.tutorial .gnb-area {}
-.tutorial .theme-area {}
-.tutorial .consolation-area {}
-.tutorial .search-area {}
-.tutorial .share-area {}
-.tutorial .switch-area {}
 .tutorial .gnb-area .arrow {background:url("../images/icons/icon-hambugger-btn.png") left top/contain no-repeat}
 .tutorial .theme-area .arrow {background:url("../images/icons/icon-switch-button-white-off.png") left top/contain no-repeat}
 .tutorial .consolation-area .arrow {background:url("../images/icons/icon-cardiogram-white.png") left top/contain no-repeat}
@@ -567,35 +562,14 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 .tutorial .switch-area .arrow {background:url("../images/switch-off.png") left top/contain no-repeat}
 
 @keyframes fadeOutScale {
-    0% {
-        transform: scale(1);
-
-    }
-    100% {
-        transform: scale(1.8);
-        opacity:0;
-    }
+    0% {transform: scale(1);}
+    100% {transform: scale(1.8);opacity:0;}
 }
 
 @keyframes cheeseAni {
-    0% {
-        transform: scale(.4) rotate(-24deg) translate(3px);
-        -webkit-transform-origin: 0 0;
-        -moz-transform-origin: 0 0;
-        transform-origin: 0 0;
-    }
-    50% {
-        transform: scale(1.6) rotate(24deg) translate(-200px);
-        -webkit-transform-origin: 0 0;
-        -moz-transform-origin: 0 0;
-        transform-origin: 0 0;
-    }
-    100% {
-        transform: scale(.4) rotate(-24deg) translate(3px);
-        -webkit-transform-origin: 0 0;
-        -moz-transform-origin: 0 0;
-        transform-origin: 0 0;
-    }
+    0% {transform: scale(1) rotate(-5deg) translate(30px);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;transform-origin: 0 0;}
+    50% {transform: scale(1) rotate(5deg) translate(-30px);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;transform-origin: 0 0;}
+    100% {transform: scale(1) rotate(-5deg) translate(30px);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;transform-origin: 0 0;}
 }
 
 /* animation */
