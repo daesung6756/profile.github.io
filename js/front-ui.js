@@ -18,9 +18,7 @@ function tutorialClickEvent () {
     if($(".tutorial").hasClass("is-fixed")){
         $("body").removeClass("is-lock")
         $(".tutorial").removeClass("is-fixed")
-        console.log(this)
     } else {
-        console.log(this)
         $("body").addClass("is-lock")
         $(".tutorial").addClass("is-fixed")
     }

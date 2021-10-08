@@ -101,7 +101,62 @@ function grm () {
         '<!-- float-scroll -->' +
         '<div class="scroll-floating">' +
         '<button type="button">위로 바로가기</button>' +
-        '</div>'
+        '</div>' +
+
+        '<!-- Guide -->' +
+        '<div class="tutorial">' +
+        '<div class="inner">' +
+        '<div class="center-box">' +
+        '<div class="gnb-area group-position">' +
+        '<span class="arrow"></span>'+
+        '<dl>'+
+        '<dt class="title"></dt>' +
+        '<dd class="desc">다른 카테고리로 페이지 이동을 할 수 있도록 카테고리 목록 정보를 전달 합니다.</dd>' +
+        '</dl>' +
+        '</div>' +
+        '<div class="theme-area group-position">' +
+        '<span class="arrow"></span>' +
+        '<dl>' +
+        '<dt class="title"></dt>' +
+        '<dd class="desc">테마를 On/Off 할 수 있는 스위치 입니다.</dd>' +
+        '</dl>' +
+        '</div>' +
+        '<div class="consolation-area group-position">' +
+        '<span class="arrow"></span>' +
+        '<dl>' +
+        '<dt class="title"></dt>' +
+        '<dd class="desc">위로의 메시지를 랜덤으로 제공해 줍니다.</dd>' +
+        '</dl>' +
+        '</div>' +
+        '<div class="search-area group-position">' +
+        '<span class="arrow"></span>' +
+        '<dl>' +
+        '<dt class="title"></dt>' +
+        '<dd class="desc">작업했던 프로젝트를 검색할 수 있습니다.</dd>' +
+        '</dl>' +
+        '</div>' +
+        '<div class="share-area group-position">' +
+        '<span class="arrow"></span>' +
+        '<dl>' +
+        '<dt class="title"></dt>' +
+        '<dd class="desc">트위터나 페이스북에 해당 페이지를 공유 할 수 있습니다.</dd>' +
+        '</dl>' +
+        '</div>' +
+        '<div class="switch-area group-position">' +
+        '<span class="arrow"></span>' +
+        '<dl>' +
+        '<dt class="title"></dt>' +
+        '<dd class="desc">컨텐츠 영역의 전등을 On/Off 합니다. </dd>' +
+        '</dl>' +
+        '</div>' +
+        '</div>' +
+
+        '<div class="btn-area group-position">' +
+        '<button type="button" class="circle-type" onclick="tutorialClickEvent()">Close</button>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '<!-- //Guide -->'
     );
     // header
     $(".header").append(
@@ -160,6 +215,7 @@ function grm () {
         '</div>' +
         '</div>'
     );
+
 }
 $(function(){
     grm();
