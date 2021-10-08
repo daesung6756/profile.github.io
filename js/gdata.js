@@ -67,15 +67,31 @@ var InterestList = [
 ]
 
 //유틸리티 프로그램 내역
+
 var utilsList = [
+    {
+        pic:"https://lh3.googleusercontent.com/hpEU5s5j7W63ZRMwlR6muufOc3C_D9E_iBwpCClWcL-hYgKjjf2B-dYvIt18SESR1twQ-dSBLLcx9RZ6BszF8eDC=w128-h128-e365-rj-sc0x00ffffff",
+        name:"Pix to Pix",
+        link: "https://chrome.google.com/webstore/detail/pix-to-pix-pixel-perfect/binboaimbgchaamickjnhgjdccohndin?hl=ko",
+        desc :"크롬 브라우저에 이미지를 띄어서 실제 작업물과 비교를 해볼 수 있게 도와주는 확장 프로그램."
+    },
+    {
+        pic:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADSUlEQVRoge1ZXU7bQBD+dg0tb80NGk7QcINwA27QIvVHfoI+WlSKo/4kb5QnFKgEPQH0BukN0huYE5C+FZB3+mAUbM84scckEInvJdZkdv19u7Ozs17gCQ8LM3nqHXcAF85uYkME77rMXLe9sg97ZyzTcJpf3fa6Puw0t4LG8ugV2qv4le3jDqkQGtDkOfhgJOcHh8BRMQOPC08CHhpLL2BloW/rHTYBrwOgCZhh4X5QAYudAWPPAHoDUBtwIb4Ndut2mZoB1wVsp3Iu7h/tgGgXQBNkRqD4AHv+KfMLTxqg61bGZtEB8L38yzjHevm+P9gHQRjFgnKhP7gEoZEjtYnAH2op6EPo82FbJg8ALkTvsM3MsTvgrmZLzQF1BKx6O9MdvA4z3azxcPHMazUH1FrExEc4/39+FsLtMWCy4UJo4MuPl1oWOgFfj1o8liUIswD3h5nMzaaKB9ICescd9AaU1OQz4GKBPB3AYJyztRGeZH3JCAvWtLhNgMBROA+UqMlX0GQ2MhHI/WL21X/ZhW7ciPlYoT8RnOP9bWTkxgB4/rc2u0gDP+IzZV5pX3u/O3HgDzk5NIWUGjEfJe5PgLFJrJfK9SYvANpMpBNANj/KALnGbY98keZzvYv/cp+bdQ0VnYDYcQEwiYCkLMiOMKGRCSNiIQQQlUjLHDoBKwIBa19Mnp37yf5Ph5EhYQbNAgVcrQkz4FIL0Ttnf6fDyBihvQ46AeH2WEiFdwL23o/EkkEq8GoivZF1s78zQEK6TMPFv3mj29LCCWlTCisGzlF/HugfnYEomx5jr4lPby8AJAeY59eXAol1GG+ftVWeC/T7ALkL3tv1xuRZqjwBwNh9EPHa52qNlxglUEeAkArzmSTm4UjYQj7cDEaJ4OqosRN7XEC+qgz8oTgLeUi7d0noBYhVZWovmCDeFuqjNCLxI0BJ6AUEfoT8jitlnsCPQO5jQS8R4NSHGUB7oJnAbQI0BCgCXLdwJAP/NMk+dJ740hBwXVw927gdCBklOD3uz+slOC39t9GlF7DYj7uzMO2SLx1O8iXfY8BCLvnmieoXhUufheQ1kIm3POZ40a2A5p54jhfd1SEcaGYSmONFd5Fv9QvwJywK/wHaxGJz6YsW4AAAAABJRU5ErkJggg==",
+        name:"Nimbus Screenshot & Screen Video Recorder",
+        link: "https://chrome.google.com/webstore/detail/nimbus-screenshot-screen/bpconcjcammlapcogcnnelfmaeghhagj",
+        desc :" 크롬 브라우저에 이미지 및 동영상 스크린 샷 기능을 제공하는 확장 프로그램."
+    },
+    {
+        pic:"https://lh3.googleusercontent.com/oZgezs3YtaQJhQ6Qkg75OR5kiKxua00n-cKvyTHAxvIougsfmKn2CyX8Sy6CMy56A9sCJUV9vIjvp86QPyfhvN9P=w128-h128-e365-rj-sc0x00ffffff",
+        name:"OpenWAX",
+        link: "https://chrome.google.com/webstore/detail/openwax/bfahpbmaknaeohgdklfbobogpdngngoe",
+        desc :" 크롬 브라우저에 접근성 테스트를 지원하는 확장 프로그램."
+    },
     {
         pic:"https://images.altools.co.kr/altoolsRenewal/icon_8.gif",
         name:"알캡처",
-        date:"2021.03.22",
-        os: "XP, Vista(32/64bit), 7(32/64bit), 8(32/64bit), 8.1(32/64bit), 10(32/64bit)",
-        license:"알송 / 알툴바 / 알캡처는 국가 및 대상, 버전에 관계없이 기업, 개인 누구나 무료로 사용이 가능합니다.",
         link: "https://www.altools.co.kr/download/alcapture.aspx",
-        desc :"모니터 화면 안의 무엇이든 원하는 순간에 보이는 그대로 캡처해주는 화면 캡쳐 프로그램 입니다. 직접지정 캡처는 물론 단위영역 캡처, 창캡처, 전체화면 캡처,스크롤 캡처, 지정사이즈 캡처, 꾸미기 등의 기능을 제공하는 캡쳐도구 입니다. 알캡처는 제한없이 누구나 무료로 사용이 가능합니다."
+        desc :"모니터 화면 안의 무엇이든 원하는 순간에 보이는 그대로 캡처해주는 화면 캡쳐 프로그램 입니다."
     },
 ]
 

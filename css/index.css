@@ -28,7 +28,7 @@
 .tech_list .slick-custom-control .custom-btn:active {position:relative;top:1px;}
 .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
 
-.profile .info {color:#ddd;display:flex;align-items:end;flex-wrap:wrap;justify-content: space-between;margin-top:-10px}
+.profile .info {color:#ddd;display:flex;align-items:baseline;flex-wrap:wrap;justify-content: space-between;margin-top:-10px}
 .profile .info > li {background: #191919;width:100%;margin-top:10px;border-radius:4px;cursor:pointer;}
 .profile .info .question{position:relative;color:#333;font-size:.7rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;padding:1rem 1rem 1rem 3rem;font-weight:700}
 .profile .info .question:before,
@@ -40,6 +40,8 @@
 .profile .info .answer {display:none;color:#444;font-size:.6rem;padding:1rem 1rem 1rem 3rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;border-top:1px dotted #000}
 .profile .info .answer.is-active {display:block;}
 .profile .info .answer + .question {margin-top:1rem}
+
+
 
 @media screen and (min-width:768px){
     .tech_list .slick-slider {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background:rgb(28 28 28);border-radius:10px;-webkit-transition: background-color .3s;-o-transition: background-color .3s;transition: background-color .3s;}

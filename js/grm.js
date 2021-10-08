@@ -135,8 +135,9 @@ function grm () {
         '<div class="bg-box">' +
         '</div>' +
         '<div class="desc-group">' +
-        '<h1>The CAT</h1>' +
-        '<p class="desc" data-tooltip="고양이들은 음악과 같아요. <br>고양이들을 인정하지 않는 사람들에게 <br>고양이의 가치를 설명하려고 노력하는 것은 <br>정말로 어리석은 짓입니다.">Cats are like Music. <br>It'+"'"+'s foolish to try to <br>explain their worth to those who <br>don'+"'"+'t appreciate them</p>' +
+        '<h1>Ds.LEE</h1>' +
+        '<p class="desc" data-tooltip="Hello World">이곳은 개인 포트폴리오 사이트이이며,<br> 웹 작업을 거듭할수록 쌓이는 <br>기술 및 정보들을 <br>기록하기 위해 만들었습니다. <br>이 페이지는 현재도 작업 진행중입니다.</p>' +
+        '<button type="button" class="orange-round" onclick="tutorialClickEvent()" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></button>' +
         '</div>' +
         '</div>' +
         '</div>' +

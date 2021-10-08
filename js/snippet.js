@@ -31,26 +31,40 @@ let lazyLoading = {
             }
         })
 
-        $.each(lazyGroup , function (key , value) {
-            let $src = $("[data-src='" + value +"']");
+        if(lazyLoadTimeout){
+            clearTimeout(lazyLoadTimeout)
+        }
 
-            setTimeout(function () {
-                let scrollTop = window.pageYOffset;
+        lazyLoadTimeout = setTimeout(function () {
+            let $scrollTop = window.pageYOffset;
 
-                if($src.offsetTop < (window.innerHeight + scrollTop)){
+            $.each(lazyGroup , function (key , value) {
+                let $src = $("[data-src='" + value +"']");
+
+                console.log($src,$src.offset().top, window.innerHeight)
+
+                if($src.offset().top < (window.innerHeight + $scrollTop)){
                     $src.attr("src", value);
                     $src.removeClass("lazy");
                 }
-            }, 20);
 
-        })
+            })
+
+            if(lazyGroup.length === 0){
+                $(document).off("scroll",lazyLoading.init())
+                $(window).off("resize", lazyLoading.init())
+                $(window).off("orientationChange", lazyLoading.init())
+            }
+
+        }, 20);
 
     }
 }
+$(document).on("scroll",lazyLoading.init())
+$(window).on("resize", lazyLoading.init())
+$(window).on("orientationChange", lazyLoading.init())
 
-function lazyLoadTimeout () {
 
-}
 
 document.addEventListener("DOMContentLoaded", function() {
     var lazyloadImages = document.querySelectorAll("img.lazy");
@@ -231,9 +245,6 @@ function dragMouseMove (e){
 dragBox.addEventListener("mousedown", dragMouseDown , true)
 document.addEventListener("mouseup", dragMouseUp , true)
 document.addEventListener("mousemove", dragMouseMove , true)
-
-
-
 
 
 // DOMContentLoaded cycle (jquery ready)
@@ -483,7 +494,7 @@ var keyVisualVideoGroup = new Array();
 $(function () {
 
     //Lazy init
-    lazyLoading.init();
+   /* lazyLoading.init();*/
 
     rotatePop.init( "slide1", rotatePopdata );
 

@@ -12,7 +12,18 @@ function toggleClassTarget( el, className) {
         button.addClass("is-on");
         elem.addClass(className);
     }
+}
 
+function tutorialClickEvent () {
+    if($(".tutorial").hasClass("is-fixed")){
+        $("body").removeClass("is-lock")
+        $(".tutorial").removeClass("is-fixed")
+        console.log(this)
+    } else {
+        console.log(this)
+        $("body").addClass("is-lock")
+        $(".tutorial").addClass("is-fixed")
+    }
 }
 
 var UI = {
@@ -285,18 +296,15 @@ var UI = {
 
             $el.append(
                 '<li><div class="flex-wrap">' +
-                        '<div class="column"><div class="pic" style="background:url(' + value.pic + ') center center/cover no-repeat;"></div></div>' +
+                        '<div class="column"><div class="pic" style="background:#fff url(' + value.pic + ') center center/contain no-repeat;"></div></div>' +
                         '<div class="column">' +
                             '<ul class="util-info">' +
                                 '<li><h5 class="title">' + value.name + '</h5></li>' +
-                                '<li><span>등록일</span>' + value.date + '</li>' +
-                                '<li><span>운영체제</span>' + value.os + '</li>' +
-                                '<li><span>라이센스</span> ' + value.license + '</li>' +
+                                '<li>' + value.desc + '</li>' +
+                                '<li><a href="' + value.link + '" class="download-link" target="_blank">DOWNLOAD</a></li>' +
                             '</ul>' +
                         '</div>' +
                     '</div>' +
-                    '<p class="util-desc">' + value.desc + '</p>' +
-                    '<p class="util-link"><a href="' + value.link + '" target="_blank">다운로드 페이지 이동</a></p>' +
                 '</li>'
             )
         })

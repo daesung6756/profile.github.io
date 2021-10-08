@@ -532,6 +532,72 @@ dl.desc-list > dd {margin-top:1rem;font-size:.8rem;line-height:1.6;color:#303030
 body {overflow: auto}
 body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 
+.center-box {position:absolute;top:50%;left:50%;transform: translate(-50%,-50%)}
+.orange-round {position:relative;color:#fff;border-radius:10px;border:0;padding:0 20px;height:20px;background:transparent;animation:cheeseAni 8s infinite ease-in-out}
+.orange-round:after {content:"";position:absolute;top:-360px;width:1px;height:380px;background: #121212;z-index:-1;}
+.theme .orange-round {display:none;}
+
+.tutorial {display:none;}
+.tutorial.is-fixed {display:block;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba( 0, 0, 0, .6);z-index:9999}
+.tutorial .inner {position:relative;height:100%;}
+.tutorial .inner .group-position {display:flex;align-items:center;font-size:.7rem;margin:0;}
+.tutorial .inner .group-position + .group-position {margin-top:20px;}
+.tutorial .inner .arrow {width:50px;height:50px;margin-right:20px;}
+
+.tutorial .inner .btn-area {position:absolute;top:30px;right:30px;}
+.tutorial .inner .btn-area > button.circle-type {position:relative;background:#ff5100;border:0;width:70px;height:70px;border-radius: 50%;color:#ddd;}
+.tutorial .inner .btn-area > button.circle-type:active {top:1px;left:1px;}
+.tutorial .inner .btn-area > button.circle-type:after,
+.tutorial .inner .btn-area > button.circle-type:before {content:"";position:absolute;top:0;left:0;width:100%;height:100%;background: rgba(255,81,0,.8);z-index:-1;border-radius: 50%;}
+.tutorial .inner .btn-area > button.circle-type:hover:after {animation: fadeOutScale  .9s infinite}
+.tutorial .inner .btn-area > button.circle-type:hover:before {animation: fadeOutScale .6s infinite}
+.tutorial .inner .desc {display:inline-block;vertical-align: top;max-width:240px;}
+
+.tutorial .gnb-area {}
+.tutorial .theme-area {}
+.tutorial .consolation-area {}
+.tutorial .search-area {}
+.tutorial .share-area {}
+.tutorial .switch-area {}
+.tutorial .gnb-area .arrow {background:url("../images/icons/icon-hambugger-btn.png") left top/contain no-repeat}
+.tutorial .theme-area .arrow {background:url("../images/icons/icon-switch-button-white-off.png") left top/contain no-repeat}
+.tutorial .consolation-area .arrow {background:url("../images/icons/icon-cardiogram-white.png") left top/contain no-repeat}
+.tutorial .search-area .arrow {background:url("../images/icons/icon-search-white.png") left top/contain no-repeat}
+.tutorial .share-area .arrow {background:url("../images/icons/icon-sns-share-white.png") left top/contain no-repeat}
+.tutorial .switch-area .arrow {background:url("../images/switch-off.png") left top/contain no-repeat}
+
+@keyframes fadeOutScale {
+    0% {
+        transform: scale(1);
+
+    }
+    100% {
+        transform: scale(1.8);
+        opacity:0;
+    }
+}
+
+@keyframes cheeseAni {
+    0% {
+        transform: scale(.4) rotate(-24deg) translate(3px);
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    50% {
+        transform: scale(1.6) rotate(24deg) translate(-200px);
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    100% {
+        transform: scale(.4) rotate(-24deg) translate(3px);
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+
 /* animation */
 @keyframes textOpacity {
     0%{opacity:.2;}
