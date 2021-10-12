@@ -191,7 +191,7 @@ function grm () {
         '</div>' +
         '<div class="desc-group">' +
         '<h1>Ds.LEE</h1>' +
-        '<p class="desc" data-tooltip="Hello World">기술 및 정보들을 <br>기록하기 위해 만들었습니다. <br>Ing.</p>' +
+        '<p class="desc" data-tooltip="Hello World">Ing...</p>' +
         '</div>' +
         '</div>' +
         '</div>' +
