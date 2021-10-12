@@ -191,11 +191,11 @@ function grm () {
         '</div>' +
         '<div class="desc-group">' +
         '<h1>Ds.LEE</h1>' +
-        '<p class="desc" data-tooltip="Hello World">이곳은 개인 포트폴리오 사이트이이며,<br> 웹 작업을 거듭할수록 쌓이는 <br>기술 및 정보들을 <br>기록하기 위해 만들었습니다. <br>이 페이지는 현재도 작업 진행중입니다.</p>' +
-        '<button type="button" class="orange-round" onclick="tutorialClickEvent()" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></button>' +
+        '<p class="desc" data-tooltip="Hello World">기술 및 정보들을 <br>기록하기 위해 만들었습니다. <br>Ing.</p>' +
         '</div>' +
         '</div>' +
         '</div>' +
+        '<button type="button" class="cheese-btn" onclick="tutorialClickEvent()" ><div class="hand"><span class="fingernail"></span><span class="fingernail"></span></div><span class="line"></span><div class="pic" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></div></button>' +
         '<div class="full-event-area">' +
         '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
         '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +

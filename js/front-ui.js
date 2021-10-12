@@ -16,10 +16,10 @@ function toggleClassTarget( el, className) {
 
 function tutorialClickEvent () {
     if($(".tutorial").hasClass("is-fixed")){
-        $("body").removeClass("is-lock")
+        $("body").removeClass("is-locked")
         $(".tutorial").removeClass("is-fixed")
     } else {
-        $("body").addClass("is-lock")
+        $("body").addClass("is-is-locked")
         $(".tutorial").addClass("is-fixed")
     }
 }
