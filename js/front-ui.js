@@ -486,10 +486,9 @@ var UI = {
             var btn = $("[data-toggle='" +  value + "']");
             var panel = $("[data-toggle-panel='" +  value + "']");
 
-            btn.on("click", function () {
+            btn.on("click, touch", function () {
                 $(this).toggleClass("is-on")
                 panel.toggleClass("is-active");
-                alert("test");
             });
 
         })
