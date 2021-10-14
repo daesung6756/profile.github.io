@@ -24,8 +24,7 @@
 
 .section.is-on .tech_list .slick-slider {
     background: #ffffff;
-    background: -moz-linear-gradient(51deg,rgb(255 237 211) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
-    background: -webkit-linear-gradient(51deg,rgb(255 237 211) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
+    background: -o-linear-gradient(39deg,rgb(255 237 211) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
     background: linear-gradient(51deg,rgb(255 237 211) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
     -webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s;}
 .section.is-on .tech_list .slick-slider .title {color:#333;}
@@ -42,8 +41,8 @@
 .section.is-on .profile .info > .answer{color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .info > li {
     background: #ffffff;
-    background: -moz-linear-gradient(180deg, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
-    background: -webkit-linear-gradient(180deg, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(11%, rgb(255 238 212)),color-stop(20%, rgb(255 247 236)),color-stop(87%, rgb(255 237 179)),color-stop(99%, rgb(175 129 62)),to(rgb(255 237 185)));
+    background: -o-linear-gradient(top, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
     background: linear-gradient(180deg, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
 }
 .section.is-on .profile .info > li.is-on {background: #f05133}
@@ -89,8 +88,13 @@ body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;widt
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
 body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity 1s, color 1s, -webkit-transform 1s ease;transition: opacity 1s, color 1s, -webkit-transform 1s ease;-o-transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease, -webkit-transform 1s ease;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
 body.theme .visual-spot.is-on .p5Canvas {-webkit-animation: catComeIn .4s forwards;animation: catComeIn .4s forwards}
+body.theme .visual-spot.is-on .cheese-btn {-webkit-animation:cheeseAniTheme .8s forwards;animation:cheeseAniTheme .8s forwards;}
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:before,
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:after {display:block;}
+body.theme .visual-spot.is-on .cheese-btn > .line {height:0;-webkit-transition: height .2s ease-out;-o-transition: height .2s ease-out;transition: height .2s ease-out}
+body.theme .visual-spot.is-on .btn-list {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);-webkit-transition: -webkit-transform .3s ease-in-out;transition: -webkit-transform .3s ease-in-out;-o-transition: transform .3s ease-in-out;opacity:1;transition: transform .3s ease-in-out, opacity .6s ease-in;transition: transform .3s ease-in-out, opacity .6s ease-in, -webkit-transform .3s ease-in-out, opacity .6s ease-in}
+body.theme .visual-spot.is-on .btn-list button {color:#fff;}
+body.theme .visual-spot.is-on .btn-list button::before {background:#ffc931;}
 body.theme .section.is-on {background-color:rgb(23 53 62);background-image: none;}
 
 body.theme .section.is-on .photo-list li+li {border-top:1px dotted #6b6a55;}
@@ -98,10 +102,10 @@ body.theme .section.is-on .photo-list .info .name{color: #80e8df;}
 body.theme .section.is-on .photo-list .info dd {color:#fff}
 body.theme .section.is-on .photo-list .info dd:before {color:#ccc27d}
 
-body.theme .section.is-on .profile .info > li {background:#fff;box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,.2 );}
+body.theme .section.is-on .profile .info > li {background:#fff;-webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,.2 );box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,.2 );}
 body.theme .section.is-on .profile .info .question{color: #333;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
-body.theme .section.is-on .profile .info .question:before{background:#333;transition: color .2s linear, transform .1s linear}
-body.theme .section.is-on .profile .info .question:after{background:#333;transition: color .2s linear, transform .1s linear}
+body.theme .section.is-on .profile .info .question:before{background:#333;-webkit-transition: color .2s linear, -webkit-transform .1s linear;transition: color .2s linear, -webkit-transform .1s linear;-o-transition: color .2s linear, transform .1s linear;transition: color .2s linear, transform .1s linear;transition: color .2s linear, transform .1s linear, -webkit-transform .1s linear}
+body.theme .section.is-on .profile .info .question:after{background:#333;-webkit-transition: color .2s linear, -webkit-transform .1s linear;transition: color .2s linear, -webkit-transform .1s linear;-o-transition: color .2s linear, transform .1s linear;transition: color .2s linear, transform .1s linear;transition: color .2s linear, transform .1s linear, -webkit-transform .1s linear}
 body.theme .section.is-on .profile .info .answer{color:#fff;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 body.theme .section.is-on .profile .info > li.is-on {background:rgb(47 125 171)}
 body.theme .section.is-on .profile .info > li.is-on  .question {color:#a3d3f1}

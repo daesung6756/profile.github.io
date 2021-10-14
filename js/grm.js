@@ -97,6 +97,21 @@ function grm () {
         '</div>' +
         '</div>' +
         '</div>' +
+        '<!-- roadmap pop -->' +
+        '<div class="popup-wrap is-dim wide" data-pop="roadMapPop" data-pop-index="roadMapPop">' +
+        '<div class="pop">' +
+        '<div class="pop-head">' +
+        '<h2 class="pop-tit">Road Map</h2>' +
+        '<button type="button" data-pop-close="roadMapPop" class="x-close"><i class="icon icon-x-circle-white"><span class="blind">팝업 닫기</span></i></button>' +
+        '</div>' +
+        '<div class="pop-content">' +
+        '<img src=""></div>' +
+        '<div class="pop-foot">' +
+        '<div class="foot-inner">' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
 
         '<!-- float-scroll -->' +
         '<div class="scroll-floating">' +
@@ -186,23 +201,30 @@ function grm () {
     // visual-spot
     $('.visual-spot').append(
         '<div class="spot-inner">' +
-        '<div class="bg-area">' +
-        '<div class="bg-box">' +
+            '<div class="bg-area">' +
+                '<div class="bg-box"></div>' +
+                '<div class="desc-group">' +
+                    '<h1>Ds.LEE</h1>' +
+                    '<p class="desc" data-tooltip="Hello World"><strong>Web Developer 2021 Road Map</strong></p>' +
+                    '<ul class="btn-list mt10">' +
+                        '<li><button type="button" data-pop-open="roadMapPop">Intro</button></li>' +
+                        '<li><button type="button" data-pop-open="roadMapPop">Front-End</button></li>' +
+                        '<li><button type="button" data-pop-open="roadMapPop">Back-End</button></li>' +
+                        '<li><button type="button" data-pop-open="roadMapPop">DevOps</button></li>' +
+                    '</ul>' +
+                '</div>' +
+            '</div>' +
         '</div>' +
-        '<div class="desc-group">' +
-        '<h1>Ds.LEE</h1>' +
-        '<p class="desc" data-tooltip="Hello World">Ing...</p>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '<button type="button" class="cheese-btn" onclick="tutorialClickEvent()" ><div class="hand"><span class="fingernail"></span><span class="fingernail"></span></div><span class="line"></span><div class="pic" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></div></button>' +
+        '<button type="button" class="cheese-btn" onclick="tutorialClickEvent()" >' +
+        '<div class="hand"><span class="fingernail"></span><span class="fingernail"></span></div>' +
+        '<span class="line"></span><div class="pic" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></div></button>' +
         '<div class="full-event-area">' +
-        '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
-        '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
-        '<span class="mouse type3" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
-        '<span class="mouse type4" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
-        '<span class="mouse type5" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
-        '<span class="mouse type6" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type3" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type4" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type5" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
+            '<span class="mouse type6" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +
         '</div>'
     );
     // footer
@@ -211,7 +233,7 @@ function grm () {
         '<div class="address-group">' +
         '<p>Daesung.Lee</p>' +
         '<p>Profile Website</p>' +
-        '<p>Update : 2021.06.15<br>Version: 0.6</p>' +
+        '<p>Update : 2021.10.14<br>Version: 0.61</p>' +
         '</div>' +
         '</div>'
     );

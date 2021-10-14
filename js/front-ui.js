@@ -784,6 +784,7 @@ var UI = {
             var $close = $("[data-pop-close=" + value +"]");
             var $body = $("body");
             var $openPop = false;
+            var popRealIndex;
 
 
             $open.on('click', function(){
@@ -814,8 +815,12 @@ var UI = {
                     $popup.addClass('is-show');
 
                     $openPop = true
-                }
 
+                    //roadmap
+                    if($popup.is("[data-pop-index]")){
+                        $popup.find(".pop-content").find("img").attr("src", roadMapImgGroup[$open.index(this)] )
+                    }
+                }
 
 
             });
