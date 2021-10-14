@@ -177,6 +177,24 @@ h6.d-sign:before {width:3px;top:8px;}
 .btn-list li {position:relative;font-size:0;}
 .btn-list li + li {margin-top:5px;}
 
+.utils-list > li + li {margin-top:40px;}
+.utils-list .pic {width:100%;height:100%;padding-top:54%;opacity:.2;}
+.utils-list .pic > img  {display:block;width:100%;max-width:400px;margin:0 auto;}
+.utils-list .util-info > dd {font-size:.7rem;line-height:1.4;width:100%;color:#333;}
+.utils-list .util-info > dt + dd {margin-top:10px;}
+.utils-list .util-info > dd + dd {margin-top:6px;}
+.utils-list .util-info > dt > .title {font-size:1.1rem;color:#333;}
+.utils-list .util-info > dd > span {position:relative;display:inline-block;vertical-align: top;margin-right:5px;padding-right:10px;}
+.utils-list .util-info > dd > span:after {content:":";position:absolute;top:0;right:0;}
+.utils-list .util-info > dd a {display:inline-block;color:#333;height:20px;line-height:20px;vertical-align: top}
+.utils-list .util-info > dd a .icon {width:16px;height:16px;vertical-align: top;margin-right:10px;opacity:.2}
+.utils-list .util-desc {margin-top:10px;font-size:.7rem;line-height:1.4;color:#caf3ff;}
+.utils-list .util-desc + .util-link {margin-top:6px;}
+.utils-list .util-link {text-align:right;}
+.utils-list .util-link > a {color:#fff;font-size:.6rem;}
+.utils-list .flex-wrap {display:block;}
+.utils-list .flex-wrap > .column + .column {margin-top:10px;}
+
 /* line */
 .dot-top-line + .dot-top-line {border-top:1px dotted #4c5971;margin-top:30px;}
 
@@ -447,6 +465,7 @@ article > .tit + p.desc,
 .icon.icon-sns-share-white {background-image:url('../images/icons/icon-sns-share-white.png');background-repeat:no-repeat;background-size:contain;}
 .icon.icon-sns-facebook {background-image:url('../images/icons/icon-sns-facebook.png');background-repeat:no-repeat;background-size:contain;}
 .icon.icon-sns-twitter {background-image:url('../images/icons/icon-sns-twitter.png');background-repeat:no-repeat;background-size:contain;}
+.icon.icon-download {background-image:url('../images/icons/icon-download.png');background-repeat:no-repeat;background-size:contain;}
 
 /* toggle-switch */
 .toggle-switch {position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);border:0;padding:0;width:55px;height:55px;background-image:url("../images/switch-off.png");background-color:transparent;background-repeat:no-repeat;background-position:0 0;opacity:.2;outline: none;background-size:contain;-webkit-transition: opacity .3s;-o-transition: opacity .3s;transition: opacity .3s;}
@@ -573,6 +592,10 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 .cheese-btn > .hand .fingernail:after {content:'';display:none;position:absolute;top:96%;right:8px;width: 0;height: 0;border-left: 3px solid transparent;border-right: 3px solid transparent;border-top: 4px solid #adadad;z-index:-1}
 .cheese-btn > .line {position:relative;display:inline-block;width:1px;bottom:100%;height:40px;background: #313131;z-index:-1;}
 .cheese-btn > .pic {position:relative;top:-7px;}
+
+
+
+
 
 /* animation */
 @-webkit-keyframes fadeOutScale {
@@ -818,6 +841,18 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
     .form-set.share-url input[type="text"] {border-radius:0;}
     .form-set.share-url button {position:absolute;top:0;right:0;background:#2a8ad4;color:#fff;width:120px;margin-top:0;border-radius:0;}
 
+    /* util-list */
+    .utils-list {display:flex;align-items: baseline;justify-content: space-between;flex-wrap: wrap;width:100%;margin-top:-30px;}
+    .utils-list > li {position:relative;width:calc(50% - 10px);margin-top:30px;}
+    .utils-list > li:nth-child(odd) {margin-right:10px;}
+    .utils-list > li:nth-child(even) {margin-left:10px;}
+    .utils-list .pic {width:100px;height:100px;padding:0;}
+
+    .utils-list .util-link > a {display:inline-block;font-size:.7rem;line-height:1;color:#Fff;vertical-align: top;}
+
+    .utils-list .flex-wrap {display:flex;}
+    .utils-list .flex-wrap > .column:first-child {padding-right:10px;}
+    .utils-list .flex-wrap > .column + .column {margin-top:0;}
 
     /* desc-group */
     .txt {font-size:14px;}

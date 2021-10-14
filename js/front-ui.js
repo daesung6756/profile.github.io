@@ -296,11 +296,11 @@ var UI = {
                 '<li><div class="flex-wrap">' +
                         '<div class="column"><div class="pic" style="background:#fff url(' + value.pic + ') center center/contain no-repeat;"></div></div>' +
                         '<div class="column">' +
-                            '<ul class="util-info">' +
-                                '<li><h5 class="title">' + value.name + '</h5></li>' +
-                                '<li>' + value.desc + '</li>' +
-                                '<li><a href="' + value.link + '" class="download-link" target="_blank">DOWNLOAD</a></li>' +
-                            '</ul>' +
+                            '<dl class="util-info">' +
+                                '<dt><h5 class="title">' + value.name + '</h5></dt>' +
+                                '<dd>' + value.desc + '</dd>' +
+                                '<dd><a href="' + value.link + '" class="download-link" target="_blank" title="새창 이동"><i class="icon icon-download"></i>DOWNLOAD</a></dd>' +
+                            '</dl>' +
                         '</div>' +
                     '</div>' +
                 '</li>'
