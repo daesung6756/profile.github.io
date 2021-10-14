@@ -489,7 +489,6 @@ var UI = {
             btn.on("click", function () {
                 $(this).toggleClass("is-on")
                 panel.toggleClass("is-active");
-                alert("test");
             });
 
         })
