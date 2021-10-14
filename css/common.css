@@ -177,8 +177,8 @@ h6.d-sign:before {width:3px;top:8px;}
 .btn-list li {position:relative;font-size:0;}
 .btn-list li + li {margin-top:5px;}
 
-.utils-list > li + li {margin-top:40px;}
-.utils-list .pic {width:100%;height:100%;padding-top:54%;opacity:.2;}
+.utils-list> li + li {margin-top:40px;}
+.utils-list .pic {width:100%;height:100%;padding-top:30%;opacity:.2;}
 .utils-list .pic > img  {display:block;width:100%;max-width:400px;margin:0 auto;}
 .utils-list .util-info > dd {font-size:.7rem;line-height:1.4;width:100%;color:#333;}
 .utils-list .util-info > dt + dd {margin-top:10px;}
@@ -842,7 +842,7 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
     .form-set.share-url button {position:absolute;top:0;right:0;background:#2a8ad4;color:#fff;width:120px;margin-top:0;border-radius:0;}
 
     /* util-list */
-    .utils-list {display:flex;align-items: baseline;justify-content: space-between;flex-wrap: wrap;width:100%;margin-top:-30px;}
+    .utils-list {display:flex;align-items: flex-start;justify-content: space-between;flex-wrap: wrap;width:100%;margin-top:-30px;}
     .utils-list > li {position:relative;width:calc(50% - 10px);margin-top:30px;}
     .utils-list > li:nth-child(odd) {margin-right:10px;}
     .utils-list > li:nth-child(even) {margin-left:10px;}
