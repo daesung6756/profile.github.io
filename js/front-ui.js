@@ -830,6 +830,11 @@ var UI = {
                 $popup.removeClass('is-show');
                 $popup.children('.dimmed').remove();
                 $openPop = false;
+
+                //roadmap
+                if($popup.is("[data-pop-index]")){
+                    $popup.find(".pop-content").find("img").attr("src", "");
+                }
             });
         })
 
