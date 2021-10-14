@@ -486,7 +486,7 @@ var UI = {
             var btn = $("[data-toggle='" +  value + "']");
             var panel = $("[data-toggle-panel='" +  value + "']");
 
-            btn.on("click, touch", function () {
+            btn.on("click", function () {
                 $(this).toggleClass("is-on")
                 panel.toggleClass("is-active");
                 alert("test");
@@ -1144,52 +1144,7 @@ var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지
 $(function(){
 
     UI.init();
-});
 
-// load
-$(window).on("load", function () {
-    UI.loaderRemove()
-    UI.toggleClassDefault()
-})
-
-//scroll
-$(window).on('scroll', function(){
-    UI.headetStickyBar();
-    UI.toggleSwitchScrollEvent()
-    UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show")
-});
-
-//resize
-$(window).on('resize', function(){
-    UI.tooltip();
-    UI.resizeCheckReset();
-});
-
-//event
-$(document).on('click', '.scroll-floating button', function(e){
-    e.preventDefault();
-    $('html, body').stop(e).animate({scrollTop : 0}, 300);
-});
-$(document).on('keyup', "#httpStatusSearch" , function(event){
-    if(event.keyCode === 13) {
-        UI.httpStatusSearchLog(this.value);
-    }
-});
-$(document).on('keyup', "#searcTtList" , function(){
-    UI.itTtListSearch(this);
-});
-$(document).on('click', "#getSearchText", function() {
-    UI.popupLogSearch('#searchTit',historyLog);
-});
-$(document).on("keypress",'#searchTit', function(event){//input enter key
-    if(event.keyCode === 13) {
-        $('#getSearchText').click();
-    }else if (event.keyCode === 96){
-        $('#searchTit').val('');
-    }
-});
-
-$(document).ready(function($){
     "use strict";
     $(".visual-toggle").on("click",function(){
         if($(this).hasClass("is-on")) {
@@ -1319,4 +1274,49 @@ $(document).ready(function($){
             }())
         }
     })
+
+    //event
+    $(document).on('click', '.scroll-floating button', function(e){
+        e.preventDefault();
+        $('html, body').stop(e).animate({scrollTop : 0}, 300);
+    });
+    $(document).on('keyup', "#httpStatusSearch" , function(event){
+        if(event.keyCode === 13) {
+            UI.httpStatusSearchLog(this.value);
+        }
+    });
+    $(document).on('keyup', "#searcTtList" , function(){
+        UI.itTtListSearch(this);
+    });
+    $(document).on('click', "#getSearchText", function() {
+        UI.popupLogSearch('#searchTit',historyLog);
+    });
+    $(document).on("keypress",'#searchTit', function(event){//input enter key
+        if(event.keyCode === 13) {
+            $('#getSearchText').click();
+        }else if (event.keyCode === 96){
+            $('#searchTit').val('');
+        }
+    });
+});
+
+
+// load
+$(window).on("load", function () {
+    UI.loaderRemove()
+    UI.toggleClassDefault()
 })
+
+//scroll
+$(window).on('scroll', function(){
+    UI.headetStickyBar();
+    UI.toggleSwitchScrollEvent()
+    UI.scrollLimitEvent('.scroll-floating', '.container', '.footer',"is-show")
+});
+
+//resize
+$(window).on('resize', function(){
+    UI.tooltip();
+    UI.resizeCheckReset();
+});
+
