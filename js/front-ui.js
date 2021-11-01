@@ -500,6 +500,8 @@ var UI = {
         var $sort = [];
         var $random = [];
 
+        $el.children().remove();
+
         $.each($array, function (key, value) {
             $random.push(value);
         });
@@ -508,7 +510,7 @@ var UI = {
             return Math.random() - Math.random();
         });
 
-        $random.splice(0, ($random.length - 5));
+        $random.splice(0, ($random.length - 6));
 
         $.each($random ,function(key, value){
             $(el).append('<li data-toggle="qaToggle' + key + '"><p class="question">Q : ' + value.question + '</p><p class="answer" data-toggle-panel="qaToggle' + key + '">A : ' + value.answer + '</p></li>')

@@ -701,12 +701,17 @@ var encouragement = [
 var techLists = [
     {
         image: "images/logo/logo_photoshop.png",
-        title: "Photoshop",
+        title: "Adobe Photoshop",
         description: "포토샵은 웹 사이트 제작에 필요한 화면을 구성하는 픽셀 기반의 그래픽 툴입니다. PSD파일을 통해 시각화 된 이미지와 전체적인 레이아웃에 관한 정보를 얻을 수 있으며, 웹 환경에 맞게 이미지를 압축하여 리소스 관리에 도움을 줄 수 있습니다. 다양한 웹브라우저의 호환성을 위해서 현재까지는 픽셀 기반의 이미지를 많이 사용하기 때문에 프론트를 작업하는 사람들은 자주 접하게 되는 프로그램입니다.",
     },
     {
+        image: "images/logo/logo_xd.png",
+        title: "Adobe XD",
+        description: "Adobe XD는 UI/UX 여러 툴 중 후발주자지만 진화 속도가 빠르고 툴 자체가 가볍다는 장점이 있습니다. 그리고 여타 다른 툴에서는 볼 수  없는 간단한 애니메이션도 구현이 가능 합니다. 인터렉션에 대한 시각적인 제공이 가능해져 프로토파이 같은 프로그램을 사용하지 않더라도 인터렉션이 들어간 프로토타입 이미지를 제공 할 수 있으며, 작업자들과의 생산성을 높일 수 있고, 고객사에게 표현하고자하는 인터렉션을 시각적으로 보여 줄 수 있습니다. ",
+    },
+    {
         image: "images/logo/logo_illustrator.png",
-        title: "Illustartor",
+        title: "Adobe Illustartor",
         description: "일러스트는 백터 기반의 그래픽 툴입니다. 사실 퍼블리셔가 직접적으로 일러스트 프로그램을 사용하는 경우는 많이 없습니다. 백터는 그 특성상 확대를 해도 깨지지 않기 때문에 웹이나 앱에서 좋은 장점을 가지고 있습니다. 아직은 호환성이 좋지 않더라도 향후 기대해 볼 수 있는 그래픽 툴이 아닐까 생각 됩니다.",
     },
     {
@@ -732,7 +737,12 @@ var techLists = [
     {
         image: "images/logo/logo_jquery.png",
         title: "Jquery",
-        description: "2006년 존 레식(John Resig)이 최초로 출시한 클라이언트 측 HTML 스크립팅을 간소화하기 위해 고안된 크로스 플랫폼 자바스크립트 라이브러리 입니다. Jquery를 이용하면 DOM의 내용을 쉽게 탐색할 수 있어, 검색할 노드나 요소, 값등에 접근하거나 찾기가 비교적 간단하다.",
+        description: "2006년 존 레식(John Resig)이 최초로 출시한 클라이언트 측 HTML 스크립팅을 간소화하기 위해 고안된 크로스 플랫폼 자바스크립트 라이브러리 입니다. Jquery를 이용하면 DOM의 내용을 쉽게 탐색할 수 있어, 검색할 노드나 요소, 값등에 접근하거나 찾기가 비교적 간단합니다.",
+    },
+    {
+        image: "images/logo/logo_gulp.png",
+        title: "Gulp",
+        description: "Gulp는 개발 작업을 자동화하는 빌드 도구입니다. 비슷한 도구로는 그런트(Grunt)가 있습니다. 스트림을 이용해 데이터를 읽고 출력하며 작업들을 메모리에서 처리 합니다. npm을 통해 설치 할 수 있습니다. 퍼블리싱 할때 필요한 플러그인들을 설치하여 환경구성을 하면 작업이 더 편리해집니다.",
     },
     {
         image: "images/logo/logo_node.png",

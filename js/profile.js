@@ -1,51 +1,47 @@
 var profileQaData = [
     {
         question:'닉네임이 있다면?',
-        answer:'이름첫글자 + 숭'
+        answer:'친구들은 이대숭이 라고 합니다.'
     },
     {
         question:'태어난 달?',
-        answer:'5월'
+        answer:'5월은 가정의 달이에요.'
     },
     {
         question:'출신지역?',
-        answer:'강동'
+        answer:'강동에서 태어났습니다.'
     },
     {
-        question:'혈액형?',
-        answer:'B형'
-    },
-    {
-        question:'태어난 지역?',
-        answer:'서울'
+        question:'혈액형은?',
+        answer:'B형은 이미지가 별루 안좋은데 좋은 점도 많이 있답니다.'
     },
     {
         question:'아끼는 사람들?',
-        answer:'몇명 있음.'
+        answer:'지금 연락되는 모든 사람들은 특별히 아낀다고 볼 수 있습니다.'
     },
     {
         question:'연애중인가요?',
-        answer:'...'
+        answer:'뭐요? 거 장난이 너무 심한거 아니오'
     },
     {
         question:'사랑하는 사람과 가장 하고싶은 것은?',
-        answer:'연애'
+        answer:'요즘은 놀이동산을 그렇게 가보고 싶네요. 놀이동산 안간지 10년 정도 된 것 같아요.'
     },
     {
         question:'성격의 장점은?',
-        answer:'현실적이다.'
+        answer:'감수성이 예민해 남의 감정에 쉽게 공감하고, 소신이 있어서 무엇인가 정하기까지 어렵지만 정하고 나면 추진력이 좋습니다.'
     },
     {
         question:'성격의 단점은?',
-        answer:'현실적이다.'
+        answer:'누가 부탁하면 잘 거절을 못합니다. 지금은 많이 바뀌고 있어요.'
     },
     {
         question:'가장 감동받은 순간은?',
-        answer:'도시락'
+        answer:'대학교 시절 여자친구가 나를 위해 도시락을 싸들고 캠퍼스로 놀러 왔을 때'
     },
     {
         question:'가장 많이 울었던 순간은?',
-        answer:'할아버지 돌아가셨을 때'
+        answer:'친할아버지 돌아가셨을 때 &#39;나는 이제 할아버지가 없구나&#39;라는 생각에 펑펑 울었던 것 같습니다.'
     },
     {
         question:'이상형은?',
@@ -396,4 +392,5 @@ var profileQaData = [
 
 $(function(){
     UI.profileQaDraw('.profile .info' ,profileQaData);
+
 });
