@@ -53,7 +53,7 @@ var UI = {
         if($("[data-pop-open]").length > 0){this.popup()}
         if($("[data-dropdown]").length > 0){this.dropdown()}
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
-        if($("[data-toggle]").length > 0){this.toggleClassDefault;}
+        if($("[data-toggle]").length > 0){this.toggleClassDefault();}
     },
     searchParam: function (key) {
         return new URLSearchParams(location.search).get(key);
@@ -475,7 +475,6 @@ var UI = {
     toggleClassDefault : function () {
         var toggleGroup = [];
 
-
         $("[data-toggle]").each(function(){
             if($.inArray( $(this).data("toggle"), toggleGroup ) === -1  ){
                 toggleGroup.push($(this).data("toggle"))
@@ -515,6 +514,11 @@ var UI = {
         $.each($random ,function(key, value){
             $(el).append('<li data-toggle="qaToggle' + key + '"><p class="question">Q : ' + value.question + '</p><p class="answer" data-toggle-panel="qaToggle' + key + '">A : ' + value.answer + '</p></li>')
         });
+
+        if($el.children().length !== 0){
+
+            this.toggleClassDefault();
+        }
 
     },
     lampDraw: function() {
@@ -1299,13 +1303,15 @@ $(function(){
             $('#searchTit').val('');
         }
     });
+
+
 });
 
 
 // load
 $(window).on("load", function () {
     UI.loaderRemove()
-    UI.toggleClassDefault()
+
 })
 
 //scroll
