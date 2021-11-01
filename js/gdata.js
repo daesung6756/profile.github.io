@@ -230,7 +230,7 @@ var historyLog = [
             'images/list/laufenn-mobile.jpg',
         ],
         type : '운영',
-        name:'[LOCAL] 라우펜 글로벌 사이트 운영 업무',
+        name:'[LOCAL] 라우펜 글로벌 사이트 운영 업무 (진행중)',
         date:'2020.03 ~ 2020.6',
         agency:'Concentrix Korea',
         customer:'한국 타이어',
