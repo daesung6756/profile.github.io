@@ -28,6 +28,7 @@
 .tech_list .slick-custom-control .custom-btn:active {position:relative;top:1px;}
 .tech_list .slick-custom-control .custom-btn + .custom-btn {margin-left:4px;}
 
+.profile {position:relative;}
 .profile .info {color:#ddd;display:flex;align-items:baseline;flex-wrap:wrap;justify-content: space-between;margin-top:-10px}
 .profile .info > li {background: #191919;width:100%;margin-top:10px;border-radius:4px;cursor:pointer;}
 .profile .info .question{position:relative;color:#333;font-size:.7rem;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;padding:1rem 1rem 1rem 3rem;font-weight:700}

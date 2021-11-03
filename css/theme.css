@@ -87,18 +87,17 @@ body.theme .section.is-on .tech_list .slick-dots li {opacity:1;-webkit-transitio
 body.theme .section.is-on .tech_list .slick-dots li.slick-active button {background: rgb(176 195 137);}
 
 body.theme .visual-spot{background:#004f67;}
-body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;
-    /*background:url("../images/window.png") right center no-repeat;background-size:cover;*/}
-/*body.theme .visual-spot .spot-inner .bg-area{position:relative;background:url("../images/sky-bg.jpg") center center no-repeat;background-size:cover;background-attachment: fixed}*/
-body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
-body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity 1s, color 1s, -webkit-transform 1s ease;transition: opacity 1s, color 1s, -webkit-transform 1s ease;-o-transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease, -webkit-transform 1s ease;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
+body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;}
+body.theme .visual-spot.is-on .desc-group {top:50%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
+body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity 1s, color 1s, -webkit-transform 1s ease;-o-transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease, -webkit-transform 1s ease;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
 body.theme .visual-spot.is-on .cheese-btn {-webkit-animation:cheeseAniTheme .1s forwards;animation:cheeseAniTheme .1s forwards;}
 body.theme .visual-spot.is-on .cheese-btn:hover {bottom:-20px}
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:before,
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:after {display:block;}
 body.theme .visual-spot.is-on .cheese-btn > .line {height:0;-webkit-transition: height .2s ease-out;-o-transition: height .2s ease-out;transition: height .2s ease-out}
 /*body.theme .visual-spot.is-on .cheese-btn > .pic:hover {animation: upDownTarget .6s infinite ease-in-out}*/
-body.theme .visual-spot.is-on .btn-list {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);-webkit-transition: -webkit-transform .3s ease-in-out;transition: -webkit-transform .3s ease-in-out;-o-transition: transform .3s ease-in-out;opacity:1;transition: transform .3s ease-in-out, opacity .6s ease-in;transition: transform .3s ease-in-out, opacity .6s ease-in, -webkit-transform .3s ease-in-out, opacity .6s ease-in}
+body.theme .visual-spot.is-on .btn-list {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);-webkit-transition: -webkit-transform .3s ease-in-out;transition: -webkit-transform .3s ease-in-out;-o-transition: transform .3s ease-in-out;opacity:1;transition: transform .3s ease-in-out, opacity .6s ease-in, -webkit-transform .3s ease-in-out, opacity .6s ease-in}
 body.theme .visual-spot.is-on .btn-list button {color:#fff;}
 body.theme .visual-spot.is-on .btn-list button::before {background:#ffc931;}
 

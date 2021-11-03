@@ -271,7 +271,7 @@ img {display:block;max-width:100%;}
 .visual-spot {position:relative;background-color:#000;overflow:hidden;}
 .visual-spot .spot-inner {position:relative;text-align:center;overflow:hidden;}
 .visual-spot .bg-area {position:relative;width:100%;height:350px;text-align:center;padding-top:30px;-webkit-transition: height .3s;-o-transition: height .3s;transition: height .3s;max-width: 1024px;margin: 0 auto;}
-.visual-spot .bg-area .desc-group {position:absolute;top:50%;left:50%;margin-left:80px;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%)}
+.visual-spot .bg-area .desc-group {position:absolute;top:100%;left:50%;margin-left:80px;-webkit-transform: translate(0,-50%);-ms-transform: translate(0,-50%);transform: translate(0,-50%)}
 .visual-spot .bg-area .desc-group h1 {color:#fff;font-size:24px;font-weight:900;letter-spacing:-.05em;opacity:0;-webkit-transition: opacity .3s, color .3s, -webkit-transform .3s;transition: opacity .3s, color .3s, -webkit-transform .3s;-o-transition: opacity .3s, color .3s, transform .3s;transition: opacity .3s, color .3s, transform .3s;transition: opacity .3s, color .3s, transform .3s, -webkit-transform .3s;-webkit-transform: translateX(100%);-ms-transform: translateX(100%);transform: translateX(100%);}
 .visual-spot .bg-area .desc-group .desc {color:#fff;font-size:14px;opacity:0;-webkit-transition: opacity .3s, color .3s, -webkit-transform .3s;transition: opacity .3s, color .3s, -webkit-transform .3s;-o-transition: opacity .3s, color .3s, transform .3s;transition: opacity .3s, color .3s, transform .3s;transition: opacity .3s, color .3s, transform .3s, -webkit-transform .3s;-webkit-transform: translateX(100%);-ms-transform: translateX(100%);transform: translateX(100%);}
 .visual-spot .text-area {position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);margin:-20px 0 0 0;z-index:1;white-space: nowrap;}
@@ -546,9 +546,10 @@ article > .tit + p.desc,
 .overlay .tbl-event-btn .icon {width:10px;height:10px;margin:10px;-webkit-transform: rotate(90deg);-ms-transform: rotate(90deg);transform: rotate(90deg);-webkit-transition: -webkit-transform .3s;transition: -webkit-transform .3s;-o-transition: transform .3s;transition: transform .3s;transition: transform .3s, -webkit-transform .3s;}
 .overlay.d-right.is-show .tbl-event-btn .icon {-webkit-transform: rotate(-90deg);-ms-transform: rotate(-90deg);transform: rotate(-90deg);-webkit-transition: -webkit-transform .3s;transition: -webkit-transform .3s;-o-transition: transform .3s;transition: transform .3s;transition: transform .3s, -webkit-transform .3s;}
 
-
 /* loader */
 .loader-wrap {position:fixed;top:0;left:0;width:100%;height:100%;z-index:9999;background:rgba(0,0,0,.8)}
+.loader-wrap.absolute-type {position:absolute;}
+.loader-wrap.bg-none {background:rgba(0,0,0,0)}
 .loader-wrap .loader {position:absolute;top:50%;left:50%;width:6rem;height:6rem;-webkit-transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);background:url("../images/loader-circle.svg") center center/contain no-repeat;}
 
 /* canvas */

@@ -26,7 +26,7 @@ function tutorialClickEvent () {
 
 var UI = {
     init : function(){
-        this.loaderAdd();
+        this.loaderAdd("body");
         this.checkTheme();
         this.resizeCheckReset();
         this.lampDraw();
@@ -949,8 +949,8 @@ var UI = {
         if(!status) {
             var $body = $('body');
             var $random = [];
-            UI.loaderAdd()
-            UI.loaderRemove()
+            UI.loaderAdd("body" )
+            UI.loaderRemove("body")
             setTimeout(function () {
                 $.each(array, function (key, value) {$random.push(value);});
                 $random.sort(function () {return Math.random() - Math.random();}); // 랜덤 정렬
@@ -1076,17 +1076,21 @@ var UI = {
             $('.header-drop').removeClass("is-show");
         }
     },
-    loaderAdd : function () {
-        var body = $("body");
-        var loader = '<div class="loader-wrap"><span class="loader"></span></div>';
-        body.prepend(loader);
+    loaderAdd : function (el, type = "") {
+        var element = $(el);
+        var loader = '<div class="loader-wrap ' + type +'"><span class="loader"></span></div>';
+
+        element.prepend(loader);
+
     },
-    loaderRemove : function () {
-        var body = $("body");
-        body.find(".loader-wrap").fadeOut(400);
+    loaderRemove : function (el, duration = 400 ) {
+        var element = $(el);
+
+        element.find(".loader-wrap").fadeOut(duration);
         setTimeout(function () {
-            body.find(".loader-wrap").remove();
-        }, 400)
+            element.find(".loader-wrap").remove();
+        }, duration)
+
     },
     InterestListDraw : function ( data ){
         if($(".Interest-list")){
@@ -1310,7 +1314,7 @@ $(function(){
 
 // load
 $(window).on("load", function () {
-    UI.loaderRemove()
+    UI.loaderRemove("body")
 
 })
 
