@@ -88,7 +88,15 @@ body.theme .section.is-on .tech_list .slick-dots li.slick-active button {backgro
 
 body.theme .visual-spot{background:#004f67;}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;}
-body.theme .visual-spot.is-on .desc-group {top:50%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);}
+body .visual-spot .spot-inner.is-on {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#131313+0,111111+40,000000+49,070707+81,070707+87,262626+100 */
+    background: #131313; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #131313 0%, #111111 40%, #000000 49%, #070707 81%, #070707 87%, #262626 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#262626',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+body.theme .visual-spot.is-on .desc-group {top:50%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);z-index:1;}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
 body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity 1s, color 1s, -webkit-transform 1s ease;-o-transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease, -webkit-transform 1s ease;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
 body.theme .visual-spot.is-on .cheese-btn {-webkit-animation:cheeseAniTheme .1s forwards;animation:cheeseAniTheme .1s forwards;}

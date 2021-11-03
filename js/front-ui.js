@@ -66,13 +66,11 @@ var UI = {
         if($theme === "on"){
             var $toggleBtn = $('.visual-toggle');
             var $visual = $('.visual-spot');
-            var $mouse = $('.mouse');
             var $theme = $("body");
 
             $toggleBtn.addClass('is-on');
             $visual.addClass('is-on');
             $theme.addClass('theme');
-
 
             (function() {
                 var lastTime = 0;
@@ -742,6 +740,7 @@ var UI = {
                 $theme.addClass('theme');
                 checkTheme = true;
             }
+            UI.visualSpotInnerSwitchEvent();
         })
 
     },
@@ -755,7 +754,17 @@ var UI = {
                 $(this).parents('.section').removeClass("is-on")
                 checkLight = false
             }
+
+            UI.visualSpotInnerSwitchEvent();
         });
+    },
+    visualSpotInnerSwitchEvent : function (){
+        var spot = $(".visual-spot").find(".spot-inner");
+        if(checkTheme || !checkLight) {
+            spot.removeClass("is-on")
+        } else {
+            spot.addClass("is-on")
+        }
     },
     visualMouseClickEvent : function () {
         var mouseGroup=[];
