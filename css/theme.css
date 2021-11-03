@@ -52,6 +52,9 @@
 }
 .section.is-on .profile .info > li.is-on {background: #f05133}
 
+.section.is-on .toggle-switch .tooltip-block,
+.section.is-on .toggle-switch .tooltip-block:after{display:none;}
+
 /* theme */
 body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
 body.theme .section.is-on h4.tit {color:rgb(255,255,255)}

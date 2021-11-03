@@ -528,7 +528,7 @@ var UI = {
 
         $.each(sectionInnerGroup, function(){
             $(this).append(
-                '<button type="button" class="panel-btn1 toggle-switch"  data-tooltip="스위치!!"><span class="blind">전등 효과 켜기/끄기</span></button>' +
+                '<button type="button" class="panel-btn1 toggle-switch" ><span class="tooltip-block-wrap"><span class="tooltip-block dir-left">스위치</span></span><span class="blind">전등 효과 켜기/끄기</span></button>' +
                 '<div class="blink-event-set">' +
                 '<span class="bim box-blink-ani"></span>' +
                 '<span class="lamp"></span>' +
