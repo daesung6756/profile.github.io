@@ -1207,15 +1207,16 @@ var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지
 
 //ready
 $(function(){
-
+    "use strict";
 
     UI.init();
     slickSlide.init();
+
     $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
     $(document).on("afterChange", "[data-slick=tech_list]", beforeAnimationSlick)
     $(document).on("beforeChange","[data-slick=tech_list]", aftereAnimationSlick)
 
-    "use strict";
+
     $(".visual-toggle").on("click",function(){
         if($(this).hasClass("is-on")) {
 

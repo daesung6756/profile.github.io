@@ -9,14 +9,5 @@ $.getScript( "js/data-profile.js");
 $.getScript( "js/data-itWordList.js");
 $.getScript( "js/data-web-accessibility.js");
 
-/*document.write("<script src='./js/data-gnb.js'></script>");
-document.write("<script src='./js/data-experience.js'></script>");
-document.write("<script src='./js/data-encouragement.js'></script>");
-document.write("<script src='./js/data-history.js'></script>");
-document.write("<script src='./js/data-util.js'></script>");
-document.write("<script src='./js/data-wish.js'></script>");
-document.write("<script src='./js/data-roadmap.js'></script>");
-document.write("<script src='./js/data-profile.js'></script>");
-document.write("<script src='./js/data-itWordList.js'></script>");*/
 
 // var $themeOncheck = false;
