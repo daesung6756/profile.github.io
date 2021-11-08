@@ -27,11 +27,7 @@
 .section.is-on .years-tab .partion-list li{color:#999;}
 .section.is-on .years-tab .partion-list li.is-active {color:#ddd;}
 
-.section.is-on .tech_list .slick-slider {
-    background: #ffffff;
-    background: -o-linear-gradient(39deg,rgb(255 198 115) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
-    background: linear-gradient(51deg,rgb(255 198 115) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);
-    -webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s;}
+.section.is-on .tech_list .slick-slider {background: #ffffff;background: -o-linear-gradient(39deg,rgb(255 198 115) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);background: linear-gradient(51deg,rgb(255 198 115) 21%,rgb(255 237 164) 49%,rgb(255 207 136) 77%,rgb(28 28 28) 94%,rgb(28 28 28) 100%);-webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s;}
 .section.is-on .tech_list .slick-slider .title {color:#333;}
 .section.is-on .tech_list .slick-slider .desc {color:#8f9da8;}
 .section.is-on .tech_list .slick-slide .row .column img {background-color:rgba(255,255,255,.5);opacity:1;-webkit-transition: opacity .3s, background-color .3s;-o-transition: opacity .3s, background-color .3s;transition: opacity .3s, background-color .3s;}
@@ -44,16 +40,22 @@
 
 .section.is-on .profile .info > .question{color:#777;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .profile .info > .answer{color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
-.section.is-on .info > li {
-    background: #ffffff;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(11%, rgb(255 238 212)),color-stop(20%, rgb(255 247 236)),color-stop(87%, rgb(255 237 179)),color-stop(99%, rgb(175 129 62)),to(rgb(255 237 185)));
-    background: -o-linear-gradient(top, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
-    background: linear-gradient(180deg, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);
-}
+.section.is-on .info > li {background: #ffffff;background: -webkit-gradient(linear, left top, left bottom, color-stop(11%, rgb(255 238 212)),color-stop(20%, rgb(255 247 236)),color-stop(87%, rgb(255 237 179)),color-stop(99%, rgb(175 129 62)),to(rgb(255 237 185)));background: -o-linear-gradient(top, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);background: linear-gradient(180deg, rgb(255 238 212) 11%,rgb(255 247 236) 20%,rgb(255 237 179) 87%,rgb(175 129 62) 99%,rgb(255 237 185) 100%);}
 .section.is-on .profile .info > li.is-on {background: #f05133}
 
 .section.is-on .toggle-switch .tooltip-block,
 .section.is-on .toggle-switch .tooltip-block:after{display:none;}
+
+.section.is-on .main-tab-nav li {color:#ddd;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.section.is-on .main-tab-nav li.is-active {color:#ffc673;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.section.is-on .main-tab-nav li.is-active:before {background:#ffc673;-webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s}
+
+.section.is-on table.tbl-row {border-color:#24323d;}
+.section.is-on table.tbl-row th {background:#2d3f4f;color:#ddd;-webkit-transition: background .3s ,color .3s;-o-transition: background .3s ,color .3s;transition: background .3s ,color .3s;border-color:#24323d;}
+.section.is-on table.tbl-row td {color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;border-color:#24323d;}
+
+.section.is-on .desc-group strong.tit {color:#ddd;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+.section.is-on .desc-group .sub-text {color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
 /* theme */
 body.theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
@@ -91,13 +93,7 @@ body.theme .section.is-on .tech_list .slick-dots li.slick-active button {backgro
 
 body.theme .visual-spot{background:#004f67;}
 body.theme .visual-spot .spot-inner .bg-box {position:absolute;top:0;left:0;width:100%;height:100%;}
-body .visual-spot .spot-inner.is-on {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#131313+0,111111+40,000000+49,070707+81,070707+87,262626+100 */
-    background: #131313; /* Old browsers */
-    background: -moz-linear-gradient(45deg,  #131313 0%, #111111 40%, #000000 49%, #070707 81%, #070707 87%, #262626 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#262626',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+body .visual-spot .spot-inner.is-on { /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#131313+0,111111+40,000000+49,070707+81,070707+87,262626+100 */background: #131313; /* Old browsers */background: -moz-linear-gradient(45deg,  #131313 0%, #111111 40%, #000000 49%, #070707 81%, #070707 87%, #262626 100%); /* FF3.6-15 */background: -webkit-linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* Chrome10-25,Safari5.1-6 */background: linear-gradient(45deg,  #131313 0%,#111111 40%,#000000 49%,#070707 81%,#070707 87%,#262626 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#262626',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
 
 body.theme .visual-spot.is-on .desc-group {top:50%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);z-index:1;}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
@@ -134,6 +130,17 @@ body.theme .section.is-on .profile .info > li.is-on  .question:after {background
 body.theme .section.is-on .profile .info > li.is-on  .answer {color:#fff;border-color:#103850;}
 
 body.theme .section.is-on .tech_list .slick-slider > .slick-list.draggable {border-bottom: 1px dotted #ddd;}
+
+body.theme .section.is-on .main-tab-nav li {color:#fff;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+body.theme .section.is-on .main-tab-nav li.is-active {color:#e1be5d;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+body.theme .section.is-on .main-tab-nav li.is-active:before {background:#e1be5d;-webkit-transition: background .3s;-o-transition: background .3s;transition: background .3s}
+
+body.theme .section.is-on table.tbl-row {border-color:#437c8e;}
+body.theme .section.is-on table.tbl-row th {background:#296297;color:#ddd;-webkit-transition: background .3s ,color .3s;-o-transition: background .3s ,color .3s;transition: background .3s ,color .3s;border-color:#437c8e;}
+body.theme .section.is-on table.tbl-row td {color:#aeccd5;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;border-color:#437c8e;}
+
+body.theme .section.is-on .desc-group strong.tit {color:#e1be5d;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
+body.theme .section.is-on .desc-group .sub-text {color:#aeccd5;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
 body.theme .scroll-floating button{background: rgba(19, 103, 33, 1);}
 

@@ -24,15 +24,17 @@ var include = {
             },
             snippet : function () {
                 document.write('<link rel="stylesheet" href="css/snippet.css">');
+            },
+            wa : function () {
+                document.write('<link rel="stylesheet" href="css/snippet.css">');
             }
         },
         scripts : function (){
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
             document.write('<script src="js/vendor/p5.min.js"></script>');
             document.write('<script src="js/grm.js"></script>');
-            document.write('<script src="js/gdata.js"></script>');
+            document.write('<script src="js/control-data.js"></script>');
             document.write('<script src="js/front-ui.js"></script>');
-            document.write('<script src="js/profile.js"></script>');
         }
     },
     footer : {

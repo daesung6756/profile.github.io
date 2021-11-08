@@ -388,9 +388,3 @@ var profileQaData = [
         answer:'적당한 긴장감과 간절함이 필요해.'
     },
 ];
-
-
-$(function(){
-    UI.profileQaDraw('.profile .info' ,profileQaData);
-
-});

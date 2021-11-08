@@ -1,4 +1,4 @@
-var WordList = [
+var itWordList = [
     "application - 응용 프로그램",
     "argument - 인자",
     "article - 게시물",
@@ -87,7 +87,3 @@ var WordList = [
     "verification - 검증",
     "whitespace - 공백",
 ];
-
-$(function(){
-    UI.defaultListDraw('.search-output', WordList);
-});
