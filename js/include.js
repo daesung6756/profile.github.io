@@ -36,7 +36,7 @@ var include = {
     },
     footer : {
         scripts : function(){
-            document.write('<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>');
+            document.write('<script type="text/javascript" src="js/vendor/slick.min.js"></script>');
             document.write('<script src="js/front-ui.js"></script>');
             document.write('<script src="js/draw-visual.js"></script>');
         }
