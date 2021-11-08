@@ -19,4 +19,4 @@ document.write("<script src='./js/data-roadmap.js'></script>");
 document.write("<script src='./js/data-profile.js'></script>");
 document.write("<script src='./js/data-itWordList.js'></script>");*/
 
-var $themeOncheck = false;
+// var $themeOncheck = false;

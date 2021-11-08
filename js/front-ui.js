@@ -24,6 +24,49 @@ function tutorialClickEvent () {
     }
 }
 
+function initAnimationSlick(event, slick) {
+    $(slick.$slides[0]).addClass("animated")
+}
+function beforeAnimationSlick(event, slick, nextSlide) {
+    $(slick.$slides[nextSlide]).addClass("animated")
+}
+function aftereAnimationSlick(event, slick, currentSlide) {
+    $(slick.$slides[currentSlide]).removeClass("animated")
+}
+var slickOption = {
+    autoplay:false,
+    autoplaySpeed: 3000,
+    centerMode: true,
+    fade: true,
+    centerPadding: '0',
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: false,
+}
+
+var slickSlide = {
+    init: function () {
+        if($("[data-slick]").length > 0){ this.event( slickOption );}
+    },
+    event : function ( option ){
+        var slickGroup = [];
+
+        $("[data-slick]").each(function (){
+            if($.inArray($(this).data("slick"), slickGroup ) === -1){
+                slickGroup.push($(this).data("slick"));
+            }
+        });
+
+        $.each(slickGroup, function(key, value) {
+            var slickSlide =  $("[data-slick='" + value + "']")
+
+            slickSlide.slick( option );
+            slickSlide.find(".slick-current").addClass("animated")
+        })
+    },
+};
+
 var UI = {
     init : function(){
         this.loaderAdd("body");
@@ -1165,7 +1208,12 @@ var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지
 //ready
 $(function(){
 
+
     UI.init();
+    slickSlide.init();
+    $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
+    $(document).on("afterChange", "[data-slick=tech_list]", beforeAnimationSlick)
+    $(document).on("beforeChange","[data-slick=tech_list]", aftereAnimationSlick)
 
     "use strict";
     $(".visual-toggle").on("click",function(){

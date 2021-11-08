@@ -25,9 +25,6 @@ var include = {
             snippet : function () {
                 document.write('<link rel="stylesheet" href="css/snippet.css">');
             },
-            wa : function () {
-                document.write('<link rel="stylesheet" href="css/snippet.css">');
-            }
         },
         scripts : function (){
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
