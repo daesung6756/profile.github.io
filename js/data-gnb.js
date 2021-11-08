@@ -6,7 +6,7 @@ var gnbList = [
     },
     {
         name:'History',
-        url:'profile.html'
+        url:'history.html'
     },
     {
         name:"Web-Accessibility",
@@ -18,7 +18,7 @@ var gnbList = [
     },
     {
         name:'HTTP Status',
-        url:'http-status.html'
+        url:'status.html'
     },
     /*
     {
