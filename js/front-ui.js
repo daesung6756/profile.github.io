@@ -71,12 +71,8 @@ var UI = {
     init : function(){
         this.loaderAdd("body");
 
-        if($("[data-tooltip]").length > 0){this.tooltip()}
-        if($("[data-tab]").length > 0){this.tabs()}
-        if($("[data-pop-open]").length > 0){this.popup()}
-        if($("[data-dropdown]").length > 0){this.dropdown()}
+
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
-        if($("[data-toggle]").length > 0){this.toggleClassDefault();}
 
         this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
         this.InterestListDraw(InterestList)
@@ -98,6 +94,13 @@ var UI = {
         this.gnbLinkThemeCheckEvent();
         this.snsShare();
         this.moreText();
+
+
+        if($("[data-tooltip]").length > 0){this.tooltip()}
+        if($("[data-tab]").length > 0){this.tabs()}
+        if($("[data-pop-open]").length > 0){this.popup()}
+        if($("[data-dropdown]").length > 0){this.dropdown()}
+        if($("[data-toggle]").length > 0){this.toggleClassDefault();}
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과

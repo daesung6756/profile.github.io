@@ -103,7 +103,7 @@ body.theme .visual-spot.is-on .cheese-btn:hover {bottom:-20px}
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:before,
 body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:after {display:block;}
 body.theme .visual-spot.is-on .cheese-btn > .line {height:0;-webkit-transition: height .2s ease-out;-o-transition: height .2s ease-out;transition: height .2s ease-out}
-/*body.theme .visual-spot.is-on .cheese-btn > .pic:hover {animation: upDownTarget .6s infinite ease-in-out}*/
+
 body.theme .visual-spot.is-on .btn-list {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);-webkit-transition: -webkit-transform .3s ease-in-out;transition: -webkit-transform .3s ease-in-out;-o-transition: transform .3s ease-in-out;opacity:1;transition: transform .3s ease-in-out, opacity .6s ease-in, -webkit-transform .3s ease-in-out, opacity .6s ease-in}
 body.theme .visual-spot.is-on .btn-list button {color:#fff;}
 body.theme .visual-spot.is-on .btn-list button::before {background:#ffc931;}
