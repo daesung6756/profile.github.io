@@ -106,8 +106,9 @@ body.theme .visual-spot.is-on .cheese-btn > .hand .fingernail:after {display:blo
 body.theme .visual-spot.is-on .cheese-btn > .line {animation:cheeseThemeLineDrop .3s forwards ease-in-out }
 
 body.theme .visual-spot.is-on .btn-list {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);-webkit-transition: -webkit-transform .3s ease-in-out;transition: -webkit-transform .3s ease-in-out;-o-transition: transform .3s ease-in-out;opacity:1;transition: transform .3s ease-in-out, opacity .6s ease-in, -webkit-transform .3s ease-in-out, opacity .6s ease-in}
-body.theme .visual-spot.is-on .btn-list button {color:#fff;}
-body.theme .visual-spot.is-on .btn-list button::before {background:#ffc931;}
+body.theme .visual-spot.is-on .btn-list button {color:#fff;-webkit-transition: color .2s ease-out, letter-spacing .1s linear;-o-transition: color .2s ease-out, letter-spacing .1s linear;transition: color .2s ease-out, letter-spacing .1s linear;letter-spacing: -.05em}
+body.theme .visual-spot.is-on .btn-list button::before {background: rgba(255, 255, 255, 0.3);}
+body.theme .visual-spot.is-on .btn-list button:hover {color: #ffe600;-webkit-transition: color .3s ease-in, letter-spacing .1s linear;-o-transition: color .3s ease-in, letter-spacing .1s linear;transition: color .3s ease-in, letter-spacing .1s linear;letter-spacing: .1em}
 
 body.theme .section.is-on {background-color:rgb(23 53 62);background-image: none;}
 body.theme .section.is-on .utils-list .util-info > dt > .title {color: #7de1ff;}
