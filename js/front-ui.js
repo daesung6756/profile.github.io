@@ -71,10 +71,10 @@ var UI = {
     init : function(){
         this.loaderAdd("body");
 
-
         if($("[data-slick]").length > 0){this.techListDraw(techLists);}
+        if($("[data-toggle]").length > 0){this.toggleClassDefault();}
 
-        this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');
+        this.toggleClassTarget('.overlay.d-right', '.tbl-event-btn', 'is-show');//target class  , click event Class, event view class
         this.InterestListDraw(InterestList)
         this.utilsListDraw("utilsList", utilsList) //util list
         this.defaultListDraw('.search-output', itWordList);//search list
@@ -100,7 +100,7 @@ var UI = {
         if($("[data-tab]").length > 0){this.tabs()}
         if($("[data-pop-open]").length > 0){this.popup()}
         if($("[data-dropdown]").length > 0){this.dropdown()}
-        if($("[data-toggle]").length > 0){this.toggleClassDefault();}
+
 
         // this.tableColDraw('.intro-tbl-col', colOption1, rowData1); // 오버레이 사이드 메뉴
         // this.tableAni('.tbl-col', 'ani-slide-down-up'); // 오버레이 사이드 메뉴 애니메이션 효과
@@ -564,7 +564,6 @@ var UI = {
         });
 
         if($el.children().length !== 0){
-
             this.toggleClassDefault();
         }
 

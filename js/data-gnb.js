@@ -20,11 +20,12 @@ var gnbList = [
         name:'HTTP Status',
         url:'status.html'
     },
-    /*
-    {
+
+    /*{
         name:"스크린 정보",
         url:'screen-size.html'
-    },
+    },*/
+    /*
     {
         name:"Code Snippet",
         url:'event-group.html'

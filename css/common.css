@@ -595,13 +595,77 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 .tutorial .share-area .arrow {background:url("../images/icons/icon-sns-share-white.png") left top/contain no-repeat}
 .tutorial .switch-area .arrow {background:url("../images/switch-off.png") left top/contain no-repeat}
 
-.cheese-btn {position:absolute;bottom:30px;left:65px;color:#fff;border-radius:10px;border:0;padding:0 20px;background:transparent;-webkit-animation:cheeseAni 2s infinite ease-in-out;animation:cheeseAni 2s infinite ease-in-out;z-index:99;}
-.cheese-btn > .hand {position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;border-radius:50% 50% 0 0 ;width:30px;height:16px;background:#000;}
+.cheese-btn {position:absolute;bottom:30px;left:65px;color:#fff;border-radius:10px;border:0;padding:0 20px;background:transparent;
+    animation:cheeseBtnMoveUp .5s forwards ease-in-out .3s, cheeseBtnSideMove .6s forwards .8s, cheeseLeftRightMoving 2s infinite ease-in-out 1.4s;
+    z-index:99;
+}
+.cheese-btn > .hand {position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;border-radius:50% 50% 0 0 ;width:30px;height:16px;background:#000;bottom:-20px}
 .cheese-btn > .hand .fingernail {position:relative;width:50%;}
 .cheese-btn > .hand .fingernail:before {content:'';display:none;position:absolute;top:96%;left:8px;width: 0;height: 0;border-left: 3px solid transparent;border-right: 3px solid transparent;border-top: 4px solid #adadad;z-index:-1}
 .cheese-btn > .hand .fingernail:after {content:'';display:none;position:absolute;top:96%;right:8px;width: 0;height: 0;border-left: 3px solid transparent;border-right: 3px solid transparent;border-top: 4px solid #adadad;z-index:-1}
-.cheese-btn > .line {position:relative;display:inline-block;width:1px;bottom:100%;height:40px;background: #313131;z-index:-1;-webkit-transition: height .2s ease-out;-o-transition: height .2s ease-out;transition: height .2s ease-out}
+.cheese-btn > .line {
+    position:relative;
+    display:inline-block;
+    bottom:100%;
+    width:1px;
+    height:40px;
+    background: #313131;
+
+    animation:cheeseAniLineUp .3s forwards ease-in;
+    z-index:-1;
+}
 .cheese-btn > .pic {position:relative;top:-7px;}
+
+
+@keyframes cheeseAniLineUp {
+    0% {height:0;}
+    100% {height:80px;}
+}
+
+@keyframes cheeseBtnMoveUp {
+    0% {bottom:-40px}
+    100% {bottom:30px;}
+}
+@keyframes cheeseBtnSideMove {
+    0% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0)}
+    100% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+}
+
+
+@keyframes cheeseLeftRightMoving {
+    0% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+    50% {-webkit-transform: rotate(16deg) translate(-16px);transform: rotate(16deg) translate(-16px);-webkit-transform-origin: top center;transform-origin: top center;}
+    100% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+}
+
+@-webkit-keyframes cheeseLeftRightMoving {
+    0% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+    50% {-webkit-transform: rotate(16deg) translate(-16px);transform: rotate(16deg) translate(-16px);-webkit-transform-origin: top center;transform-origin: top center;}
+    100% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+}
+
+@keyframes cheeseThemeStopMoving {
+    0% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
+    100% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0);-webkit-transform-origin: top center;transform-origin: top center;}
+}
+@keyframes cheeseThemeLineDrop {
+    0% {height:80px;}
+    100% {height:0;}
+}
+@keyframes cheeseThemeMoveBtn {
+    0% {height:0;bottom:30px;}
+    100% {height:0;bottom:-10px;}
+}
+
+@-webkit-keyframes cheeseAniTheme {
+    50% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0)}
+    100% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0);bottom:-10px;}
+}
+
+@keyframes cheeseAniTheme {
+    50% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0)}
+    100% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0);bottom:-10px;}
+}
 
 
 /* animation */
@@ -616,29 +680,8 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 }
 
 
-@keyframes cheeseAni {
-    0% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
-    50% {-webkit-transform: rotate(16deg) translate(-16px);transform: rotate(16deg) translate(-16px);-webkit-transform-origin: top center;transform-origin: top center;}
-    100% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
-}
 
-@-webkit-keyframes cheeseAni {
-    0% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
-    50% {-webkit-transform: rotate(16deg) translate(-16px);transform: rotate(16deg) translate(-16px);-webkit-transform-origin: top center;transform-origin: top center;}
-    100% {-webkit-transform: rotate(-16deg) translate(16px);transform: rotate(-16deg) translate(16px);-webkit-transform-origin: top center;transform-origin: top center;}
-}
 
-@-webkit-keyframes cheeseAniTheme {
-    0% {}
-    50% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0)}
-    100% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0);bottom:-10px;}
-}
-
-@keyframes cheeseAniTheme {
-    0% {}
-    50% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0)}
-    100% {-webkit-transform: rotate(0) translate(0);transform: rotate(0) translate(0);bottom:-10px;}
-}
 
 
 @keyframes textOpacity {
@@ -987,8 +1030,8 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 
     .layer-pop .pop-foot:before {border-top: 30px solid #fff;border-right: 30px solid transparent;}
 
-    .cheese-btn {left:136px;bottom:78px}
-    .cheese-btn > .line {height:80px;}
+    .cheese-btn {left:136px;bottom:-10px}
+    .cheese-btn > .line {height:0;}
 }
 
 @media (min-width:1200px ) {
