@@ -10,6 +10,7 @@ var include = {
             common : function () {
                 document.write('<link rel="stylesheet" href="css/reset.css">');
                 document.write('<link rel="stylesheet" href="css/common.css">');
+                document.write('<link rel="stylesheet" href="css/animation.css">');
                 document.write('<link rel="stylesheet" href="css/theme.css">');
             },
             index : function () {
