@@ -765,7 +765,7 @@ table.tbl-row td {padding:20px;border-bottom:1px solid #070a0d;font-size:14px;li
 
     .layer-pop .pop-foot:before {border-top: 30px solid #fff;border-right: 30px solid transparent;}
 
-    .cheese-btn {left:136px;bottom:-10px}
+    .cheese-btn {left:136px;bottom:-40px}
     .cheese-btn > .line {height:0;}
 
     .tooltip-block.dir-bottom {margin-top:0;}
