@@ -198,7 +198,7 @@ span.tooltip::after {content:'';display:block;position:absolute;top:100%;right:0
 /* tooltip set */
 .tooltip-block-wrap {position:relative;display:inline-block;width:100%;height:100%;vertical-align: top;}
 .tooltip-block {position:absolute;width:auto;font-size:12px;padding:10px;border-radius:5px;color:#fff;background: #ff5100;white-space:nowrap;-webkit-animation: toggleSwitchRotateAnimation 3s infinite;animation: toggleSwitchRotateAnimation 3s infinite}
-.tooltip-block.dir-bottom {top:100%;left:50%;-webkit-transform:translate( -50%, 5px ) ;-ms-transform:translate( -50%, 5px ) ;transform:translate( -50%, 5px ) ;}
+.tooltip-block.dir-bottom {top:100%;left:50%;-webkit-transform:translate( -50%, 5px ) ;-ms-transform:translate( -50%, 5px ) ;transform:translate( -50%, 5px );margin-top:18px}
 .tooltip-block.dir-left {top:50%;right:100%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
 .tooltip-block:after {content:"";position:absolute;width: 0;height: 0;}
 .dir-bottom:after {bottom:100%;left:50%;-webkit-transform: translateX(-50%);-ms-transform: translateX(-50%);transform: translateX(-50%);border-left: .3rem solid transparent;border-right: .3rem solid transparent;border-bottom: .6rem solid #ff5100;}
@@ -767,9 +767,12 @@ table.tbl-row td {padding:20px;border-bottom:1px solid #070a0d;font-size:14px;li
 
     .cheese-btn {left:136px;bottom:-10px}
     .cheese-btn > .line {height:0;}
+
+    .tooltip-block.dir-bottom {margin-top:0;}
 }
 
 @media (min-width:1200px ) {
+
 
     /* footer */
     .footer .inner {padding:30px 0;}
