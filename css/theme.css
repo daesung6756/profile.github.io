@@ -98,6 +98,7 @@ body .visual-spot .spot-inner.is-on { /* Permalink - use to edit and share this 
 body.theme .visual-spot.is-on .desc-group {top:50%;-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);transform: translate(-50%,-50%);z-index:1;}
 body.theme .visual-spot.is-on .desc-group h1 {opacity:1;color: #ffc931;-webkit-transition: opacity .3s, color .3s, -webkit-transform .7s ease;-o-transition: opacity .3s, color .3s, transform .7s ease;transition: opacity .3s, color .3s, transform .7s ease, -webkit-transform .7s ease;-webkit-transform:translateX(0);-ms-transform:translateX(0);transform:translateX(0);}
 body.theme .visual-spot.is-on .desc-group .desc {position:relative;opacity:1;color: #f9ffd1;-webkit-transition: opacity 1s, color 1s, -webkit-transform 1s ease;-o-transition: opacity 1s, color 1s, transform 1s ease;transition: opacity 1s, color 1s, transform 1s ease, -webkit-transform 1s ease;-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
+body.theme .visual-spot.is-on .is-tutorial {display:none;}
 
 body.theme .visual-spot.is-on .cheese-btn {animation:cheeseThemeStopMoving .3s forwards ease-in-out, cheeseThemeMoveBtn .3s forwards ease-in-out .3s ;}
 body.theme .visual-spot.is-on .cheese-btn:hover {bottom:-20px}

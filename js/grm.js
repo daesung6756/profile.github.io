@@ -217,7 +217,7 @@ function grm () {
         '</div>' +
         '<button type="button" class="cheese-btn" onclick="tutorialClickEvent()" >' +
         '<div class="hand"><span class="fingernail"></span><span class="fingernail"></span></div>' +
-        '<span class="line"></span><div class="pic" data-tooltip="Tutorial"><img src="images/cheese.png" alt="" style="width:30px;"></div></button>' +
+        '<span class="line"></span><div class="pic"><img src="images/cheese.png" alt="" style="width:30px;"></div><span class="tooltip-block dir-top is-tutorial ">Tutorial</span></button>' +
         '<div class="full-event-area">' +
             '<span class="mouse type1" data-tooltip="찍찍!!"><span class="inner"><img src="images/left-mouse.png" alt=""></span></span>' +
             '<span class="mouse type2" data-tooltip="찍찍!!"><span class="inner"><img src="images/right-mouse.png" alt=""></span></span>' +

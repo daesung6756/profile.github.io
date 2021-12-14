@@ -633,7 +633,7 @@ var UI = {
         });
 
         $.each(tooltipGroup , function(key, value) {
-            var $target = $('[data-tooltip=\''+ value +'\']');
+            var $target = $('[data-tooltip="'+ value +'"]');
 
             $target.on('mouseenter',function(){
                 var dataValue = value.replace(" ", "&nbsp;");
@@ -661,6 +661,9 @@ var UI = {
                 $(this).find('.tooltip').remove('.tooltip');
                 return false;
             });
+
+
+
         });
     },
     dropdown: function () {
