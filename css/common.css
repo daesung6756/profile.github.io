@@ -606,6 +606,13 @@ table.tbl-row td {padding:20px;border-bottom:1px solid #070a0d;font-size:14px;li
 /* etc */
 .blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:0;line-height:0}
 
+/* typing word */
+.typed-word {position:relative;height:100%;}
+.typed-word .typing-text,
+.typed-word .typing-cursor {display:inline-block;vertical-align: top;}
+.typed-word .typing-text {font-size:.7rem;line-height:1;color:#00a94d;}
+.typed-word .typing-cursor {width:.1rem;height:.7rem;background:#00ce5e;margin-left:2px;animation: blink .5s infinite linear}
+
 
 /* break point */
 @media (min-width:768px ){

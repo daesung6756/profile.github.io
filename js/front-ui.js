@@ -66,7 +66,6 @@ var slickSlide = {
         })
     },
 };
-
 var UI = {
     init : function(){
         this.loaderAdd("body");
@@ -1207,15 +1206,49 @@ var UI = {
 };
 
 var checkTheme = false;
+
 var checkLight = false;
 var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지 제목
+
+
 
 //ready
 $(function(){
     "use strict";
+    grm();
+
+    /// 멀티 타이핑 효과 start
+    var $typingAniwordsGroup = [
+        "npm install @vue/cli -g",
+        "vue -V",
+        "vue init webpack profile",
+        "cd ./profile",
+        "npm install",
+        "npm run dev",
+    ];
+    var $typedEl = document.querySelector(".typing-text");
+    var $typeIndex = 0;
+    var $n = 0;
+
+    var typing = function (){
+        if($n < $typingAniwordsGroup[$typeIndex].length){
+            $typedEl.innerHTML += $typingAniwordsGroup[$typeIndex][$n++];
+        } else {
+            $typedEl.innerHTML = "";
+            $n = 0;
+            $typeIndex++;
+            if ($typeIndex >= $typingAniwordsGroup.length){
+                $typedEl.innerHTML = "";
+                $typeIndex = 0;
+            }
+        }
+    }
+    /// 멀티 타이핑 효과 end
 
     UI.init();
     slickSlide.init();
+
+    setInterval(typing,180 ); //멀티 타이핑 효과 반복
 
     $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
     $(document).on("afterChange", "[data-slick=tech_list]", beforeAnimationSlick)
@@ -1376,13 +1409,14 @@ $(function(){
     });
 
 
+
+
 });
 
 
 // load
 $(window).on("load", function () {
-    UI.loaderRemove("body")
-
+    UI.loaderRemove("body");
 })
 
 //scroll

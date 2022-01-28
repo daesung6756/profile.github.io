@@ -204,7 +204,11 @@ function grm () {
             '<div class="bg-area">' +
                 '<div class="bg-box"></div>' +
                 '<div class="desc-group">' +
-                    '<h1>Ds.LEE</h1>' +
+                    '<h1 class="king">Ds.LEE</h1>' +
+                    '<p class="typed-word">' +
+                        '<span class="typing-text"></span>' +
+                        '<span class="typing-cursor"></span>' +
+                    '</p>' +
                     '<p class="desc" data-tooltip="Hello World"><strong>Web Developer 2021 Road Map</strong></p>' +
                     '<ul class="btn-list mt10">' +
                         '<li><button type="button" data-pop-open="roadMapPop">Intro</button></li>' +
@@ -239,6 +243,4 @@ function grm () {
     );
 
 }
-$(function(){
-    grm();
-});
+
