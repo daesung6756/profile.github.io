@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <script src="js/include.js"></script>
     <script>
-        include.head.title("Daesung.lee Info");
+        include.head.title("Snippet");
         include.head.meta();
         include.head.styles.common();
         include.head.styles.snippet();
@@ -82,9 +82,9 @@
                                         <div class="column n1 tac p10">
 
                                             <div class="ex-fieldset">
-                                                <div class="fieldset">
-                                                    <input type="text" id="testCopyInput">
-                                                    <button type="button" onclick="getTextClipboardCopy('#testCopyInput')" title="작성된 내용 클립보드에 복사">내용 복사</button>
+                                                <div class="fieldset search-field">
+                                                    <input type="text" id="testCopyInput" class="search-input">
+                                                    <button type="button" class="search-btn" onclick="getTextClipboardCopy('#testCopyInput')" title="작성된 내용 클립보드에 복사">내용 복사</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@
                             <!-- //Clipboard Copy : START -->
 
                             <!-- Get Position Offset : START -->
-                            <div class="article card-type">
+                            <div class="article card-type m-hide">
                                 <h4 class="tit">Get Position Offset</h4>
                                 <p class="desc">내용</p>
 

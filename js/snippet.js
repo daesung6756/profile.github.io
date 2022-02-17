@@ -1,6 +1,6 @@
 'use strict';
 
-function deviceCheck () {
+function deviceCheck() {
     var txt = "";
     txt += "Browser CodeName: " + navigator.appCodeName + "\n";
     txt += "Browser Name: " + navigator.appName + "\n";
@@ -231,20 +231,15 @@ function dragMouseUp () {
 
 function dragMouseMove (e){
     let parent = dragBox.parentElement;
-    e.preventDefault();
 
     if (isDragStatus) {
 
-        console.log(parent.offsetTop, )
+        console.log(parent.offsetTop)
 
         dragBox.style.left = (e.clientX + dragOffset[0]) + 'px';
         dragBox.style.top  = (e.clientY + dragOffset[1]) + 'px';
     }
 }
-
-dragBox.addEventListener("mousedown", dragMouseDown , true)
-document.addEventListener("mouseup", dragMouseUp , true)
-document.addEventListener("mousemove", dragMouseMove , true)
 
 
 // DOMContentLoaded cycle (jquery ready)
@@ -490,6 +485,37 @@ let rotatePop = {
 // 동영상 그룹 전역 변수
 var keyVisualVideoGroup = new Array();
 
+// 리사이징 및 스크롤 이벤트 전역 변수 및 function
+var resizeTimer ;
+var scrollTimer ;
+//리사이즈 펑션
+function resizeFunction(){
+    // lazy loading
+    lazyLoading.init();
+
+    // mouse touch event
+    var wW = $(window).width();
+    if(wW > 1024){
+        dragBox.addEventListener("mousedown", dragMouseDown , true);
+        document.addEventListener("mouseup", dragMouseUp , true);
+        document.addEventListener("mousemove", dragMouseMove , true);
+
+        console.log("PC - resize");
+    } else {
+        dragBox.removeEventListener("mousedown", dragMouseDown , true);
+        document.removeEventListener("mouseup", dragMouseUp , true);
+        document.removeEventListener("mousemove", dragMouseMove , true);;
+
+        console.log("MO - resize");
+    }
+}
+//스크롤 펑션
+function scrollFunction () {
+    // lazy loading
+    lazyLoading.init();
+
+    console.log("scroll End");
+}
 
 $(function () {
 
@@ -498,12 +524,23 @@ $(function () {
 
     rotatePop.init( "slide1", rotatePopdata );
 
-    $("scroll", function(){
-        lazyLoading.init();
-    })
-    $("resize", function(){
-        lazyLoading.init();
+    $(window).on("scroll", function(){
+        window.clearTimeout(scrollTimer);
+        scrollTimer = window.setTimeout( scrollFunction, 500 );
     })
 
+    $(window).on("resize", function(){
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout( resizeFunction, 500 );
+    });
+
+    var wW = $(window).width();
+    if(wW > 1024){
+        dragBox.addEventListener("mousedown", dragMouseDown , true);
+        document.addEventListener("mouseup", dragMouseUp , true);
+        document.addEventListener("mousemove", dragMouseMove , true);
+    }
+
 })
+
 

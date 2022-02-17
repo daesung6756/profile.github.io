@@ -1210,8 +1210,6 @@ var checkTheme = false;
 var checkLight = false;
 var exhibitionTitle = $("html").find("title").text(); // 공유 하는 페이지 제목
 
-
-
 //ready
 $(function(){
     "use strict";
@@ -1243,12 +1241,11 @@ $(function(){
             }
         }
     }
+    setInterval(typing,180 );
     /// 멀티 타이핑 효과 end
 
     UI.init();
     slickSlide.init();
-
-    setInterval(typing,180 ); //멀티 타이핑 효과 반복
 
     $(document).on("init", "[data-slick=tech_list]",initAnimationSlick)
     $(document).on("afterChange", "[data-slick=tech_list]", beforeAnimationSlick)
