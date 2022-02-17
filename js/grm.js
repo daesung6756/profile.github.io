@@ -237,7 +237,7 @@ function grm () {
         '<div class="address-group">' +
         '<p>Daesung.Lee</p>' +
         '<p>Profile Website</p>' +
-        '<p>Update : 2022.01.27<br>Version: 0.62</p>' +
+        '<p>Update : 2022.02.17<br>Version: 0.63</p>' +
         '</div>' +
         '</div>'
     );
