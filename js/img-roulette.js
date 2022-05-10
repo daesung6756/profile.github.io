@@ -12,8 +12,8 @@ var rouletteImg = {
     },
     startAnimation : function(array) {
         var totalAngle = 0;
-        var $play = $('.play-btn');
-        var $outputInner = $(".output-rotate .roullet-inner");
+        var $play = $('[data-roulet="playBtn"]');
+        var $outputInner = $(`[data-roulet="outInner"]`);
 
         $play.on('click', function(){
             var max = 360;
@@ -55,6 +55,8 @@ var rouletteImg = {
         });
     }
 };
+
+
 
 $(function() {
     rouletteImg.init();
