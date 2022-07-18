@@ -26,6 +26,9 @@ var include = {
             snippet : function () {
                 document.write('<link rel="stylesheet" href="css/snippet.css">');
             },
+            screenSize : function() {
+                document.write('<link rel="stylesheet" href="css/screen-size.css">');
+            }
         },
         scripts : function (){
             document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
