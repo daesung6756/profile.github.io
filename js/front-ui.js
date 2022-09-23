@@ -373,7 +373,7 @@ var UI = {
                 $nArray.push($getYears.match(null));
             }
         });
-        console.log($mArray);
+
         var $aMax = $mArray.length;
         var $bMax = $nArray.length;
 
@@ -1206,6 +1206,8 @@ var UI = {
     },
 };
 
+
+
 var checkTheme = false;
 
 var checkLight = false;
@@ -1407,8 +1409,21 @@ $(function(){
     });
 
 
+    $(document).on('keyup',  function(e) {
+        console.log(e.keyCode);
+        switch (e.keyCode) {
+            case 192 :
+                if($('[data-pop="gnb"]').hasClass("is-show")){
+                    $('[data-pop-close="gnb"]').click();
+                } else {
+                    $('[data-pop-open="gnb"]').click();
+                }
+                break;
 
-
+            default:
+                break;
+        }
+    });
 });
 
 

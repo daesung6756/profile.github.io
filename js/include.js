@@ -31,18 +31,17 @@ var include = {
             }
         },
         scripts : function (){
-            document.write('<script src="js/vendor/jquery-3.4.0.min.js"></script>');
-            document.write('<script src="js/vendor/p5.min.js"></script>');
-            document.write('<script src="js/grm.js"></script>');
-            document.write('<script src="js/control-data.js"></script>');
-
+            document.write('<script type="text/javascript" src="js/vendor/jquery-3.4.0.min.js"></script>');
+            document.write('<script type="text/javascript" src="js/vendor/p5.min.js"></script>');
+            document.write('<script type="text/javascript" src="js/grm.js"></script>');
+            document.write('<script type="text/javascript" src="js/control-data.js"></script>');
         }
     },
     footer : {
         scripts : function(){
             document.write('<script type="text/javascript" src="js/vendor/slick.min.js"></script>');
-            document.write('<script src="js/front-ui.js"></script>');
-            document.write('<script src="js/draw-visual.js"></script>');
+            document.write('<script type="text/javascript" src="js/front-ui.js"></script>');
+            document.write('<script type="text/javascript" src="js/draw-visual.js"></script>');
         }
     },
     addFunction : {
