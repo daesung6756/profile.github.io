@@ -365,26 +365,27 @@ var UI = {
         var $nArray = [];
 
         $.each($obj, function(key, value){
-            var $getYears = value.date;
-            if($getYears.match($years)){
+            var $getYears = value.firstdate;
+
+            if($getYears.match($years) || value.lastdate ==='진행중'){
                 $mArray.push($getYears.match($years));
             } else {
                 $nArray.push($getYears.match(null));
             }
         });
-
+        console.log($mArray);
         var $aMax = $mArray.length;
         var $bMax = $nArray.length;
 
         $.each($obj, function(key, value){
-            var $getYears = value.date;
+            var $getYears = value.firstdate;
             var $pc = value.img[0];
             var $tablet = value.img[1];
             var $mobile = value.img[2];
             var $count;
             var $el;
 
-            if (parseInt($getYears.split("~")[1].split(".")[0]) !== parseInt($years)) {
+            if (parseInt($getYears.split(".")[0]) !== parseInt($years) ){
                 $el = $('.photo-list.before-log');
                 $beforeLog.text('before (' + $nArray.length + ')');
                 $count = $bMax--;
@@ -398,7 +399,7 @@ var UI = {
                 '<dl class="info revealOnScroll" data-animation="fadeInLeft" data-timeout="400">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
-                '<dd class="date">' + value.date + '</dd>' +
+                '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
                 // '<dd class="agency">' + value.agency + '</dd>' +
                 // '<dd class="customer">' + value.customer + '</dd>' +
                 // '<dd class="position">' + value.position + '</dd>' +
@@ -415,7 +416,7 @@ var UI = {
                 '<dl class="info revealOnScroll"  data-animation="fadeInLeft" data-timeout="400">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
-                '<dd class="date">' + value.date + '</dd>' +
+                '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
                 // '<dd class="agency">' + value.agency + '</dd>' +
                 // '<dd class="customer">' + value.customer + '</dd>' +
                 // '<dd class="position">' + value.position + '</dd>' +
