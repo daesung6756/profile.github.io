@@ -62,6 +62,8 @@
 .section.is-on .desc-group strong.tit {color:#ddd;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .section.is-on .desc-group .sub-text {color:#aaa;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 
+.section.is-on .source-wrap .source-desc {color:#a8a8a8;}
+
 /* theme */
 .theme .section.is-on h3.tit {color:rgb(216, 255, 0)}
 .theme .section.is-on h4.tit {color:rgb(255,255,255)}
@@ -153,6 +155,8 @@
 .theme .section.is-on .tbl-row th {background:#296297;color:#ddd;-webkit-transition: background .3s ,color .3s;-o-transition: background .3s ,color .3s;transition: background .3s ,color .3s;border-color:#437c8e;}
 .theme .section.is-on .tbl-col td,
 .theme .section.is-on .tbl-row td {color:#aeccd5;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s;border-color:#437c8e;}
+
+.theme  .section.is-on .source-wrap .source-desc {color:#83b9c7;}
 
 .theme .section.is-on .desc-group strong.tit {color:#e1be5d;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}
 .theme .section.is-on .desc-group .sub-text {color:#aeccd5;-webkit-transition: color .3s;-o-transition: color .3s;transition: color .3s}

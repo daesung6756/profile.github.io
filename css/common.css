@@ -383,6 +383,11 @@ body.is-locked {position:relative;width:100%;height:100%;overflow: hidden;}
 .cheese-btn > .line {position:relative;display:inline-block;bottom:100%;width:1px;height:40px;background: #313131;animation:cheeseAniLineUp .3s forwards ease-in;z-index:-1;}
 .cheese-btn > .pic {position:relative;top:-7px;}
 
+.source-wrap {margin-top:1rem}
+.source-wrap .source-desc{color:#333;font-size:.6rem;line-height:1.4;}
+.source-wrap .source-desc > a {color:inherit}
+.source-wrap .source-desc + .source-desc{ margin-top:.4rem}
+
 /* h ~  or desc */
 .tit {position:relative;font-weight:900;line-height:1.4;}
 .tit.box-type {margin:40px 0 0 0;}
