@@ -487,7 +487,7 @@ var UI = {
         var $array = gnbList;
 
         $.each($array, function (key, value) {
-            $el.append('<li><a href="javascript:void(0)" data-href="' + value.url + '">' + value.name + '</a></li>');
+            $el.append('<li><a href="javascript:void(0)" data-href="' + value.url + '" target="'+ value.target + '">' + value.name + '</a></li>');
         });
     },
     gnbLinkThemeCheckEvent : function () {
