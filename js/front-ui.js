@@ -361,54 +361,59 @@ var UI = {
         var $afterLog = $(".years-tab li.after-log");
         var $beforeLog = $(".years-tab li.before-log");
         var $totalLength = $obj.length;
+        var $ingArray = [];
         var $mArray = [];
         var $nArray = [];
+        var $afterMonthSort;
+        var $beforeMonthSort;
 
-        $.each($obj, function(key, value){
-            var $getYears = value.firstdate;
-
-            if($getYears.match($years) || value.lastdate ==='진행중'){
-                $mArray.push($getYears.match($years));
+        $.each($obj, function(key, value) {
+            if (value.lastdate === '진행중') {
+                $ingArray.push(value);
             } else {
-                $nArray.push($getYears.match(null));
+                if(value.lastdate.match($years)){
+                    $mArray.push(value);
+                } else {
+                    $nArray.push(value);
+                }
             }
         });
+
+        $afterMonthSort = $mArray.sort(function(a, b) {
+            return a.lastdate - b.lastdate;
+        });
+        $afterMonthSort.reverse();
+        $.each($ingArray, function(key, value) {
+            $afterMonthSort.unshift(value);
+        });
+
+        $beforeMonthSort = $nArray.sort(function(a, b) {
+            return a.lastdate - b.lastdate;
+        });
+        $beforeMonthSort.reverse();
 
         var $aMax = $mArray.length;
         var $bMax = $nArray.length;
 
-        $.each($obj, function(key, value){
-            var $getYears = value.firstdate;
+        $.each($afterMonthSort, function(key, value){
             var $pc = value.img[0];
             var $tablet = value.img[1];
             var $mobile = value.img[2];
             var $count;
             var $el;
 
-            if (parseInt($getYears.split(".")[0]) !== parseInt($years) ){
-                $el = $('.photo-list.before-log');
-                $beforeLog.text('before (' + $nArray.length + ')');
-                $count = $bMax--;
-            } else {
-                $el = $('.photo-list.after-log');
-                $afterLog.text($years + ' (' + $mArray.length + ')');
-                $count = $aMax--;
-            }
+            $el = $('.photo-list.after-log');
+            $afterLog.text($years + ' (' + $mArray.length + ')');
+            $count = $aMax--;
 
             var $info1 =
                 '<dl class="info revealOnScroll" data-animation="fadeInLeft" data-timeout="400">' +
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
-                // '<dd class="agency">' + value.agency + '</dd>' +
-                // '<dd class="customer">' + value.customer + '</dd>' +
-                // '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
-                /*'<dd class="language">' + value.language + '</dd>' +*/
                 '<dd class="tool">' + value.tool + '</dd>' +
                 '<dd class="support">' + value.support + '</dd>' +
-                // '<dd class="description"><p>' + value.description + '</p></dd>' +
-                // '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
                 '<dd class="url"><a href="' + value.url + '" target="_blank" title="' + value.url + ' 바로가기">사이트 바로가기</a></dd>' +
                 '</dl>';
 
@@ -417,15 +422,86 @@ var UI = {
                 '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
                 '<dd class="type">' + value.type + '</dd>' +
                 '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
-                // '<dd class="agency">' + value.agency + '</dd>' +
-                // '<dd class="customer">' + value.customer + '</dd>' +
-                // '<dd class="position">' + value.position + '</dd>' +
                 '<dd class="process">' + value.process + '</dd>' +
-                /*'<dd class="language">' + value.language + '</dd>' +*/
                 '<dd class="tool">' + value.tool + '</dd>' +
                 '<dd class="support">' + value.support + '</dd>' +
-                // '<dd class="description"><p>' + value.description + '</p></dd>' +
-                // '<dd class="feedback"><p>' + value.feedback + '</p></dd>' +
+                '</dl>';
+
+            var $pic1 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" style="background-image:url(' + $pc + ');" data-pop-open="imgPopup" data-pop-src="'+ $pc +'"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3" style="background-image:url(' + $mobile + ');" data-pop-open="imgPopup" data-pop-src="'+ $mobile +'"></span>' +
+                '</div>';
+            var $pic2 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" style="background-image:url(' + $pc + ');" data-pop-open="imgPopup" data-pop-src="'+ $pc +'"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3"></span>' +
+                '</div>';
+            var $pic3 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400" >' +
+                '<span class="item case1"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
+                '</div>';
+            var $pic4 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1" data-pop-open="imgPopup" style="background-image:url(' + $pc + ');" data-pop-src="'+ $pc +'"></span>' +
+                '<span class="item case2" data-pop-open="imgPopup" style="background-image:url(' + $tablet + ');" data-pop-src="'+ $tablet +'"></span>' +
+                '<span class="item case3" data-pop-open="imgPopup" style="background-image:url(' + $mobile + ');" data-pop-src="'+ $mobile +'"></span>' +
+                '</div>';
+            var $pic5 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +
+                '<span class="item case1"></span>' +
+                '<span class="item case2"></span>' +
+                '<span class="item case3"></span>' +
+                '</div>';
+
+            if(value.url !== ''){
+                $infos = $info1;
+            } else {
+                $infos = $info2;
+            }
+
+            if($pc !== '' && $mobile !== '' && $tablet === '') {
+                $el.append('<li>' + $pic1 + $infos + '</li>');
+            } else if($pc !== '' && $tablet === '' && $mobile === '') {
+                $el.append('<li>' + $pic2 + $infos + '</li>');
+            } else if($pc === '' && $tablet === '' && $mobile !== '') {
+                $el.append('<li>' + $pic3 + $infos + '</li>');
+            } else if ($pc !== '' && $tablet !== '' && $mobile !== ''){
+                $el.append('<li>' + $pic4 + $infos + '</li>');
+            } else {
+                $el.append('<li>' + $pic5 + $infos + '</li>');
+            }
+
+        });
+        $.each($beforeMonthSort, function(key, value){
+            var $pc = value.img[0];
+            var $tablet = value.img[1];
+            var $mobile = value.img[2];
+            var $count;
+            var $el;
+
+            $el = $('.photo-list.before-log');
+            $beforeLog.text('before (' + $nArray.length + ')');
+            $count = $bMax--;
+
+            var $info1 =
+                '<dl class="info revealOnScroll" data-animation="fadeInLeft" data-timeout="400">' +
+                '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
+                '<dd class="type">' + value.type + '</dd>' +
+                '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
+                '<dd class="process">' + value.process + '</dd>' +
+                '<dd class="tool">' + value.tool + '</dd>' +
+                '<dd class="support">' + value.support + '</dd>' +
+                '<dd class="url"><a href="' + value.url + '" target="_blank" title="' + value.url + ' 바로가기">사이트 바로가기</a></dd>' +
+                '</dl>';
+
+            var $info2 =
+                '<dl class="info revealOnScroll"  data-animation="fadeInLeft" data-timeout="400">' +
+                '<dd class="name">' + $count + '.&nbsp;'+ value.name + '</dd>' +
+                '<dd class="type">' + value.type + '</dd>' +
+                '<dd class="date">' + value.firstdate + ' ~ ' + value.lastdate + '</dd>' +
+                '<dd class="process">' + value.process + '</dd>' +
+                '<dd class="tool">' + value.tool + '</dd>' +
+                '<dd class="support">' + value.support + '</dd>' +
                 '</dl>';
 
             var $pic1 = '<div class="pic revealOnScroll" data-animation="fadeInRight" data-timeout="400">' +

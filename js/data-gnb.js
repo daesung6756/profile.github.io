@@ -40,4 +40,14 @@ var gnbList = [
         url:'https://daesung6756.github.io/imageOffsetGuide.io/',
         target:'_blank'
     },
+    {
+        name:"Style Guide 2019",
+        url:'https://daesung6756.github.io/style-guide.io/',
+        target:'_blank'
+    },
+    {
+        name:"Flex Guide",
+        url:'https://daesung6756.github.io/flex-guide.io/',
+        target:'_blank'
+    },
 ];
