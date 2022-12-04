@@ -15,11 +15,11 @@ var historyLog = [
         position: 'PL (PL:1명)',
         process:'reponsive Publishing',
         language:'Doctype : html5. scss, jquery,',
-        tool: 'AEM, node, webpack, git, svn',
+        tool: 'AEM, node, webpack, svn',
         support :'최신 브라우저',
         description:'',
         feedback:'',
-        url:'',
+        url:'https://www.hankook-motorsports.com/ko/main.html',
         rate  : 4
     },
     {
@@ -37,11 +37,11 @@ var historyLog = [
         position: 'PL (PL:1명)',
         process:'reponsive Publishing',
         language:'Doctype : html5. scss, jquery,',
-        tool: 'AEM, node, webpack, git, svn',
+        tool: 'AEM, node, webpack, svn',
         support :'최신 브라우저',
         description:'',
         feedback:'',
-        url:'',
+        url:'https://www.hankook-motorsports.com/ko/main.html',
         rate  : 4
     },
     {
@@ -59,11 +59,11 @@ var historyLog = [
         position: 'PL (PL:1명)',
         process:'reponsive Publishing',
         language:'Doctype : html5. scss, jquery,',
-        tool: 'AEM, node, webpack, git, svn',
+        tool: 'AEM, node, webpack, git',
         support :'최신 브라우저',
         description:'',
         feedback:'',
-        url:'',
+        url:'https://www.hankooktire.com/kr/ko/home.html',
         rate  : 4
     },
     {
