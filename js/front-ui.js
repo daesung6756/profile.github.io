@@ -383,6 +383,7 @@ var UI = {
             return a.lastdate - b.lastdate;
         });
         $afterMonthSort.reverse();
+        $ingArray.reverse();
         $.each($ingArray, function(key, value) {
             $afterMonthSort.unshift(value);
         });
