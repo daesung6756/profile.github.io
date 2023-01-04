@@ -64,7 +64,44 @@ $(document).on("scroll",lazyLoading.init())
 $(window).on("resize", lazyLoading.init())
 $(window).on("orientationChange", lazyLoading.init())
 
+// slide up list
+const slideUpList = {
+    elem: document.querySelectorAll('[data-slideup]'),
+    elemGroup: [],
+    init : function () {
+        if(this.elem.length > 0){
+            this.events();
+        }
+    },
+    events: function (){
+        const _this = this;
+        this.elem.forEach(function(value, key){
+            _this.elemGroup.push(value.dataset.slideup)
+        })
+        this.elemGroup.forEach(function(value, key){
+            const element = document.querySelector('[data-slideup="' + value + '"]');
+            const elementHeight = Number((window.getComputedStyle(element).height).replace("px",""));
+            const list = element.querySelector('[data-list="' + value + '"]');
+            const lastClass = "last-child";
 
+            const play = setInterval(function () {
+                if (element.dataset.index === (list.children.length).toString() ){
+                    element.setAttribute("data-index" , "0");
+                    list.style.transform = "translateY(30px)";
+                    list.classList.add(lastClass)
+                    setTimeout(function () {
+                        list.classList.remove(lastClass)
+                        element.setAttribute("data-index" , "1");
+                        list.style.transform = "translateY(0)";
+                    },100)
+                }  else {
+                    element.setAttribute("data-index",  (Number(element.dataset.index) + 1).toString());
+                    list.style.transform = "translateY(" +  (elementHeight*2 - ( elementHeight *  (Number(element.dataset.index) +1))).toString() + "px)"
+                }
+            }, 1600)
+        });
+    }
+}
 
 document.addEventListener("DOMContentLoaded", function() {
     var lazyloadImages = document.querySelectorAll("img.lazy");
@@ -94,6 +131,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("scroll", lazyload);
     window.addEventListener("resize", lazyload);
     window.addEventListener("orientationChange", lazyload);
+
+    slideUpList.init();
 });
 
 function elementToggleClass ( el, className ) {

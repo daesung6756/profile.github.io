@@ -79,10 +79,16 @@
 .section.is-on .code-wrap {opacity:1;-webkit-transition: opacity .3s ease-in-out;-o-transition: opacity .3s ease-in-out;transition: opacity .3s ease-in-out}
 
 /* theme */
-
 .theme .section.is-on .article.card-type h5.tit{color: #fff;-webkit-transition: color .3s ease-in-out;-o-transition: color .3s ease-in-out;transition: color .3s ease-in-out}
-
 .scroll-box {height:300px;overflow:hidden;overflow-y:auto;}
+
+/* slide-up list */
+.slide-up-list {height:30px;font-size:0;line-height:1;}
+.slide-up-list .list-inner {height:30px;line-height:30px;overflow:hidden;}
+.slide-up-list .desc {transition: all .3s ease;transform: translateY(0);}
+.slide-up-list .desc.last-child {transition: none;}
+.slide-up-list .desc li{ height:30px;line-height:30px;}
+.slide-up-list .desc li  a {font-size:.8rem;color:#fff;}
 
 @keyframes openPage {
     0% {margin:0;-webkit-transform:rotate(0);transform:rotate(0);opacity:0;}
