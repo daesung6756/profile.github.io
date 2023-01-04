@@ -360,7 +360,6 @@ var UI = {
         var $years = new Date().getFullYear();
         var $afterLog = $(".years-tab li.after-log");
         var $beforeLog = $(".years-tab li.before-log");
-        var $totalLength = $obj.length;
         var $ingArray = [];
         var $mArray = [];
         var $nArray = [];

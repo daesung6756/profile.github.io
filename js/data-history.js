@@ -2,6 +2,50 @@
 var historyLog = [
     {
         img: [
+            'images/list/lgdisplay-pc.png',
+            '',
+            'images/list/lgdisplay-mobile.png',
+        ],
+        type :'운영',
+        name:'LG 디스플레이 운영',
+        firstdate:'2023.01',
+        lastdate:'진행중',
+        agency:'Concentrix Korea',
+        customer:'LG디스플레이',
+        position: 'PL (PL:1명)',
+        process:'reponsive Publishing',
+        language:'Doctype : html5. scss, jquery,',
+        tool: 'IDE',
+        support :'최신 브라우저',
+        description:'',
+        feedback:'',
+        url:'https://www.lgdisplay.com/',
+        rate  : 4
+    },
+    {
+        img: [
+            '',
+            '',
+            '',
+        ],
+        type :'운영',
+        name:'SAMSUNG DashBoard 운영',
+        firstdate:'2023.01',
+        lastdate:'진행중',
+        agency:'Concentrix Korea',
+        customer:'삼성',
+        position: 'PL (PL:1명)',
+        process:'Adaptive Web Publishing',
+        language:'Doctype : html5. scss, jquery,',
+        tool: 'IDE',
+        support :'최신 브라우저',
+        description:'',
+        feedback:'',
+        url:'',
+        rate  : 4
+    },
+    {
+        img: [
             'images/list/hankooktire_motosport_pc.jpg',
             '',
             'images/list/hankooktire_motosport_mobile.jpg',
