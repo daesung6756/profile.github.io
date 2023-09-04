@@ -19,7 +19,7 @@ var historyLog = [
         support :'최신 브라우저',
         description:'EDM 및 Landing-page 제작, Experience Cloud Builder 페이지 제작',
         feedback:'',
-        url:'https://www.posco-inc.com:4453/poscoinc/v4/kor/index.jsp',
+        url:'https://www.kiu.ac.kr/pages/index.htm',
         rate  : 4
     },
     {
